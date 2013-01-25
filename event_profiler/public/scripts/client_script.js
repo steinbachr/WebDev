@@ -12,7 +12,9 @@ $(document).ready(function() {
         
         //if we've already fetched the attendees for this event from fb, no need to make duplicate call
         if (attendeeInfo[eventId]) {
-                
+            Graphs.rsvpGraph(eventId);
+            Graphs.guyGirlRatio(eventId);
+            Graphs.friendsInvited(eventId);
         } else {
             Facebook.getEventAttendees(eventId);            
         }        
@@ -21,7 +23,7 @@ $(document).ready(function() {
     
     function animateBox($selector) {
         var NEW_BOX_HEIGHT = 400;
-        var NEW_BOX_WIDTH = 900;
+        var NEW_BOX_WIDTH = 1100;
         
         if (!$selector.hasClass('opened')) {
             $selector.addClass('opened');
@@ -36,6 +38,7 @@ $(document).ready(function() {
         }
         else {
             $selector.removeClass('opened');
+            $selector.find('.graph-holder').html('');
             $selector.animate({
                 height: '-='+NEW_BOX_HEIGHT                
             }, 2000, function() {

@@ -24,13 +24,17 @@ Graphs.rsvpGraph = function(event_id) {
     ]);
         
     // Set chart options
-    var options = {'title':'Breakdown by RSVP',
-        'width':500,
-        'height':300};
+    var options = {
+        title : 'Breakdown by RSVP',
+        width : 300,
+        height: 300,
+        colors: ['#2B15C9', '#00B303', '#F9AF00', '#F92A00'],
+        is3D  : true
+    };
     
     // Instantiate and draw our chart, passing in some options.
     var chart = new google.visualization.PieChart(document.getElementById('rsvp_graph_'+event_id));
-    chart.draw(data, null);
+    chart.draw(data, options);
 }
 
 Graphs.guyGirlRatio = function(event_id) {     
@@ -49,7 +53,9 @@ Graphs.guyGirlRatio = function(event_id) {
     ]);
     var options = {
         title: 'Guy to Girl Ratio',
-        hAxis: {title: 'RSVP Status', titleTextStyle: {color: 'red'}}
+        width:400, height:400,
+        hAxis: {title: 'RSVP Status', titleTextStyle: {color: 'red'}},
+        colors : ['#00B303', '#65047F']
     };
     var chart = new google.visualization.ColumnChart(document.getElementById('guy_girl_graph_'+event_id));
     
@@ -68,3 +74,29 @@ Graphs.guyGirlRatio = function(event_id) {
     }
 }
 
+Graphs.friendsInvited = function(event_id) {
+    var numberFriendsInvited = attendeeInfo[event_id]['friends_invited'];
+    var totalNumberInvited = attendeeInfo[event_id]['summary'].count;
+
+    // Create our data table.
+    var data = new google.visualization.DataTable();
+    data.addColumn('string', 'Friend');
+    data.addColumn('number', 'Invites');
+    data.addRows([
+        ['Current Friend', numberFriendsInvited],
+        ['Friend To Be', totalNumberInvited - numberFriendsInvited]
+    ]);
+
+    // Set chart options
+    var options = {
+        title : 'Current Friends Invited',
+        width : 300,
+        height: 300,
+        colors: ['#00B303', '#2B15C9'],
+        is3D  : true
+    };
+
+    // Instantiate and draw our chart, passing in some options.
+    var chart = new google.visualization.PieChart(document.getElementById('friends_invited_graph_'+event_id));
+    chart.draw(data, options);
+}

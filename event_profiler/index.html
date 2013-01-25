@@ -51,16 +51,19 @@
            }(document, /*debug*/ false));
         </script>
         <div id="header">
-             <h1>The Facebook Event Profiler</h1>
+             <h1>The Facebook Event Profiler</h1><span class="copyright"><img src="public/images/copyright-sign.JPG" /> Bobby Steinbach 2013</span>
         </div>     
         <div id="events"><img src="public/images/ajax-loader.gif" class="loader" /></div>       
         <script id="eventsTpl" type="text/template">
             <ul>
-            {{#data}}
-            <li><img src="{{picture}}" /><button id="{{id}}" class="btn">{{name}}</button></li>
+            {{#data}}            
+            <li><img src="{{picture}}" /><button id="{{id}}" class="btn">{{name}}</button></li>            
             <div class="event-desc">
-            <div id="rsvp_graph_{{id}}"></div>
-            <div id="guy_girl_graph_{{id}}"></div>
+            <div id="guy_girl_graph_{{id}}" class="graph-holder" style="display:inline-block;"></div>
+            <div id="pie_charts">
+                <div id="rsvp_graph_{{id}}" class="graph-holder" style="display:inline-block;"></div>            
+                <div id="friends_invited_graph_{{id}}" class="graph-holder" style="display:inline-block;"></div>
+            </div>
             </div>
             {{/data}}        
             </ul>

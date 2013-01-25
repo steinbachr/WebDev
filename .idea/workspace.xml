@@ -1,14 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="078c4814-d8f8-427c-84b9-a50693064042" name="Default" comment="" />
+    <list default="true" id="078c4814-d8f8-427c-84b9-a50693064042" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/event_profiler/public/scripts/charts.js" afterPath="$PROJECT_DIR$/event_profiler/public/scripts/charts.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/event_profiler/public/scripts/client_script.js" afterPath="$PROJECT_DIR$/event_profiler/public/scripts/client_script.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/event_profiler/public/scripts/facebook_connect.js" afterPath="$PROJECT_DIR$/event_profiler/public/scripts/facebook_connect.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/event_profiler/index.html" afterPath="$PROJECT_DIR$/event_profiler/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/event_profiler/public/stylesheets/styles.less" afterPath="$PROJECT_DIR$/event_profiler/public/stylesheets/styles.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="WebDev.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="$PROJECT_DIR$/../PersonalSite/.idea/workspace.xml" changelist="078c4814-d8f8-427c-84b9-a50693064042" time="1358444982185" ignored="false" />
-    <file path="/index.html" changelist="078c4814-d8f8-427c-84b9-a50693064042" time="1359133471634" ignored="false" />
+    <file path="/index.html" changelist="078c4814-d8f8-427c-84b9-a50693064042" time="1359135394357" ignored="false" />
     <file path="/stylesheet.less" changelist="078c4814-d8f8-427c-84b9-a50693064042" time="1358829298611" ignored="false" />
     <file path="/scripts.js" changelist="078c4814-d8f8-427c-84b9-a50693064042" time="1358464716487" ignored="false" />
-    <file path="/Dummy.txt" changelist="078c4814-d8f8-427c-84b9-a50693064042" time="1359133503566" ignored="false" />
+    <file path="/Dummy.txt" changelist="078c4814-d8f8-427c-84b9-a50693064042" time="1359155399629" ignored="false" />
+    <file path="/client_script.js" changelist="078c4814-d8f8-427c-84b9-a50693064042" time="1359135316119" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +78,25 @@
       <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/event_profiler/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="23" selection-start="2519" selection-end="2519" vertical-scroll-proportion="0.23357664">
+            <state line="30" column="21" selection-start="1644" selection-end="1644" vertical-scroll-proportion="0.72625697">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="client_script.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/event_profiler/public/scripts/client_script.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="39" column="29" selection-start="1279" selection-end="1279" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="charts.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/event_profiler/public/scripts/charts.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -99,6 +125,7 @@
         <option value="$PROJECT_DIR$/project1/index.html" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/public/styles/stylesheet.less" />
+        <option value="$PROJECT_DIR$/event_profiler/public/scripts/client_script.js" />
         <option value="$PROJECT_DIR$/event_profiler/index.html" />
       </list>
     </option>
@@ -209,6 +236,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebDev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebDev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="event_profiler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="PackagesPane" />
@@ -219,7 +268,7 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="options.lastSelected" value="preferences.sourceCode.Python" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="/Applications/XAMPP/xamppfiles/htdocs" />
     <property name="DefaultHtmlFileTemplate" value="Html" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.includeJavaFiles" value="false" />
@@ -227,8 +276,8 @@
     <property name="FullScreen" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -325,7 +374,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20502432" sideWeight="0.984975" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20259319" sideWeight="0.984975" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -392,18 +441,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="28" selection-start="1352" selection-end="1352" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project1/scripts/scripts.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="234" selection-end="234" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/project1/styles/stylesheet.less">
       <provider selected="true" editor-type-id="text-editor">
         <state line="78" column="5" selection-start="2357" selection-end="2357" vertical-scroll-proportion="0.0" />
@@ -465,9 +502,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/styles/stylesheet.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="30" selection-start="412" selection-end="412" vertical-scroll-proportion="0.47202796">
-          <folding />
-        </state>
+        <state line="18" column="30" selection-start="412" selection-end="412" vertical-scroll-proportion="0.47202796" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
@@ -477,9 +512,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/event_profiler/public/scripts/charts.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/event_profiler/public/scripts/client_script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="29" selection-start="1279" selection-end="1279" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/event_profiler/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="23" selection-start="2519" selection-end="2519" vertical-scroll-proportion="0.23357664">
+        <state line="30" column="21" selection-start="1644" selection-end="1644" vertical-scroll-proportion="0.72625697">
           <folding />
         </state>
       </provider>

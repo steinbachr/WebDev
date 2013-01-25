@@ -34,7 +34,7 @@ Facebook.login = function(cb) {
         } else {
             // cancelled
         }        
-    }, {scope: 'user_events, user_birthday'});
+    }, {scope: 'user_events, user_birthday, friends_birthday'});
 }
 
 Facebook.getEvents = function(renderer) {    
@@ -46,8 +46,8 @@ Facebook.getEvents = function(renderer) {
     });        
     
     function getEvent(event_id, renderer) {
-        FB.api('/'+event_id+'?fields=id,name,picture', function(response) {
-            events['data'].push({'id' : response.id, 'name' : response.name, 'picture' : response.picture.data.url});
+        FB.api('/'+event_id+'?fields=id,name,picture,location', function(response) {
+            events['data'].push({'id' : response.id, 'name' : response.name, 'picture' : response.picture.data.url, 'location' : response.location});
             renderer(events, '#eventsTpl', '#events');
         }); 
     }   
@@ -64,8 +64,9 @@ Facebook.getEventAttendees = function(event_id) {
     
     function getDetailedUsersInfo() {                                       
         var QUERY1 = "SELECT uid,rsvp_status FROM event_member WHERE eid="+event_id;
-        var QUERY2 = "SELECT uid,sex,birthday FROM user WHERE uid IN (SELECT uid FROM #query1)";
-        var queriesDict = {"query1":QUERY1, "query2" :QUERY2};
+        var QUERY2 = "SELECT uid,sex FROM user WHERE uid IN (SELECT uid FROM #query1)";
+        var QUERY3 = "SELECT uid1 FROM friend WHERE uid2=me() AND uid1 IN (SELECT uid FROM #query2)";
+        var queriesDict = {"query1":QUERY1, "query2" :QUERY2, "query3" :QUERY3};
                 
         FB.api('/fql', {q : queriesDict}, function(response) {
             var notReplied = []
@@ -73,12 +74,13 @@ Facebook.getEventAttendees = function(event_id) {
                 , maybe = []
                 , notAttending = [];                        
             var reservationStatusArray = response.data[0].fql_result_set;
-            var userInfoArray = response.data[1].fql_result_set;             
+            var userInfoArray = response.data[1].fql_result_set
+            var friendsInvitedSize = response.data[2].fql_result_set.length;             
             
             //reservation status array and userinfo array should be same size, if not we had a problem but well plow through
             for (var i=0 ; i<reservationStatusArray.length ; i++) {
-                if(reservationStatusArray[i].rsvp_status == "attending") {
-                    attending.push(userInfoArray[i]);
+                if(reservationStatusArray[i].rsvp_status == "attending") {                     
+                    attending.push(userInfoArray[i]);                    
                 } else if(reservationStatusArray[i].rsvp_status == "unsure") {
                     maybe.push(userInfoArray[i]);
                 } else if(reservationStatusArray[i].rsvp_status == "declined") {
@@ -87,11 +89,11 @@ Facebook.getEventAttendees = function(event_id) {
                     notReplied.push(userInfoArray[i]);
                 }              
             }
+            attendeeInfo[event_id]['friends_invited'] = friendsInvitedSize  
             attendeeInfo[event_id]['attendance'] = {'noreply' : notReplied, 'attending' : attending, 'maybe' : maybe, 'declined' : notAttending};             
             
             Graphs.guyGirlRatio(event_id);
+            Graphs.friendsInvited(event_id);
         });                 
     }
 }
-
-//select sex,birthday from user where uid in (list of ids)
