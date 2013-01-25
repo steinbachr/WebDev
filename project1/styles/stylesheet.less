@@ -1,0 +1,100 @@
+@dark-orange: #FF8700;
+@light-orange: #FFA540;
+@tan: #FFBD73;
+@blue: #0072A1;
+
+
+.rounded-corners(@radius: 5px) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  -ms-border-radius: @radius;
+  -o-border-radius: @radius;
+  border-radius: @radius;
+}
+.grey-gradient() {
+  background-image: linear-gradient(bottom, rgb(212,212,212) 9%, rgb(255,255,255) 70%, rgb(250,250,250) 85%);
+  background-image: -o-linear-gradient(bottom, rgb(212,212,212) 9%, rgb(255,255,255) 70%, rgb(250,250,250) 85%);
+  background-image: -moz-linear-gradient(bottom, rgb(212,212,212) 9%, rgb(255,255,255) 70%, rgb(250,250,250) 85%);
+  background-image: -webkit-linear-gradient(bottom, rgb(212,212,212) 9%, rgb(255,255,255) 70%, rgb(250,250,250) 85%);
+  background-image: -ms-linear-gradient(bottom, rgb(212,212,212) 9%, rgb(255,255,255) 70%, rgb(250,250,250) 85%);
+
+  background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(0.09, rgb(212,212,212)),
+    color-stop(0.7, rgb(255,255,255)),
+    color-stop(0.85, rgb(250,250,250))
+  );
+}
+
+
+body {
+    background: url('../images/debut_dark.png') repeat;
+    .container {      
+        margin-top: 50px;
+        background: white;
+        padding: 20px 50px 50px 50px; 
+        .rounded-corners;
+        .row {
+          margin-left: 0px;
+        }
+        .span12 {
+          margin-left: 0px;
+        }
+        a {
+          font-size: 16px;
+        }
+        button, button:hover {
+          background: @dark-orange;
+        }
+        .header {      
+          height: 150px;          
+          .top-links {
+            position: relative;
+            left: 50px;
+            top: -20px;
+            float: right;
+            border-left: solid 1px #aaa;            
+            border-bottom: solid 1px #aaa;  
+            border-bottom-left-radius: 5px;
+            padding: 15px;
+          }
+          h1 {
+            text-align: center;
+          }
+        }        
+        .rent-button {
+            margin: 20px 0px;
+            width: 100%;
+            button {
+              height: 75px;
+              font-size: 26px;
+            }
+        }
+        .past-rentals {
+            border: solid 2px #999;
+            padding: 10px 0px 0px 0px;            
+            .rounded-corners;
+            h4 {
+              border-bottom: solid 1px #999;
+              padding: 0px 0px 10px 10px;
+              margin-bottom: 0px;
+            }          
+            ul {             
+              list-style-type: none;
+              margin-left: 0px;
+              li {
+                .grey-gradient;
+                padding: 10px 0px 10px 10px;    
+                border-bottom: solid 1px #999;
+              }              
+            }
+            .overflow-container {
+              height: 100px;
+              overflow-y: scroll;              
+            }
+        }
+    } 
+}
+
