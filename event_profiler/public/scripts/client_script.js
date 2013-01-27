@@ -33,7 +33,7 @@ $(document).ready(function() {
             }, 2000, function() {
                 $selector.animate({
                     width: '+='+NEW_BOX_WIDTH
-                }, 3000);
+                }, 2000);
             });
         }
         else {
@@ -45,7 +45,7 @@ $(document).ready(function() {
                 $selector.animate({
                     width: '-='+NEW_BOX_WIDTH,
                     opacity: '0'
-                }, 3000);
+                }, 2000);
             });
         } 
     }        

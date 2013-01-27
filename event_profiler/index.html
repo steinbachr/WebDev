@@ -1,6 +1,12 @@
 <!DOCTYPE html>  
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#">
     <head>
+        <meta property="og:title" content="Event Profiler" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="http://event-profiler.incepted.us" />
+        <meta property="og:image" content="http://event-profiler.incepted.us/public/images/fb_page_icon_large.png" />
+        <meta property="og:site_name" content="The Facebook Event Profiler" />
+        <meta property="fb:admins" content="1356600017" />
         <script type="text/javascript">            
             var Facebook = {};  
             var Client = {};
@@ -51,22 +57,37 @@
            }(document, /*debug*/ false));
         </script>
         <div id="header">
-             <h1>The Facebook Event Profiler</h1><span class="copyright"><img src="public/images/copyright-sign.JPG" /> Bobby Steinbach 2013</span>
+             <h1>The Facebook Event Profiler</h1>
+            <span class="copyright"><img src="public/images/copyright-sign.JPG" /> Bobby Steinbach 2013</span>
+            <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
         </div>     
-        <div id="events"><img src="public/images/ajax-loader.gif" class="loader" /></div>       
+        <div id="events">
+            <img src="public/images/ajax-loader.gif" class="loader" />
+        </div>  
         <script id="eventsTpl" type="text/template">
+            <div id="legend">
+                <img src="public/images/attending_radio.png" class="indicator" />= attending
+                <img src="public/images/unsure_radio.png" class="indicator" />= maybe
+                <img src="public/images/declined_radio.png" class="indicator" />= declined
+                <img src="public/images/not_replied_radio.png" class="indicator" />= not replied
+            </div>
             <ul>
-            {{#data}}            
-            <li><img src="{{picture}}" /><button id="{{id}}" class="btn">{{name}}</button></li>            
+            {{#data}}                
+            <li>
+                <img src="{{picture}}" />                
+                <button id="{{id}}" class="btn">{{name}}</button>
+                <img src="public/images/{{rsvp_status}}_radio.png" class="indicator" style="padding-right: 15px;"/>   
+                <a href="http://www.facebook.com/events/{{id}}/">go to event on facebook</a>
+            </li>
             <div class="event-desc">
             <div id="guy_girl_graph_{{id}}" class="graph-holder" style="display:inline-block;"></div>
             <div id="pie_charts">
                 <div id="rsvp_graph_{{id}}" class="graph-holder" style="display:inline-block;"></div>            
                 <div id="friends_invited_graph_{{id}}" class="graph-holder" style="display:inline-block;"></div>
             </div>
-            </div>
+            </div>            
             {{/data}}        
-            </ul>
+            </ul>            
         </script>
     </body>
 </html>

@@ -10,8 +10,7 @@ var attendeeInfo = {};   //the attendees information containing data we'll use f
 
 Facebook.getLoginStatus = function() {    
     FB.getLoginStatus(function(response) {
-        if (response.status === 'connected') {
-            Facebook.access_token = response.authResponse.accessToken;
+        if (response.status === 'connected') {            
             Facebook.getEvents(Client.renderTemplate);
         } else if (response.status === 'not_authorized') {
             // not_authorized
@@ -25,29 +24,31 @@ Facebook.getLoginStatus = function() {
 
 Facebook.login = function(cb) {    
     FB.login(function(response) {
-        if (response.authResponse) {
-            // connected
-            Facebook.access_token = response.authResponse.accessToken;    
+        if (response.authResponse) {                        
             if (cb) {
                 cb();
             }
+            FB.XFBML.parse();
         } else {
             // cancelled
         }        
-    }, {scope: 'user_events, user_birthday, friends_birthday'});
+    }, {scope: 'user_events'});
 }
 
-Facebook.getEvents = function(renderer) {    
-    FB.api('/me/events', function(response) {        
+Facebook.getEvents = function(renderer) {
+    var QUERY = encodeURIComponent("SELECT rsvp_status,eid FROM event_member WHERE uid=me()");    
+    
+    FB.api('/fql?q='+QUERY, function(response) {        
         $(response['data']).each(function() {
-            var event = $(this).get(0);
-            getEvent(event.id, renderer);            
+            var event = this;
+            getEvent(event.eid, event.rsvp_status, renderer);            
         })        
     });        
     
-    function getEvent(event_id, renderer) {
+    function getEvent(event_id, rsvp_status, renderer) {
         FB.api('/'+event_id+'?fields=id,name,picture,location', function(response) {
-            events['data'].push({'id' : response.id, 'name' : response.name, 'picture' : response.picture.data.url, 'location' : response.location});
+            events['data'].push({'id' : response.id, 'name' : response.name, 'picture' : response.picture.data.url, 
+                                 'location' : response.location, 'rsvp_status' : rsvp_status});
             renderer(events, '#eventsTpl', '#events');
         }); 
     }   
