@@ -71,13 +71,17 @@
                 <img src="public/images/declined_radio.png" class="indicator" />= declined
                 <img src="public/images/not_replied_radio.png" class="indicator" />= not replied
             </div>
+            <div class="clearfix"></div>
             <ul>
             {{#data}}                
             <li>
                 <img src="{{picture}}" />                
                 <button id="{{id}}" class="btn">{{name}}</button>
-                <img src="public/images/{{rsvp_status}}_radio.png" class="indicator" style="padding-right: 15px;"/>   
-                <a href="http://www.facebook.com/events/{{id}}/">go to event on facebook</a>
+                <img src="public/images/{{rsvp_status}}_radio.png" class="indicator" style="padding-right: 15px;"/>
+                <div class="event-meta"> 
+                    <a href="http://www.facebook.com/events/{{id}}/">go to event on facebook</a><br />
+                    <span>Creator: {{creator}}</span>
+                </div>
             </li>
             <div class="event-desc">
             <div id="guy_girl_graph_{{id}}" class="graph-holder" style="display:inline-block;"></div>

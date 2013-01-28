@@ -30,10 +30,10 @@ $(document).ready(function() {
             $selector.animate({
                 height: '+='+NEW_BOX_HEIGHT,
                 opacity: '1'
-            }, 2000, function() {
+            }, 1000, function() {
                 $selector.animate({
                     width: '+='+NEW_BOX_WIDTH
-                }, 2000);
+                }, 1500);
             });
         }
         else {
@@ -41,11 +41,11 @@ $(document).ready(function() {
             $selector.find('.graph-holder').html('');
             $selector.animate({
                 height: '-='+NEW_BOX_HEIGHT                
-            }, 2000, function() {
+            }, 1000, function() {
                 $selector.animate({
                     width: '-='+NEW_BOX_WIDTH,
                     opacity: '0'
-                }, 2000);
+                }, 1500);
             });
         } 
     }        

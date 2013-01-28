@@ -46,9 +46,9 @@ Facebook.getEvents = function(renderer) {
     });        
     
     function getEvent(event_id, rsvp_status, renderer) {
-        FB.api('/'+event_id+'?fields=id,name,picture,location', function(response) {
+        FB.api('/'+event_id+'?fields=id,name,picture,location,owner', function(response) {
             events['data'].push({'id' : response.id, 'name' : response.name, 'picture' : response.picture.data.url, 
-                                 'location' : response.location, 'rsvp_status' : rsvp_status});
+                                 'location' : response.location, 'rsvp_status' : rsvp_status, 'creator' : response.owner.name});
             renderer(events, '#eventsTpl', '#events');
         }); 
     }   
