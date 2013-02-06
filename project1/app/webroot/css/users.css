@@ -1,0 +1,18 @@
+/*LOGIN*/
+.small {
+    font-size: small !important;
+    vertical-align: text-top;
+}
+div.login-buttons {
+    margin-top: 30px;
+}
+
+/*OVERRIDES*/
+.header {
+    border-bottom: solid 1px #ccc !important;
+}
+.container {
+    padding-bottom: 20px !important;
+}
+
+

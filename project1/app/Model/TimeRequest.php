@@ -7,18 +7,10 @@
  * To change this template use File | Settings | File Templates.
  */
 class TimeRequest extends Model {    
-//    public $hasOne = array (
-//        'User' => array (
-//            'className' => 'User',
-//            'foreignKey' => 'uid'
-//        ),
-//        'Duration' => array (
-//            'className' => 'Duration',
-//            'foreignKey' => 'duration'
-//        ),
-//        'Category' => array (
-//            'className' => 'Category',
-//            'foreignKey' => 'category'
-//        )
-//    );    
+    public $belongsTo = array (
+        'User' => array (
+            'className' => 'User',
+            'foreignKey' => 'uid'
+        )
+    );    
 }

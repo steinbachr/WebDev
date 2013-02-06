@@ -2,45 +2,50 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="078c4814-d8f8-427c-84b9-a50693064042" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project1/app/Model/Category.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project1/app/Model/Duration.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project1/app/Model/TimeRequest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project1/app/Model/User.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project1/images/debut_dark.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project1/scripts/bootstrap.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project1/scripts/jquery-1.8.3.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project1/scripts/less-1.3.1.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project1/scripts/scripts.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project1/styles/bootstrap-responsive.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project1/styles/bootstrap.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project1/styles/font-awesome.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project1/styles/stylesheet.less" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/project1/index.html" afterPath="$PROJECT_DIR$/project1/app/View/TimeRequest/index.ctp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/styles/stylesheet.less" afterPath="$PROJECT_DIR$/public/styles/stylesheet.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project1/app/Controller/TimeRequestsController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project1/app/View/Users/create.ctp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project1/app/View/Users/login.ctp" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project1/app/Controller/TimeRequestController.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project1/app/Model/Category.php" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/project1/app/Model/Duration.php" afterPath="$PROJECT_DIR$/project1/app/Controller/UsersController.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/project1/app/View/TimeRequest/index.ctp" afterPath="$PROJECT_DIR$/project1/app/View/TimeRequests/index.ctp" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/project1/app/webroot/css/stylesheet.less" afterPath="$PROJECT_DIR$/project1/app/webroot/less/stylesheet.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project1/app/Controller/AppController.php" afterPath="$PROJECT_DIR$/project1/app/Controller/AppController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project1/app/Model/TimeRequest.php" afterPath="$PROJECT_DIR$/project1/app/Model/TimeRequest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project1/app/Model/User.php" afterPath="$PROJECT_DIR$/project1/app/Model/User.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project1/app/View/Layouts/default.ctp" afterPath="$PROJECT_DIR$/project1/app/View/Layouts/default.ctp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project1/app/webroot/js/scripts.js" afterPath="$PROJECT_DIR$/project1/app/webroot/js/scripts.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="WebDev.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="$PROJECT_DIR$/../PersonalSite/.idea/workspace.xml" changelist="078c4814-d8f8-427c-84b9-a50693064042" time="1358444982185" ignored="false" />
     <file path="/index.html" changelist="078c4814-d8f8-427c-84b9-a50693064042" time="1359706734191" ignored="false" />
-    <file path="/stylesheet.less" changelist="078c4814-d8f8-427c-84b9-a50693064042" time="1360012462423" ignored="false" />
-    <file path="/scripts.js" changelist="078c4814-d8f8-427c-84b9-a50693064042" time="1359705030901" ignored="false" />
-    <file path="/Dummy.txt" changelist="078c4814-d8f8-427c-84b9-a50693064042" time="1360006995503" ignored="false" />
+    <file path="/stylesheet.less" changelist="078c4814-d8f8-427c-84b9-a50693064042" time="1360130102548" ignored="false" />
+    <file path="/scripts.js" changelist="078c4814-d8f8-427c-84b9-a50693064042" time="1360158560591" ignored="false" />
+    <file path="/Dummy.txt" changelist="078c4814-d8f8-427c-84b9-a50693064042" time="1360158120700" ignored="false" />
     <file path="/client_script.js" changelist="078c4814-d8f8-427c-84b9-a50693064042" time="1359135316119" ignored="false" />
     <file path="/styles.less" changelist="078c4814-d8f8-427c-84b9-a50693064042" time="1359313471555" ignored="false" />
     <file path="/database.php" changelist="078c4814-d8f8-427c-84b9-a50693064042" time="1359752799773" ignored="false" />
     <file path="/Time.php" changelist="078c4814-d8f8-427c-84b9-a50693064042" time="1360000019524" ignored="false" />
-    <file path="/TimeRequestController.php" changelist="078c4814-d8f8-427c-84b9-a50693064042" time="1360008095653" ignored="false" />
-    <file path="/a.py" changelist="078c4814-d8f8-427c-84b9-a50693064042" time="1359994214041" ignored="false" />
+    <file path="/TimeRequestController.php" changelist="078c4814-d8f8-427c-84b9-a50693064042" time="1360038768469" ignored="false" />
+    <file path="/a.py" changelist="078c4814-d8f8-427c-84b9-a50693064042" time="1360120876745" ignored="false" />
     <file path="/a.php" changelist="078c4814-d8f8-427c-84b9-a50693064042" time="1359994215599" ignored="false" />
     <file path="/User.php" changelist="078c4814-d8f8-427c-84b9-a50693064042" time="1359999253407" ignored="false" />
     <file path="/Duration.php" changelist="078c4814-d8f8-427c-84b9-a50693064042" time="1359999263654" ignored="false" />
     <file path="/Category.php" changelist="078c4814-d8f8-427c-84b9-a50693064042" time="1359999273449" ignored="false" />
-    <file path="/index.ctp" changelist="078c4814-d8f8-427c-84b9-a50693064042" time="1360013197769" ignored="false" />
-    <file path="/AppController.php" changelist="078c4814-d8f8-427c-84b9-a50693064042" time="1360010812272" ignored="false" />
-    <file path="/default.ctp" changelist="078c4814-d8f8-427c-84b9-a50693064042" time="1360013092757" ignored="false" />
+    <file path="/index.ctp" changelist="078c4814-d8f8-427c-84b9-a50693064042" time="1360163547802" ignored="false" />
+    <file path="/AppController.php" changelist="078c4814-d8f8-427c-84b9-a50693064042" time="1360120854252" ignored="false" />
+    <file path="/default.ctp" changelist="078c4814-d8f8-427c-84b9-a50693064042" time="1360126047603" ignored="false" />
+    <file path="/a.dummy" changelist="078c4814-d8f8-427c-84b9-a50693064042" time="1360034265390" ignored="false" />
+    <file path="/TimeRequest.php" changelist="078c4814-d8f8-427c-84b9-a50693064042" time="1360039544479" ignored="false" />
+    <file path="/UsersController.php" changelist="078c4814-d8f8-427c-84b9-a50693064042" time="1360164991208" ignored="false" />
+    <file path="/TimeRequestsController.php" changelist="078c4814-d8f8-427c-84b9-a50693064042" time="1360164721347" ignored="false" />
+    <file path="/users.less" changelist="078c4814-d8f8-427c-84b9-a50693064042" time="1360098530350" ignored="false" />
+    <file path="/create.ctp" changelist="078c4814-d8f8-427c-84b9-a50693064042" time="1360104362749" ignored="false" />
+    <file path="/login.ctp" changelist="078c4814-d8f8-427c-84b9-a50693064042" time="1360100319244" ignored="false" />
+    <file path="/users.css" changelist="078c4814-d8f8-427c-84b9-a50693064042" time="1360104653508" ignored="false" />
+    <file path="/a.java" changelist="078c4814-d8f8-427c-84b9-a50693064042" time="1360120880281" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,10 +104,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="TimeRequestController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/project1/app/Controller/TimeRequestController.php">
+      <file leaf-file-name="create.ctp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/project1/app/View/Users/create.ctp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="0" selection-start="735" selection-end="735" vertical-scroll-proportion="-16.964285">
+            <state line="5" column="0" selection-start="151" selection-end="187" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.ctp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/project1/app/View/TimeRequests/index.ctp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="43" column="26" selection-start="1814" selection-end="1814" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="scripts.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/project1/app/webroot/js/scripts.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="47" selection-start="303" selection-end="303" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="stylesheet.less" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/project1/app/webroot/less/stylesheet.less">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="138" column="35" selection-start="3934" selection-end="3934" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -111,70 +143,34 @@
       <file leaf-file-name="routes.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/project1/app/Config/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="29" selection-start="1018" selection-end="1018" vertical-scroll-proportion="-3.75">
+            <state line="29" column="82" selection-start="1304" selection-end="1304" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TimeRequest.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/project1/app/Model/TimeRequest.php">
+      <file leaf-file-name="TimeRequestsController.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/project1/app/Controller/TimeRequestsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="22" selection-start="110" selection-end="110" vertical-scroll-proportion="-4.4117646">
+            <state line="29" column="26" selection-start="1090" selection-end="1090" vertical-scroll-proportion="0.71537">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="default.ctp" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/project1/app/View/Layouts/default.ctp">
+      <file leaf-file-name="UsersController.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/project1/app/Controller/UsersController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="40" selection-start="909" selection-end="909" vertical-scroll-proportion="0.4496788">
+            <state line="32" column="5" selection-start="1019" selection-end="1019" vertical-scroll-proportion="-11.25">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.ctp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/project1/app/View/TimeRequest/index.ctp">
+      <file leaf-file-name="users.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/project1/app/webroot/css/users.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="95" selection-start="2016" selection-end="2016" vertical-scroll-proportion="0.0">
-              <folding>
-                <marker date="1360013295000" expanded="true" signature="0:3506" placeholder="..." />
-                <marker date="1360013295000" expanded="true" signature="5:732" placeholder="..." />
-                <marker date="1360013295000" expanded="true" signature="739:3498" placeholder="..." />
-                <marker date="1360013295000" expanded="true" signature="763:1848" placeholder="..." />
-                <marker date="1360013295000" expanded="true" signature="792:1031" placeholder="..." />
-                <marker date="1360013295000" expanded="true" signature="824:961" placeholder="..." />
-                <marker date="1360013295000" expanded="true" signature="989:1002" placeholder="..." />
-                <marker date="1360013295000" expanded="false" signature="1053:1217" placeholder="..." />
-                <marker date="1360013295000" expanded="false" signature="1094:1206" placeholder="..." />
-                <marker date="1360013295000" expanded="true" signature="1239:1841" placeholder="..." />
-                <marker date="1360013295000" expanded="true" signature="1281:1830" placeholder="..." />
-                <marker date="1360013295000" expanded="true" signature="1373:1815" placeholder="..." />
-                <marker date="1360013295000" expanded="true" signature="1394:1796" placeholder="..." />
-                <marker date="1360013295000" expanded="true" signature="1419:1487" placeholder="..." />
-                <marker date="1360013295000" expanded="true" signature="1512:1588" placeholder="..." />
-                <marker date="1360013295000" expanded="true" signature="1613:1686" placeholder="..." />
-                <marker date="1360013295000" expanded="true" signature="1711:1774" placeholder="..." />
-                <marker date="1360013295000" expanded="true" signature="2374:3490" placeholder="..." />
-                <marker date="1360013295000" expanded="true" signature="2507:3480" placeholder="..." />
-                <marker date="1360013295000" expanded="false" signature="2542:2820" placeholder="..." />
-                <marker date="1360013295000" expanded="false" signature="2639:2758" placeholder="..." />
-                <marker date="1360013295000" expanded="true" signature="2853:3469" placeholder="..." />
-                <marker date="1360013295000" expanded="true" signature="2902:3454" placeholder="..." />
-                <marker date="1360013295000" expanded="true" signature="3083:3387" placeholder="..." />
-                <marker date="1360013295000" expanded="true" signature="3123:3180" placeholder="..." />
-                <marker date="1360013295000" expanded="true" signature="3221:3276" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="stylesheet.less" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/project1/app/webroot/css/stylesheet.less">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="113" column="19" selection-start="3324" selection-end="3324" vertical-scroll-proportion="0.0">
+            <state line="11" column="32" selection-start="185" selection-end="185" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -198,31 +194,30 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/public/styles/stylesheet.less" />
-        <option value="$PROJECT_DIR$/project1/cakephp-2.3.0/app/Config/database.php" />
-        <option value="$PROJECT_DIR$/project1/app/Controller/MainController.php" />
-        <option value="$PROJECT_DIR$/project1/app/Controller/TimeController.php" />
-        <option value="$PROJECT_DIR$/project1/app/Model/Time.php" />
+        <option value="$PROJECT_DIR$/project1/app/Config/core.php" />
+        <option value="$PROJECT_DIR$/project1/app/webroot/less/users.less" />
+        <option value="$PROJECT_DIR$/project1/app/View/Users/login.ctp" />
         <option value="$PROJECT_DIR$/project1/app/Config/routes.php" />
+        <option value="$PROJECT_DIR$/project1/app/View/Users/index.ctp" />
+        <option value="$PROJECT_DIR$/project1/app/View/Users/create.ctp" />
+        <option value="$PROJECT_DIR$/project1/app/webroot/css/users.css" />
+        <option value="$PROJECT_DIR$/project1/app/Model/AppModel.php" />
         <option value="$PROJECT_DIR$/project1/app/Model/User.php" />
-        <option value="$PROJECT_DIR$/project1/app/Model/Duration.php" />
-        <option value="$PROJECT_DIR$/project1/app/Model/Category.php" />
-        <option value="$PROJECT_DIR$/project1/app/Model/TimeRequest.php" />
-        <option value="$PROJECT_DIR$/project1/app/Controller/TimeRequestController.php" />
         <option value="$PROJECT_DIR$/project1/app/Controller/AppController.php" />
-        <option value="$PROJECT_DIR$/project1/app/webroot/css/stylesheet.less" />
-        <option value="$PROJECT_DIR$/project1/app/View/TimeRequest/index.ctp" />
         <option value="$PROJECT_DIR$/project1/app/View/Layouts/default.ctp" />
+        <option value="$PROJECT_DIR$/project1/app/webroot/less/stylesheet.less" />
+        <option value="$PROJECT_DIR$/project1/app/webroot/js/scripts.js" />
+        <option value="$PROJECT_DIR$/project1/app/View/TimeRequests/index.ctp" />
+        <option value="$PROJECT_DIR$/project1/app/Controller/UsersController.php" />
+        <option value="$PROJECT_DIR$/project1/app/Controller/TimeRequestsController.php" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="1280" />
-    <option name="y" value="-132" />
-    <option name="width" value="1920" />
-    <option name="height" value="1080" />
+    <option name="y" value="22" />
+    <option name="width" value="1280" />
+    <option name="height" value="720" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -250,6 +245,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope">
         <subPane subId="Project Files">
           <PATH>
@@ -292,9 +288,218 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebDev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebDev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebDev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebDev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="View" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Users" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebDev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebDev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="View" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TimeRequests" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebDev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebDev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="View" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebDev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebDev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="View" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Layouts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebDev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebDev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tmp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebDev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebDev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tmp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="logs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebDev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebDev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebDev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebDev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Controller" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -303,7 +508,7 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="MemberChooser.sorted" value="false" />
-    <property name="options.lastSelected" value="preferences.sourceCode.Python" />
+    <property name="options.lastSelected" value="preferences.general" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/project1/cakephp-2.3.0/app/Config/database.php" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="DefaultHtmlFileTemplate" value="Html" />
@@ -311,11 +516,11 @@
     <property name="GoToClass.includeJavaFiles" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="FullScreen" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
+    <property name="FullScreen" value="false" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -334,10 +539,10 @@
       <recent name="$PROJECT_DIR$/styles" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/project1/app/webroot/less" />
       <recent name="$PROJECT_DIR$/project1/app/webroot/img" />
       <recent name="$PROJECT_DIR$/project1/app/webroot/css" />
       <recent name="$PROJECT_DIR$/project1/plugins" />
-      <recent name="$PROJECT_DIR$/project1/app/webroot/less" />
       <recent name="$PROJECT_DIR$/project1/app/View/TimeRequest" />
     </key>
   </component>
@@ -412,7 +617,7 @@
     <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1280" y="-132" width="1920" height="1080" extended-state="6" />
+    <frame x="0" y="22" width="1280" height="720" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -421,14 +626,14 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.178762" sideWeight="0.06548856" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17666127" sideWeight="0.1345515" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.178762" sideWeight="0.92723495" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17666127" sideWeight="0.8538206" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -495,132 +700,114 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/project1/app/Model/Duration.php">
+    <entry file="file://$PROJECT_DIR$/project1/app/View/Users/login.ctp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="14" selection-start="171" selection-end="171" vertical-scroll-proportion="0.21818182">
+        <state line="3" column="0" selection-start="103" selection-end="529" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/project1/app/Model/Category.php">
+    <entry file="file://$PROJECT_DIR$/project1/app/Model/AppModel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="14" selection-start="171" selection-end="171" vertical-scroll-proportion="0.21818182">
+        <state line="31" column="3" selection-start="927" selection-end="927" vertical-scroll-proportion="0.1978022">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/project1/app/webroot/.htaccess">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project1/app/index.php">
+    <entry file="file://$PROJECT_DIR$/project1/lib/Cake/Core/App.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/project1/app/Config/core.php">
+    <entry file="file://$PROJECT_DIR$/project1/app/Model/User.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="75" selection-start="1320" selection-end="1325" vertical-scroll-proportion="0.33936653">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project1/app/Config/Schema/db_acl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project1/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="20" selection-start="869" selection-end="869" vertical-scroll-proportion="0.13186814">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project1/app/tmp/logs/error.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="960" column="12" selection-start="52948" selection-end="52948" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project1/app/Controller/AppController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="1" selection-start="1081" selection-end="1081" vertical-scroll-proportion="0.24725275">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project1/app/Config/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="29" selection-start="1018" selection-end="1018" vertical-scroll-proportion="-3.75">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project1/app/Controller/TimeRequestController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="0" selection-start="735" selection-end="735" vertical-scroll-proportion="-16.964285">
+        <state line="18" column="57" selection-start="787" selection-end="787" vertical-scroll-proportion="0.2967033">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/project1/app/Model/TimeRequest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="22" selection-start="110" selection-end="110" vertical-scroll-proportion="-4.4117646">
+        <state line="11" column="34" selection-start="287" selection-end="287" vertical-scroll-proportion="0.18131869">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/project1/app/webroot/css/stylesheet.less">
+    <entry file="file://$PROJECT_DIR$/project1/app/Config/routes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="113" column="19" selection-start="3324" selection-end="3324" vertical-scroll-proportion="0.0">
+        <state line="29" column="82" selection-start="1304" selection-end="1304" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/project1/app/View/TimeRequest/index.ctp">
+    <entry file="file://$PROJECT_DIR$/project1/app/webroot/less/stylesheet.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="95" selection-start="2016" selection-end="2016" vertical-scroll-proportion="0.0">
-          <folding>
-            <marker date="1360013295000" expanded="true" signature="0:3506" placeholder="..." />
-            <marker date="1360013295000" expanded="true" signature="5:732" placeholder="..." />
-            <marker date="1360013295000" expanded="true" signature="739:3498" placeholder="..." />
-            <marker date="1360013295000" expanded="true" signature="763:1848" placeholder="..." />
-            <marker date="1360013295000" expanded="true" signature="792:1031" placeholder="..." />
-            <marker date="1360013295000" expanded="true" signature="824:961" placeholder="..." />
-            <marker date="1360013295000" expanded="true" signature="989:1002" placeholder="..." />
-            <marker date="1360013295000" expanded="false" signature="1053:1217" placeholder="..." />
-            <marker date="1360013295000" expanded="false" signature="1094:1206" placeholder="..." />
-            <marker date="1360013295000" expanded="true" signature="1239:1841" placeholder="..." />
-            <marker date="1360013295000" expanded="true" signature="1281:1830" placeholder="..." />
-            <marker date="1360013295000" expanded="true" signature="1373:1815" placeholder="..." />
-            <marker date="1360013295000" expanded="true" signature="1394:1796" placeholder="..." />
-            <marker date="1360013295000" expanded="true" signature="1419:1487" placeholder="..." />
-            <marker date="1360013295000" expanded="true" signature="1512:1588" placeholder="..." />
-            <marker date="1360013295000" expanded="true" signature="1613:1686" placeholder="..." />
-            <marker date="1360013295000" expanded="true" signature="1711:1774" placeholder="..." />
-            <marker date="1360013295000" expanded="true" signature="2374:3490" placeholder="..." />
-            <marker date="1360013295000" expanded="true" signature="2507:3480" placeholder="..." />
-            <marker date="1360013295000" expanded="false" signature="2542:2820" placeholder="..." />
-            <marker date="1360013295000" expanded="false" signature="2639:2758" placeholder="..." />
-            <marker date="1360013295000" expanded="true" signature="2853:3469" placeholder="..." />
-            <marker date="1360013295000" expanded="true" signature="2902:3454" placeholder="..." />
-            <marker date="1360013295000" expanded="true" signature="3083:3387" placeholder="..." />
-            <marker date="1360013295000" expanded="true" signature="3123:3180" placeholder="..." />
-            <marker date="1360013295000" expanded="true" signature="3221:3276" placeholder="..." />
-          </folding>
+        <state line="138" column="35" selection-start="3934" selection-end="3934" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/project1/app/View/Layouts/default.ctp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="40" selection-start="909" selection-end="909" vertical-scroll-proportion="0.4496788">
+        <state line="41" column="48" selection-start="1611" selection-end="1611" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project1/app/webroot/css/users.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="32" selection-start="185" selection-end="185" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project1/app/Controller/AppController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="0" selection-start="750" selection-end="788" vertical-scroll-proportion="0.085388996">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project1/app/tmp/logs/error.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1802" column="87" selection-start="122057" selection-end="122057" vertical-scroll-proportion="0.69330853">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project1/app/View/TimeRequests/index.ctp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="26" selection-start="1814" selection-end="1814" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project1/app/View/Users/create.ctp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="0" selection-start="151" selection-end="187" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project1/app/webroot/js/scripts.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="47" selection-start="303" selection-end="303" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project1/app/Controller/UsersController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="5" selection-start="1019" selection-end="1019" vertical-scroll-proportion="-11.25">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project1/app/Controller/TimeRequestsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="26" selection-start="1090" selection-end="1090" vertical-scroll-proportion="0.71537">
           <folding />
         </state>
       </provider>

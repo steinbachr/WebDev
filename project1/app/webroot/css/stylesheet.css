@@ -1,0 +1,151 @@
+body {
+  background: url('../img/debut_dark.png') repeat;
+}
+body .container {
+  margin-top: 50px;
+  background: white;
+  padding: 20px 50px 50px 50px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+}
+body .container.disabled {
+  opacity: .3;
+  z-index: -10;
+}
+body .container .row {
+  margin-left: 0px;
+}
+body .container .span12 {
+  margin-left: 0px;
+}
+body .container a {
+  font-size: 16px;
+}
+body .container button,
+body .container button:hover {
+  background: #ff8700;
+}
+body .container .footer {
+  text-align: right;
+}
+body .container .header {
+  height: 150px;
+}
+body .container .header .logout {
+  float: left;
+  margin: -20px;
+}
+body .container .header .top-links {
+  position: relative;
+  left: 50px;
+  top: -20px;
+  float: right;
+  border-left: solid 1px #aaa;
+  border-bottom: solid 1px #aaa;
+  border-bottom-left-radius: 5px;
+  padding: 15px;
+}
+body .container .header h1 {
+  text-align: center;
+}
+body .container .rent-button {
+  margin: 20px 0px;
+  width: 100%;
+}
+body .container .rent-button button {
+  height: 75px;
+  font-size: 26px;
+}
+body .container .past-rentals {
+  border: solid 2px #999;
+  padding: 10px 0px 0px 0px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+}
+body .container .past-rentals h4 {
+  border-bottom: solid 1px #999;
+  padding: 0px 0px 10px 10px;
+  margin-bottom: 0px;
+}
+body .container .past-rentals ul {
+  list-style-type: none;
+  margin-left: 0px;
+}
+body .container .past-rentals ul li {
+  background-image: linear-gradient(bottom, #d4d4d4 9%, #ffffff 70%, #fafafa 85%);
+  background-image: -o-linear-gradient(bottom, #d4d4d4 9%, #ffffff 70%, #fafafa 85%);
+  background-image: -moz-linear-gradient(bottom, #d4d4d4 9%, #ffffff 70%, #fafafa 85%);
+  background-image: -webkit-linear-gradient(bottom, #d4d4d4 9%, #ffffff 70%, #fafafa 85%);
+  background-image: -ms-linear-gradient(bottom, #d4d4d4 9%, #ffffff 70%, #fafafa 85%);
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.09, #d4d4d4), color-stop(0.7, #ffffff), color-stop(0.85, #fafafa));
+  padding: 10px 0px 10px 10px;
+  border-bottom: solid 1px #999;
+}
+body .container .past-rentals .overflow-container {
+  height: 100px;
+  overflow-y: scroll;
+}
+body #rent_time_popup {
+  width: 600px;
+  background: url('../img/light_wool.png') repeat;
+}
+body #rent_time_popup .modal-header h3 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+body #rent_time_popup .modal-header ul {
+  list-style-type: none;
+}
+body #rent_time_popup .modal-header li.progress-indicator {
+  float: left;
+  height: 100px;
+  width: 100px;
+  margin-right: 35px;
+}
+body #rent_time_popup .modal-header li.progress-indicator.empty {
+  background: url('../img/progress_indicator_empty.png') no-repeat;
+}
+body #rent_time_popup .modal-header li.progress-indicator.full {
+  background: url('../img/progress_indicator_full.png') no-repeat;
+}
+body #rent_time_popup .modal-body {
+  clear: left;
+}
+body #rent_time_popup .modal-body .unreached,
+body #rent_time_popup .modal-body .unreached-input {
+  display: none;
+}
+body #rent_time_popup .modal-body .active {
+  display: block !important;
+}
+body #rent_time_popup .modal-body .step {
+  text-align: center;
+  display: none;
+}
+body #rent_time_popup .modal-body .step .step-body {
+  font-weight: bold;
+}
+body #rent_time_popup .modal-body .step button {
+  margin-top: 20px;
+}
+body div.login-overlay {
+  position: absolute;
+  top: 30%;
+  left: 34%;
+  color: black;
+  background: #EBDFF4;
+  height: 50px;
+  padding: 100px 20px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  font-weight: bold;
+}
