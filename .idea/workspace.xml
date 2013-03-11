@@ -2,28 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="078c4814-d8f8-427c-84b9-a50693064042" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project1/app/Controller/TimeRequestsController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project1/app/View/Users/create.ctp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project1/app/View/Users/login.ctp" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project1/app/Controller/TimeRequestController.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project1/app/Model/Category.php" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/project1/app/Model/Duration.php" afterPath="$PROJECT_DIR$/project1/app/Controller/UsersController.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/project1/app/View/TimeRequest/index.ctp" afterPath="$PROJECT_DIR$/project1/app/View/TimeRequests/index.ctp" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/project1/app/webroot/css/stylesheet.less" afterPath="$PROJECT_DIR$/project1/app/webroot/less/stylesheet.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project1/app/Controller/AppController.php" afterPath="$PROJECT_DIR$/project1/app/Controller/AppController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project1/app/Model/Category.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project1/app/Model/Duration.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project1/app/View/Emails/html/confirm_request.ctp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project1/app/View/Emails/text/confirm_request.ctp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project1/app/View/Elements/modal.ctp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project1/app/View/Emails/html/my_request_confirmation.ctp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project1/app/View/TimeRequests/view.ctp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project1/lib/Cake/Test/Case/AllRoutingTest.php" afterPath="$PROJECT_DIR$/project1/lib/Cake/Test/Case/AllRoutingTest.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project1/app/Model/TimeRequest.php" afterPath="$PROJECT_DIR$/project1/app/Model/TimeRequest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project1/app/Controller/TimeRequestsController.php" afterPath="$PROJECT_DIR$/project1/app/Controller/TimeRequestsController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project1/app/Model/User.php" afterPath="$PROJECT_DIR$/project1/app/Model/User.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project1/app/View/Layouts/default.ctp" afterPath="$PROJECT_DIR$/project1/app/View/Layouts/default.ctp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project1/app/View/Layouts/Emails/html/default.ctp" afterPath="$PROJECT_DIR$/project1/app/View/Layouts/Emails/html/default.ctp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project1/app/View/TimeRequests/index.ctp" afterPath="$PROJECT_DIR$/project1/app/View/TimeRequests/index.ctp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project1/app/webroot/js/scripts.js" afterPath="$PROJECT_DIR$/project1/app/webroot/js/scripts.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project1/app/webroot/css/stylesheet.css" afterPath="$PROJECT_DIR$/project1/app/webroot/css/stylesheet.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project1/app/webroot/less/stylesheet.less" afterPath="$PROJECT_DIR$/project1/app/webroot/less/stylesheet.less" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="WebDev.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="$PROJECT_DIR$/../PersonalSite/.idea/workspace.xml" changelist="078c4814-d8f8-427c-84b9-a50693064042" time="1358444982185" ignored="false" />
-    <file path="/index.html" changelist="078c4814-d8f8-427c-84b9-a50693064042" time="1359706734191" ignored="false" />
-    <file path="/stylesheet.less" changelist="078c4814-d8f8-427c-84b9-a50693064042" time="1360130102548" ignored="false" />
-    <file path="/scripts.js" changelist="078c4814-d8f8-427c-84b9-a50693064042" time="1360158560591" ignored="false" />
-    <file path="/Dummy.txt" changelist="078c4814-d8f8-427c-84b9-a50693064042" time="1360158120700" ignored="false" />
+    <file path="/index.html" changelist="078c4814-d8f8-427c-84b9-a50693064042" time="1362192408459" ignored="false" />
+    <file path="/stylesheet.less" changelist="078c4814-d8f8-427c-84b9-a50693064042" time="1360696210609" ignored="false" />
+    <file path="/scripts.js" changelist="078c4814-d8f8-427c-84b9-a50693064042" time="1360695951465" ignored="false" />
+    <file path="/Dummy.txt" changelist="078c4814-d8f8-427c-84b9-a50693064042" time="1362370891400" ignored="false" />
     <file path="/client_script.js" changelist="078c4814-d8f8-427c-84b9-a50693064042" time="1359135316119" ignored="false" />
     <file path="/styles.less" changelist="078c4814-d8f8-427c-84b9-a50693064042" time="1359313471555" ignored="false" />
     <file path="/database.php" changelist="078c4814-d8f8-427c-84b9-a50693064042" time="1359752799773" ignored="false" />
@@ -31,21 +35,25 @@
     <file path="/TimeRequestController.php" changelist="078c4814-d8f8-427c-84b9-a50693064042" time="1360038768469" ignored="false" />
     <file path="/a.py" changelist="078c4814-d8f8-427c-84b9-a50693064042" time="1360120876745" ignored="false" />
     <file path="/a.php" changelist="078c4814-d8f8-427c-84b9-a50693064042" time="1359994215599" ignored="false" />
-    <file path="/User.php" changelist="078c4814-d8f8-427c-84b9-a50693064042" time="1359999253407" ignored="false" />
-    <file path="/Duration.php" changelist="078c4814-d8f8-427c-84b9-a50693064042" time="1359999263654" ignored="false" />
-    <file path="/Category.php" changelist="078c4814-d8f8-427c-84b9-a50693064042" time="1359999273449" ignored="false" />
-    <file path="/index.ctp" changelist="078c4814-d8f8-427c-84b9-a50693064042" time="1360163547802" ignored="false" />
+    <file path="/User.php" changelist="078c4814-d8f8-427c-84b9-a50693064042" time="1360688708411" ignored="false" />
+    <file path="/Duration.php" changelist="078c4814-d8f8-427c-84b9-a50693064042" time="1360250258419" ignored="false" />
+    <file path="/Category.php" changelist="078c4814-d8f8-427c-84b9-a50693064042" time="1360249489849" ignored="false" />
+    <file path="/index.ctp" changelist="078c4814-d8f8-427c-84b9-a50693064042" time="1360720104396" ignored="false" />
     <file path="/AppController.php" changelist="078c4814-d8f8-427c-84b9-a50693064042" time="1360120854252" ignored="false" />
-    <file path="/default.ctp" changelist="078c4814-d8f8-427c-84b9-a50693064042" time="1360126047603" ignored="false" />
+    <file path="/default.ctp" changelist="078c4814-d8f8-427c-84b9-a50693064042" time="1360195566550" ignored="false" />
     <file path="/a.dummy" changelist="078c4814-d8f8-427c-84b9-a50693064042" time="1360034265390" ignored="false" />
-    <file path="/TimeRequest.php" changelist="078c4814-d8f8-427c-84b9-a50693064042" time="1360039544479" ignored="false" />
+    <file path="/TimeRequest.php" changelist="078c4814-d8f8-427c-84b9-a50693064042" time="1360695392580" ignored="false" />
     <file path="/UsersController.php" changelist="078c4814-d8f8-427c-84b9-a50693064042" time="1360164991208" ignored="false" />
-    <file path="/TimeRequestsController.php" changelist="078c4814-d8f8-427c-84b9-a50693064042" time="1360164721347" ignored="false" />
+    <file path="/TimeRequestsController.php" changelist="078c4814-d8f8-427c-84b9-a50693064042" time="1360720037596" ignored="false" />
     <file path="/users.less" changelist="078c4814-d8f8-427c-84b9-a50693064042" time="1360098530350" ignored="false" />
     <file path="/create.ctp" changelist="078c4814-d8f8-427c-84b9-a50693064042" time="1360104362749" ignored="false" />
     <file path="/login.ctp" changelist="078c4814-d8f8-427c-84b9-a50693064042" time="1360100319244" ignored="false" />
     <file path="/users.css" changelist="078c4814-d8f8-427c-84b9-a50693064042" time="1360104653508" ignored="false" />
     <file path="/a.java" changelist="078c4814-d8f8-427c-84b9-a50693064042" time="1360120880281" ignored="false" />
+    <file path="/confirm_request.ctp" changelist="078c4814-d8f8-427c-84b9-a50693064042" time="1360253342705" ignored="false" />
+    <file path="/my_request_confirmation.ctp" changelist="078c4814-d8f8-427c-84b9-a50693064042" time="1360686206886" ignored="false" />
+    <file path="/view.ctp" changelist="078c4814-d8f8-427c-84b9-a50693064042" time="1360720365162" ignored="false" />
+    <file path="/modal.ctp" changelist="078c4814-d8f8-427c-84b9-a50693064042" time="1360720312153" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,37 +112,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="create.ctp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/project1/app/View/Users/create.ctp">
+      <file leaf-file-name="TimeRequestsController.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/project1/app/Controller/TimeRequestsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="0" selection-start="151" selection-end="187" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.ctp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/project1/app/View/TimeRequests/index.ctp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="26" selection-start="1814" selection-end="1814" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="scripts.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/project1/app/webroot/js/scripts.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="47" selection-start="303" selection-end="303" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="stylesheet.less" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/project1/app/webroot/less/stylesheet.less">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="138" column="35" selection-start="3934" selection-end="3934" vertical-scroll-proportion="0.0">
+            <state line="57" column="33" selection-start="2492" selection-end="2492" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -143,34 +124,43 @@
       <file leaf-file-name="routes.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/project1/app/Config/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="82" selection-start="1304" selection-end="1304" vertical-scroll-proportion="0.0">
+            <state line="35" column="26" selection-start="1414" selection-end="1414" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TimeRequestsController.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/project1/app/Controller/TimeRequestsController.php">
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="26" selection-start="1090" selection-end="1090" vertical-scroll-proportion="0.71537">
+            <state line="36" column="34" selection-start="1798" selection-end="1798" vertical-scroll-proportion="0.3936877">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UsersController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/project1/app/Controller/UsersController.php">
+      <file leaf-file-name="scripts.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/project1/app/webroot/js/scripts.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="5" selection-start="1019" selection-end="1019" vertical-scroll-proportion="-11.25">
+            <state line="35" column="0" selection-start="1188" selection-end="1188" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="users.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/project1/app/webroot/css/users.css">
+      <file leaf-file-name="stylesheet.less" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/project1/app/webroot/less/stylesheet.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="32" selection-start="185" selection-end="185" vertical-scroll-proportion="0.0">
+            <state line="149" column="30" selection-start="4190" selection-end="4190" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="view.ctp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/project1/app/View/TimeRequests/view.ctp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="3" selection-start="156" selection-end="156" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -194,22 +184,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/project1/app/Config/core.php" />
-        <option value="$PROJECT_DIR$/project1/app/webroot/less/users.less" />
-        <option value="$PROJECT_DIR$/project1/app/View/Users/login.ctp" />
-        <option value="$PROJECT_DIR$/project1/app/Config/routes.php" />
-        <option value="$PROJECT_DIR$/project1/app/View/Users/index.ctp" />
-        <option value="$PROJECT_DIR$/project1/app/View/Users/create.ctp" />
-        <option value="$PROJECT_DIR$/project1/app/webroot/css/users.css" />
-        <option value="$PROJECT_DIR$/project1/app/Model/AppModel.php" />
+        <option value="$PROJECT_DIR$/project1/app/Model/Category.php" />
+        <option value="$PROJECT_DIR$/project1/app/Model/Duration.php" />
+        <option value="$PROJECT_DIR$/project1/app/View/Emails/text/confirm_request.ctp" />
+        <option value="$PROJECT_DIR$/project1/app/View/Emails/html/confirm_request.ctp" />
+        <option value="$PROJECT_DIR$/project1/app/View/Emails/html/my_request_confirmation.ctp" />
         <option value="$PROJECT_DIR$/project1/app/Model/User.php" />
-        <option value="$PROJECT_DIR$/project1/app/Controller/AppController.php" />
-        <option value="$PROJECT_DIR$/project1/app/View/Layouts/default.ctp" />
-        <option value="$PROJECT_DIR$/project1/app/webroot/less/stylesheet.less" />
+        <option value="$PROJECT_DIR$/project1/lib/Cake/Test/Case/AllRoutingTest.php" />
+        <option value="$PROJECT_DIR$/project1/app/Model/TimeRequest.php" />
         <option value="$PROJECT_DIR$/project1/app/webroot/js/scripts.js" />
-        <option value="$PROJECT_DIR$/project1/app/View/TimeRequests/index.ctp" />
-        <option value="$PROJECT_DIR$/project1/app/Controller/UsersController.php" />
+        <option value="$PROJECT_DIR$/project1/app/webroot/less/stylesheet.less" />
+        <option value="$PROJECT_DIR$/project1/app/View/Elements/modal.html" />
         <option value="$PROJECT_DIR$/project1/app/Controller/TimeRequestsController.php" />
+        <option value="$PROJECT_DIR$/project1/app/View/TimeRequests/index.ctp" />
+        <option value="$PROJECT_DIR$/project1/app/View/Elements/modal.ctp" />
+        <option value="$PROJECT_DIR$/project1/app/View/TimeRequests/view.ctp" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -217,7 +207,7 @@
   <component name="ProjectFrameBounds">
     <option name="y" value="22" />
     <option name="width" value="1280" />
-    <option name="height" value="720" />
+    <option name="height" value="774" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -245,17 +235,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -274,228 +253,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope">
+        <subPane subId="Project Files">
           <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WebDev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WebDev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="project1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WebDev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WebDev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="project1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WebDev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WebDev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="project1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="View" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Users" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WebDev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WebDev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="project1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="View" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TimeRequests" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WebDev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WebDev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="project1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="View" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WebDev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WebDev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="project1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="View" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Layouts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WebDev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WebDev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="project1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tmp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WebDev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WebDev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="project1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tmp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="logs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WebDev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WebDev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="project1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Model" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WebDev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WebDev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="project1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Controller" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -509,9 +275,9 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="options.lastSelected" value="preferences.general" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/project1/cakephp-2.3.0/app/Config/database.php" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="DefaultHtmlFileTemplate" value="Html" />
+    <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.includeJavaFiles" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
@@ -617,8 +383,8 @@
     <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1280" height="720" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="22" width="1280" height="774" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -626,14 +392,14 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17666127" sideWeight="0.1345515" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22123177" sideWeight="0.6129568" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17666127" sideWeight="0.8538206" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16288492" sideWeight="0.9847095" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -700,114 +466,94 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/project1/app/View/Users/login.ctp">
+    <entry file="file://$PROJECT_DIR$/project1/app/View/Emails/text/confirm_request.ctp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="0" selection-start="103" selection-end="529" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project1/app/Model/AppModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="3" selection-start="927" selection-end="927" vertical-scroll-proportion="0.1978022">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project1/lib/Cake/Core/App.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project1/app/Model/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="57" selection-start="787" selection-end="787" vertical-scroll-proportion="0.2967033">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project1/app/Model/TimeRequest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="34" selection-start="287" selection-end="287" vertical-scroll-proportion="0.18131869">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project1/app/Config/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="82" selection-start="1304" selection-end="1304" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project1/app/webroot/less/stylesheet.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="138" column="35" selection-start="3934" selection-end="3934" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="2" column="128" selection-start="183" selection-end="183" vertical-scroll-proportion="0.053475935" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/project1/app/View/Layouts/default.ctp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="48" selection-start="1611" selection-end="1611" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.20877944" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/project1/app/webroot/css/users.css">
+    <entry file="file://$PROJECT_DIR$/project1/app/View/Emails/html/confirm_request.ctp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="32" selection-start="185" selection-end="185" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project1/app/Controller/AppController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="0" selection-start="750" selection-end="788" vertical-scroll-proportion="0.085388996">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project1/app/tmp/logs/error.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1802" column="87" selection-start="122057" selection-end="122057" vertical-scroll-proportion="0.69330853">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project1/app/View/TimeRequests/index.ctp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="26" selection-start="1814" selection-end="1814" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="33" selection-start="14" selection-end="33" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/project1/app/View/Users/create.ctp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="151" selection-end="187" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="5" column="0" selection-start="151" selection-end="187" vertical-scroll-proportion="0.13066202" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project1/lib/Cake/Test/Case/AllRoutingTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="0" selection-start="1" selection-end="1" vertical-scroll-proportion="0.028462999" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project1/app/View/Emails/html/my_request_confirmation.ctp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="0" selection-start="239" selection-end="239" vertical-scroll-proportion="0.13611615" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project1/app/Model/TimeRequest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="1" selection-start="567" selection-end="567" vertical-scroll-proportion="0.44701988" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project1/app/Model/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="0" selection-start="236" selection-end="1251" vertical-scroll-proportion="0.205298" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/project1/app/webroot/js/scripts.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="47" selection-start="303" selection-end="303" vertical-scroll-proportion="0.0">
+        <state line="35" column="0" selection-start="1188" selection-end="1188" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/project1/app/Controller/UsersController.php">
+    <entry file="file://$PROJECT_DIR$/project1/app/View/Elements/modal.ctp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="5" selection-start="1019" selection-end="1019" vertical-scroll-proportion="-11.25">
+        <state line="8" column="26" selection-start="327" selection-end="327" vertical-scroll-proportion="0.1986755" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project1/app/View/TimeRequests/index.ctp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="0" selection-start="654" selection-end="2308" vertical-scroll-proportion="0.24390244" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project1/app/webroot/less/stylesheet.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="149" column="30" selection-start="4190" selection-end="4190" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project1/app/View/TimeRequests/view.ctp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="3" selection-start="156" selection-end="156" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/project1/app/Controller/TimeRequestsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="26" selection-start="1090" selection-end="1090" vertical-scroll-proportion="0.71537">
+        <state line="57" column="33" selection-start="2492" selection-end="2492" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project1/app/Config/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="26" selection-start="1414" selection-end="1414" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="34" selection-start="1798" selection-end="1798" vertical-scroll-proportion="0.3936877">
           <folding />
         </state>
       </provider>

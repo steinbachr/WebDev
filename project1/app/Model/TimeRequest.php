@@ -7,10 +7,13 @@
  * To change this template use File | Settings | File Templates.
  */
 class TimeRequest extends Model {    
-    public $belongsTo = array (
-        'User' => array (
-            'className' => 'User',
-            'foreignKey' => 'uid'
+    public $belongsTo = array('User', 'Category', 'Duration');
+    public $validate = array(
+        'description' => array('required' => array(
+                               'rule' => array('notEmpty'),
+                               'message' => 'A username is required',
+                               'allowEmpty' => false
+                        )
         )
-    );    
+    );
 }

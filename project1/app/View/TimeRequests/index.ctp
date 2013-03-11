@@ -38,12 +38,19 @@
             <h4><?php echo $step['body']; ?></h4>
             </div>
             <div class="step-input"> 
-               <?php if($step['input'] != '') { echo $this->Form->input($step['input']); } ?>
-            </div>
+               <?php 
+               if ($step['input'] == 'description') {
+                   echo $this->Form->textarea($step['input'], array('rows' => '5', 'cols' => '5'));                     
+               } elseif ($step['input'] != '') {
+                   echo $this->Form->input($step['input']);
+               }    
+               ?>                               
+            </div>            
             <button type="button" class="btn btn-primary btn-large"><?php echo $step['button']; ?></button>
         </div>            
-        <?php endforeach; ?>      
-        <?php echo $this->Form->input('uid', array('value'=>$user['id'], 'type'=>'hidden')); ?>
+        <?php endforeach; ?>  
+        <div class="errors"></div>
+        <?php echo $this->Form->input('user_id', array('value'=>$user['id'], 'type'=>'hidden')); ?>
         </form>
     </div>
 </div>

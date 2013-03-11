@@ -1,0 +1,52 @@
+@button-background: #64247F;
+
+.header-gradient() {
+  background: #b4df5b; /* Old browsers */
+  background: -moz-linear-gradient(top, #b4df5b 0%, #b4df5b 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#b4df5b), color-stop(100%,#b4df5b)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #b4df5b 0%,#b4df5b 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #b4df5b 0%,#b4df5b 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #b4df5b 0%,#b4df5b 100%); /* IE10+ */
+  background: linear-gradient(to bottom, #b4df5b 0%,#b4df5b 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b4df5b', endColorstr='#b4df5b',GradientType=0 ); /* IE6-9 */
+}
+
+body {
+  .container {
+    margin: 0px;
+    width: 100%;
+    .header {            
+      text-align: center;
+      color: white;      
+      height: 300px;
+      padding-top: 150px;
+      .header-gradient;
+      h1 {
+        margin-top: 0px;
+        font-size: 60px;
+      }
+      img {
+        position: relative;
+        &.right-pointer {
+          top: -27px;
+          left: 145px;
+        }
+      }
+    }
+    .span12 {
+      width: 100%;
+      margin-left: 0px;
+      .button-container {        
+        width: 200px;
+        height: 150px;
+        text-align: center;
+        margin: 50px auto;
+        button {
+          width: 200px;
+          height: 75px;
+          background: @button-background;          
+        }
+      }
+    }
+  }
+}

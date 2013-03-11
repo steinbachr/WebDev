@@ -124,6 +124,11 @@ body #rent_time_popup .modal-body .unreached-input {
 body #rent_time_popup .modal-body .active {
   display: block !important;
 }
+body #rent_time_popup .modal-body div.errors {
+  text-align: center;
+  padding-top: 10px;
+  color: red;
+}
 body #rent_time_popup .modal-body .step {
   text-align: center;
   display: none;

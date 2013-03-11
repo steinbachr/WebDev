@@ -19,7 +19,13 @@ class User extends Model {
                                                 'message' => 'A password is required'
                                                 )
                                            ),
+                        'email' => array('required' => array(
+                                                'rule' => array('notEmpty'),
+                                                'message' => 'Give me yo\' email'
+                                                )
+                                        )
                         );
+    public $hasMany = 'TimeRequest';
 
     public function beforeSave($options = array()) {
         if (isset($this->data[$this->alias]['password'])) {
