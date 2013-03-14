@@ -1,17 +1,60 @@
 {% extends 'base.html' %}
+
+{% block css %}
+    <link rel="stylesheet/less" type="text/css" href="{{ STATIC_URL }}css/less/index.less" />
+{% endblock %}
+{% block js %}
+    <script type="text/javascript" src="{{ STATIC_URL }}js/mine/login.js"></script>
+{% endblock %}
 {% block body %}
+    <div id="fb-root"></div>
+    <script>
+        // Additional JS functions here
+        window.fbAsyncInit = function() {
+            FB.init({
+                appId      : '552967234734621', // App ID
+                channelUrl : '', // Channel File
+                status     : true, // check login status
+                cookie     : true, // enable cookies to allow the server to access the session
+                xfbml      : true  // parse XFBML
+            });
+
+            // Additional init code here
+            FB.getLoginStatus(function(response) {
+                if (response.status === 'connected') {
+                    populateForm();
+                } else if (response.status === 'not_authorized') {
+                    facebook.login();
+                } else {
+                    facebook.login();
+                }
+            });
+        };
+
+        // Load the SDK Asynchronously
+        (function(d){
+            var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+            if (d.getElementById(id)) {return;}
+            js = d.createElement('script'); js.id = id; js.async = true;
+            js.src = "//connect.facebook.net/en_US/all.js";
+            ref.parentNode.insertBefore(js, ref);
+        }(document));
+    </script>
     <div class="container">
         <div class="header">
-            <h1>Insta' Pickup</h1>
+            <h1>InstaPickup</h1>
             <h4>just add water</h4> 
             <h5>(or click this guy)</h5>
             <img src="{{ STATIC_URL }}images/button_pointer_right.png" class="right-pointer" alt="hi"/>
         </div>
         <div class="span12">
             <div class="button-container">
+                <form id="create_user" method="post">
+                {{ form }}
                 <button class="btn btn-primary btn-large">Sign Up Now</button>
-            </div>
-        </div>
-    </div>
+                </form>
+            </div>            
+        </div>    
+    </div>    
 {% endblock %}
 

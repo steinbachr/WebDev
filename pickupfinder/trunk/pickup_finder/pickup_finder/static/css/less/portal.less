@@ -1,0 +1,53 @@
+@import "core";
+
+.header {
+  height: 50px;
+  text-align: center;
+  color: white;
+  .header-gradient;
+  padding-top: 30px;
+  font-size: 40px;
+  border-bottom: solid @dark-grey 2px  
+}
+.container {
+  width: 700px;  
+  padding: 15px 30px;
+  border-left: solid 2px @dark-grey;
+  border-right: solid 2px @dark-grey;
+  .navbar {
+    text-align: center;
+    .navbar-inner {
+      display: inline-block;
+      ul li {
+        width: 150px;
+      }
+    }
+  }
+}
+
+.content-container {
+  text-align: center;
+  .content {
+    display: inline-block;
+    /***DASHBOARD***/
+    .dashboard {      
+      .map-holder {
+        height: 300px;
+        width: 400px;
+        border: solid 1px @light-grey;
+        margin: auto;
+        .border-radius;
+      }
+      .game-lineup {
+        margin-top: 20px;
+        i {
+          vertical-align: text-bottom;
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+
+}
+
+

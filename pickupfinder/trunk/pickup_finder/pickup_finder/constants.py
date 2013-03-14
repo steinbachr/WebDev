@@ -1,11 +1,14 @@
-class DataSourceConstants():
+class ChanceAttendingConstants():
     #data source options
-    CROWD = (0, "crowdsourced")
-    SCRAPED = (1, "scraped")
+    NOT_RESPONDED=  (-1, "na")
+    DEFINITE     =  (0, "definitely")
+    MAYBE        =  (1, "maybe")
+    PROBABLY_NOT =  (2, "probably not")
+    NOT          =  (3, "nope")
     
     @classmethod
     def choices_for_model(cls):
-        return (cls.CROWD, cls.SCRAPED)
+        return (cls.NOT_RESPONDED, cls.DEFINITE, cls.MAYBE, cls.PROBABLY_NOT, cls.NOT)
     
     
 

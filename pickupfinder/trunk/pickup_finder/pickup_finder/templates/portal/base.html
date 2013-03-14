@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block css %}
+    <link rel="stylesheet/less" type="text/css" href="{{ STATIC_URL }}css/less/portal.less" />
+{% endblock %}
+{% block body %}
+    <div class="header">InstaPickup</div>
+    <div class="container">
+        <div class="navbar">
+            <div class="navbar-inner">                
+                <ul class="nav">
+                    <li class="active"><a href="#">Dashboard</a></li>
+                    <li><a href="#">Start a Game</a></li>
+                    <li><a href="#">View My Games</a></li>
+                    <li><a href="#">Help</a></li>
+                </ul>                
+            </div>
+        </div>
+        <div class="content-container">
+            <div class="content">
+                <div class="dashboard">
+                    <div class="map-holder">
+                        <h1>Yay a map will be here</h1>                
+                    </div>            
+                    <div class="game-lineup">
+                        <div class="accordion" id="lineup_accordion">
+                            <div class="accordion-group">
+                                <div class="accordion-heading">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#lineup_accordion" href="#collapsible">
+                                        <h4>Yay this will be where a lineup goes<i class="icon-list"></i></h4>
+                                    </a>
+                                </div>
+                                <div id="collapsible" class="accordion-body collapse">
+                                    <div class="accordion-inner">
+                                        lineup
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
