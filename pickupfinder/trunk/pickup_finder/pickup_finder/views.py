@@ -1,22 +1,32 @@
 from django.shortcuts import render_to_response
 from django.template import RequestContext
 from pickup_finder.controllers import *
-from pickup_finder.http import Http
-from pickup_finder.forms import UserForm
+
 
 def home(request):
-    context = RequestContext(request, {'form' : UserForm()})
-    #if its a post, we know that the user has clicked the signup button
-    if request.method == 'POST':
-        controller = CreateUserController(request)
-        controller.create_user()
-        return Http.redirect('pickup_finder.views.dashboard')
-    
-    return render_to_response("index.html", context)
+    controller = CreateUserController(request)              
+    return controller.create_user() #because a redirect is required, we break the normal pattern here
 
+##PORTALS
 def dashboard(request):
-    context = RequestContext(request, {})
-    return render_to_response("portal/base.html", context)
+    controller = DashboardController(request)    
+    context = RequestContext(request, controller.dashboard())
+    return render_to_response("portal/dashboard.html", context)
+
+def create_game(request):
+    controller = CreateGameController(request)    
+    context = RequestContext(request, controller.create_game())
+    return render_to_response("portal/create_game.html", context)
+
+def view_games(request):
+    controller = ViewGamesController(request)
+    context = RequestContext(request, controller.view_games())
+    return render_to_response("portal/view_games.html", context)
+
+def help(request):
+    controller = HelpController(request)
+    context = RequestContext(request, controller.help())
+    return render_to_response("portal/help.html", context)
     
     
 

@@ -9,37 +9,18 @@
         <div class="navbar">
             <div class="navbar-inner">                
                 <ul class="nav">
-                    <li class="active"><a href="#">Dashboard</a></li>
-                    <li><a href="#">Start a Game</a></li>
-                    <li><a href="#">View My Games</a></li>
-                    <li><a href="#">Help</a></li>
+                    <li{% if current_tab == "dashboard" %} class="active"{% endif %}><a href="{% url pickup_finder.views.dashboard %}">Dashboard</a></li>
+                    <li{% if current_tab == "create-game" %} class="active"{% endif %}><a href="{% url pickup_finder.views.create_game %}">Start a Game</a></li>
+                    <li{% if current_tab == "view-games" %} class="active"{% endif %}><a href="{% url pickup_finder.views.view_games %}">View My Games</a></li>
+                    <li{% if current_tab == "help" %} class="active"{% endif %}><a href="{% url pickup_finder.views.help %}">Help</a></li>
                 </ul>                
             </div>
         </div>
         <div class="content-container">
             <div class="content">
-                <div class="dashboard">
-                    <div class="map-holder">
-                        <h1>Yay a map will be here</h1>                
-                    </div>            
-                    <div class="game-lineup">
-                        <div class="accordion" id="lineup_accordion">
-                            <div class="accordion-group">
-                                <div class="accordion-heading">
-                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#lineup_accordion" href="#collapsible">
-                                        <h4>Yay this will be where a lineup goes<i class="icon-list"></i></h4>
-                                    </a>
-                                </div>
-                                <div id="collapsible" class="accordion-body collapse">
-                                    <div class="accordion-inner">
-                                        lineup
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                {% block content %}
+                {% endblock %}
+            </div>            
         </div>
     </div>
 {% endblock %}

@@ -1,0 +1,38 @@
+{% extends 'portal/base.html' %}
+
+{% block content %}
+    <div class="view-games">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Date / Time</th>
+                    <th>Location</th>
+                    <th>Players</th>
+                </tr>                
+            </thead>
+            <tbody>
+                <tr>
+                    <td>YAY THIS</td>
+                    <td>WILL HAVE RELEVANT</td>
+                    <td><a href="#">INFORMATION</a></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="game-lineup">
+            <div class="accordion" id="lineup_accordion">
+                <div class="accordion-group">
+                    <div class="accordion-heading">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#lineup_accordion" href="#collapsible">
+                            <h4>Yay this will be where a lineup goes<i class="icon-list"></i></h4>
+                        </a>
+                    </div>
+                    <div id="collapsible" class="accordion-body collapse">
+                        <div class="accordion-inner">
+                            lineup
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

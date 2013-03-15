@@ -1,0 +1,52 @@
+{% extends 'portal/base.html' %}
+
+{% block js %}    
+    <script type="text/javascript" src="{{ STATIC_URL }}js/libraries/jquery-ui-1.9.2.custom.min.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/mine/create_game.js"></script>
+{% endblock %}
+{% block content %}
+    <div class="create-game">
+        <form id="create_game_form" class="form-horizontal" method="post">
+            <div class="top-form">
+                {% for field in form %}
+                    <div class="control-group">
+                        <label class="control-label">{{ field.label }}</label>
+                        <div class="controls">
+                            {{ field }}
+                        </div>
+                    </div>
+                {% endfor %}                          
+            </div>     
+            <div class="bottom-form">
+                <div class="player-drag-box">
+                    <h4>Drag friends here</h4>
+                    <ul></ul>
+                </div>
+                <div class="friends-list">
+                    <ul>
+                        <li class="draggable">Yay johnson</li>
+                        <li class="draggable">This swanson</li>
+                        <li class="draggable">Will bronson</li>
+                        <li class="draggable">Be tonson</li>
+                        <li class="draggable">The fronson</li>
+                        <li class="draggable">Users kwonson</li>
+                        <li class="draggable">Friends lonson</li>
+                        <li class="draggable">Friends lonson</li>
+                        <li class="draggable">Friends lonson</li>
+                        <li class="draggable">Friends lonson</li>
+                        <li class="draggable">Friends lonson</li>
+                        <li class="draggable">Friends lonson</li>
+                        <li class="draggable">Friends lonson</li>
+                        <li class="draggable">Friends lonson</li>
+                        <li class="draggable">Friends lonson</li>
+                        <li class="draggable">Friends lonson</li>
+                        <li class="draggable">Friends lonson</li>
+                        <li class="draggable">Friends lonson</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="clearfix"></div>            
+            <button class="btn btn-large">Finish Up</button>            
+        </form>
+    </div>    
+{% endblock %}

@@ -14,3 +14,10 @@ class UserForm(forms.Form):
             raise forms.ValidationError("hit a problem processing request")
         
         return cleaned_data
+    
+    
+class GameForm(forms.Form):
+    location = forms.CharField(max_length=50)
+    public = forms.BooleanField(widget=forms.CheckboxInput())
+    player_cap = forms.IntegerField(max_value=50, required=False, widget=forms.TextInput(attrs={'disabled' : True}))
+    start = forms.DateTimeField()

@@ -1,5 +1,6 @@
 # Django settings for pickup_finder project.
 import os
+from django.core.urlresolvers import reverse
 settings_dir = os.path.dirname(__file__)
 PROJECT_ROOT = os.path.abspath(os.path.dirname(settings_dir))
 
@@ -15,11 +16,11 @@ MANAGERS = ADMINS
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'PickupFinder',                      # Or path to database file if using sqlite3.
-        'USER': 'root',                      # Not used with sqlite3.
-        'PASSWORD': '',                  # Not used with sqlite3.
-        'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
-        'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
+        'NAME': 'pickupfinder',                      # Or path to database file if using sqlite3.
+        'USER': 'root',                      
+        'PASSWORD': 'gHrVI83yiAP0Dd7AXNjJ',   
+        'HOST': 'instapickup-steinbachr.azva.dotcloud.net', # Set to empty string for localhost. Not used with sqlite3.
+        'PORT': '36465',                      # Set to empty string for default. Not used with sqlite3.
     }
 }
 

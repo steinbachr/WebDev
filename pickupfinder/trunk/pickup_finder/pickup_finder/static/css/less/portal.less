@@ -1,5 +1,17 @@
 @import "core";
 
+.button-gradient() {
+  background: #49c0f0; /* Old browsers */
+  background: -moz-linear-gradient(-45deg,  #49c0f0 0%, #2cafe3 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#49c0f0), color-stop(100%,#2cafe3)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(-45deg,  #49c0f0 0%,#2cafe3 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(-45deg,  #49c0f0 0%,#2cafe3 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(-45deg,  #49c0f0 0%,#2cafe3 100%); /* IE10+ */
+  background: linear-gradient(135deg,  #49c0f0 0%,#2cafe3 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#49c0f0', endColorstr='#2cafe3',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+}
+
 .header {
   height: 50px;
   text-align: center;
@@ -10,7 +22,7 @@
   border-bottom: solid @dark-grey 2px  
 }
 .container {
-  width: 700px;  
+  width: 800px;  
   padding: 15px 30px;
   border-left: solid 2px @dark-grey;
   border-right: solid 2px @dark-grey;
@@ -29,6 +41,22 @@
   text-align: center;
   .content {
     display: inline-block;
+    .game-lineup {
+      margin-top: 20px;
+      i {
+        vertical-align: text-bottom;
+        margin-left: 10px;
+      }
+      .accordion-heading {
+        background: @light-green;
+        a:hover {
+          text-decoration: none;
+        }
+        h4 {
+          color: white;
+        }
+      }
+    }
     /***DASHBOARD***/
     .dashboard {      
       .map-holder {
@@ -38,16 +66,73 @@
         margin: auto;
         .border-radius;
       }
-      .game-lineup {
-        margin-top: 20px;
-        i {
-          vertical-align: text-bottom;
-          margin-left: 10px;
+    }
+    /***CREATE GAME***/
+    .create-game {
+      .top-form {
+        label {
+          cursor: default;
+        }
+        .controls {
+          text-align: left;
         }
       }
+      .bottom-form { 
+        height: 200px;
+        width: 500px;
+        overflow-y: scroll;
+        .player-drag-box {
+          border: dashed 3px #ccc;
+          width: 330px;
+          height: 200px;                    
+          position: fixed;          
+          left: 250px;
+          ul {
+            list-style-type: none;
+            margin: auto;
+            overflow: scroll;
+            height: 155px;
+            li {
+              background: @light-green;
+              padding: 10px;
+              border: solid 2px #999;
+            }
+          }
+        }
+        .friends-list {
+          display: inline-block;
+          margin-left: 50px;
+          height: 200px;
+          width: 150px;                    
+          ul {
+            list-style-type: none;             
+            li {
+              cursor: pointer;
+              .button-gradient;
+              padding: 10px;
+              border: solid 2px #999;
+            }
+          }
+        }
+      }
+      button {
+        margin-top: 30px;    
+        background: @dark-purple;
+        color: white;
+      }
     }
-  }
-
+    /***HELP***/
+    .help {
+      ul {
+        list-style-type: none;
+        li {
+          background: url('../../images/help_list_image.png') no-repeat left top;  
+          height: 120px;
+          padding: 40px 120px;
+        }        
+      }
+    }
+  }    
 }
 
 
