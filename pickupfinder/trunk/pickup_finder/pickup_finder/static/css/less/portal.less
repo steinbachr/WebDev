@@ -66,6 +66,9 @@
         margin: auto;
         .border-radius;
       }
+      .game-lineup ul {
+        list-style-type: none;
+      }
     }
     /***CREATE GAME***/
     .create-game {
@@ -94,6 +97,7 @@
             height: 155px;
             li {
               background: @light-green;
+              color: @darkest-grey;
               padding: 10px;
               border: solid 2px #999;
             }
@@ -103,10 +107,12 @@
           display: inline-block;
           margin-left: 50px;
           height: 200px;
-          width: 150px;                    
+          width: 150px; 
+          padding-left: 130px;
           ul {
             list-style-type: none;             
             li {
+              color: white;
               cursor: pointer;
               .button-gradient;
               padding: 10px;

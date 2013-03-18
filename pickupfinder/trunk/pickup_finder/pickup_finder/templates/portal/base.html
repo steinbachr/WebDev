@@ -3,16 +3,20 @@
 {% block css %}
     <link rel="stylesheet/less" type="text/css" href="{{ STATIC_URL }}css/less/portal.less" />
 {% endblock %}
+{% block js %}
+    <script type="text/javascript" src="{{ STATIC_URL }}js/mine/login.js"></script>
+{% endblock %}
+{% block facebook %}{% endblock %}
 {% block body %}
     <div class="header">InstaPickup</div>
     <div class="container">
         <div class="navbar">
             <div class="navbar-inner">                
                 <ul class="nav">
-                    <li{% if current_tab == "dashboard" %} class="active"{% endif %}><a href="{% url pickup_finder.views.dashboard %}">Dashboard</a></li>
-                    <li{% if current_tab == "create-game" %} class="active"{% endif %}><a href="{% url pickup_finder.views.create_game %}">Start a Game</a></li>
-                    <li{% if current_tab == "view-games" %} class="active"{% endif %}><a href="{% url pickup_finder.views.view_games %}">View My Games</a></li>
-                    <li{% if current_tab == "help" %} class="active"{% endif %}><a href="{% url pickup_finder.views.help %}">Help</a></li>
+                    <li{% if current_tab == "dashboard" %} class="active"{% endif %}><a href="{% url pickup_finder.views.dashboard %}"><i class="icon-dashboard"></i>Dashboard</a></li>
+                    <li{% if current_tab == "create-game" %} class="active"{% endif %}><a href="{% url pickup_finder.views.create_game %}"><i class="icon-plus"></i>Start a Game</a></li>
+                    <li{% if current_tab == "view-games" %} class="active"{% endif %}><a href="{% url pickup_finder.views.view_games %}"><i class="icon-eye-open"></i>View My Games</a></li>
+                    <li{% if current_tab == "help" %} class="active"{% endif %}><a href="{% url pickup_finder.views.help %}"><i class="icon-question-sign"></i>Help</a></li>
                 </ul>                
             </div>
         </div>

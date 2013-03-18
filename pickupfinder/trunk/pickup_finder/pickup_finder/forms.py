@@ -2,7 +2,7 @@ from django import forms
 
 class UserForm(forms.Form):  
     name = forms.CharField(max_length=50, widget=forms.HiddenInput())
-    fb_id = forms.CharField(max_length=50, widget=forms.HiddenInput())
+    fb_id = forms.CharField(max_length=50, widget=forms.HiddenInput())    
     
     def clean(self):
         cleaned_data = super(UserForm, self).clean()
@@ -18,6 +18,8 @@ class UserForm(forms.Form):
     
 class GameForm(forms.Form):
     location = forms.CharField(max_length=50)
-    public = forms.BooleanField(widget=forms.CheckboxInput())
-    player_cap = forms.IntegerField(max_value=50, required=False, widget=forms.TextInput(attrs={'disabled' : True}))
-    start = forms.DateTimeField()
+    public = forms.BooleanField(widget=forms.CheckboxInput(), initial=True, required=False)
+    player_cap = forms.IntegerField(max_value=50, widget=forms.TextInput(), required=False)
+    start = forms.CharField(max_length=50)
+    player_names = forms.CharField(max_length=500, widget=forms.HiddenInput(), required=False)
+    player_ids = forms.CharField(max_length=500, widget=forms.HiddenInput(), required=False)

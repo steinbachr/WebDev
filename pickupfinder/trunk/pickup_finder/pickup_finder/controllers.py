@@ -1,4 +1,8 @@
 from pickup_finder.forms import *
+from pickup_finder.constants import *
+from pickup_finder.models import *
+from django.core import serializers
+from django.db import IntegrityError
 
 class Controller():
     def __init__(self, request):
@@ -46,15 +50,22 @@ class CreateUserController(Controller):
         else:
             form = UserForm()
         
-        context = RequestContext(self.request, {'form' : form})
+        context = RequestContext(self.request, {'form' : form, 'facebook_id' : APIKeys.FACEBOOK_DEV})
         return render_to_response("index.html", context)             
 
 ###PORTAL CONTROLLERS###
 class DashboardController(PortalController):
     def __init__(self, request):        
-        PortalController.__init__(self, request, 'dashboard')
+        PortalController.__init__(self, request, 'dashboard')    
+        self.games = Game.objects.filter(creator=self.request.user)        
+        self.player_games = PlayerGame.objects.filter(game__in=self.games)
+        self.players = [pg.player for pg in self.player_games]
 
-    def dashboard(self):         
+    def dashboard(self):      
+        self.tpl_vars['google_key'] = APIKeys.GOOGLE    
+        self.tpl_vars['games_json'] = serializers.serialize("json", self.games, fields=('latitude','longitude'))
+        self.tpl_vars['player_game_json'] = serializers.serialize("json", self.player_games)
+        self.tpl_vars['players_json'] = serializers.serialize("json", self.players)
         return self.tpl_vars
     
 class CreateGameController(PortalController):
@@ -62,12 +73,38 @@ class CreateGameController(PortalController):
         PortalController.__init__(self, request, 'create-game')
         
     def create_game(self):
+        from geopy.geocoders.googlev3 import GoogleV3
+        import datetime
+        
         if self.request.method == "POST":
-            form = GameForm(self.request.POST)
+            form = GameForm(self.request.POST)       
+            google = GoogleV3()
+            
+            if form.is_valid():
+                location = form.cleaned_data['location']
+                place, (lat, lng) = google.geocode(location)
+                public = form.cleaned_data['public']
+                player_cap = form.cleaned_data['player_cap'] if public else None
+                start = form.cleaned_data['start']
+                player_names = form.cleaned_data['player_names']
+                player_ids = form.cleaned_data['player_ids']
+                
+                split_names = player_names.split(',')[1:] #the names and ids start with a , so the first element is a blank el
+                split_ids = player_ids.split(',')[1:]
+
+                #create the model instances
+                game = Game(creator=self.request.user, latitude=lat, longitude=lng, normalized_location=location, public=public,
+                            person_cap=player_cap, starts_at=datetime.datetime.now())
+                game.save()
+                for index,name in enumerate(split_names):                    
+                    (player, created) = Player.objects.get_or_create(name=name, fb_id=split_ids[index])                                 
+                    player_game = PlayerGame(player=player, game=game, chance_attending=ChanceAttendingConstants.NOT_RESPONDED[0])
+                    player_game.save()                    
         else:
             form = GameForm()
             
         self.tpl_vars['form'] = form
+        self.tpl_vars['facebook_id'] = APIKeys.FACEBOOK_DEV
         return self.tpl_vars
 
 class ViewGamesController(PortalController):

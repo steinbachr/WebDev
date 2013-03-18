@@ -10,6 +10,14 @@ class ChanceAttendingConstants():
     def choices_for_model(cls):
         return (cls.NOT_RESPONDED, cls.DEFINITE, cls.MAYBE, cls.PROBABLY_NOT, cls.NOT)
     
+class APIKeys():
+    FACEBOOK_DEV = "552967234734621"
+    FACEBOOK_PROD = "154899554671199"
+    GOOGLE = "AIzaSyB9hdim8sfFqodjXTmBsSZ2cpfqaZeSC7Y"
+    
+
+        
+    
     
 
 

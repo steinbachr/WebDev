@@ -4,7 +4,7 @@ from pickup_finder.controllers import *
 
 
 def home(request):
-    controller = CreateUserController(request)              
+    controller = CreateUserController(request)    
     return controller.create_user() #because a redirect is required, we break the normal pattern here
 
 ##PORTALS
