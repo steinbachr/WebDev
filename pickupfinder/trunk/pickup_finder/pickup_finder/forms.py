@@ -1,7 +1,7 @@
 from django import forms
 
 class UserForm(forms.Form):  
-    name = forms.CharField(max_length=50, widget=forms.HiddenInput())
+    name = forms.CharField(max_length=80, widget=forms.HiddenInput())
     fb_id = forms.CharField(max_length=50, widget=forms.HiddenInput())    
     
     def clean(self):
@@ -20,6 +20,7 @@ class GameForm(forms.Form):
     location = forms.CharField(max_length=50)
     public = forms.BooleanField(widget=forms.CheckboxInput(), initial=True, required=False)
     player_cap = forms.IntegerField(max_value=50, widget=forms.TextInput(), required=False)
-    start = forms.CharField(max_length=50)
+    start_date = forms.CharField(max_length=50, widget=forms.TextInput(attrs={'class' : 'datepicker'}))
+    start_time = forms.CharField(max_length=50, widget=forms.TextInput(attrs={'placeholder' : 'e.g. 3:45PM'}))
     player_names = forms.CharField(max_length=500, widget=forms.HiddenInput(), required=False)
     player_ids = forms.CharField(max_length=500, widget=forms.HiddenInput(), required=False)

@@ -1,8 +1,12 @@
 {% extends 'portal/base.html' %}
 
-{% block js %}
-    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places&sensor=true"></script>
-    <script type="text/javascript" src="{{ STATIC_URL }}js/libraries/jquery-ui-1.9.2.custom.min.js"></script>        
+{% block css_spec %}
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/libraries/datepicker.css" />    
+{% endblock %}
+{% block js_spec %}
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places&sensor=true"></script>    
+    <script type="text/javascript" src="{{ STATIC_URL }}js/libraries/jquery-ui-1.9.2.custom.min.js"></script>      
+    <script type="text/javascript" src="{{ STATIC_URL }}js/libraries/bootstrap-datepicker.js"></script>    
     <script type="text/javascript" src="{{ STATIC_URL }}js/mine/create_game.js"></script>
 {% endblock %}
 {% block facebook %}    

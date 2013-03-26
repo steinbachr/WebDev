@@ -20,41 +20,23 @@ function initialize() {
             mapOptions.zoom = 8;
         }
 
-        var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);        
-
+        var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+        
         //add the games to the map        
         for (var i = 0 ; i < games.length ; i++) {
             var latlng = new google.maps.LatLng(games[i].fields.latitude, games[i].fields.longitude);
             var marker = new google.maps.Marker({
                 position: latlng,
                 map: map,
-                title:"Hello World!",
+                title: "games marker",
                 id: games[i].pk
-            });
+            });            
 
             //give the marker the games' id so we can use it if the marker is clicked
-            google.maps.event.addListener(marker, 'click', function() {
-                populate_lineup(this.id);                
+            google.maps.event.addListener(marker, 'click', function() {                
+                populate_lineup(this.id);           
             });
         }               
-    }
-}
-
-function populate_lineup(game_id) {
-    var $lineup_list = $('.game-lineup').find('.accordion-inner ul');
-    //clear the lineup list in case it had stuff from a previous click
-    $lineup_list.html('');
-    
-    for (var i = 0 ; i < player_games.length ; i++) {
-        if (player_games[i].fields.game == game_id) {
-            for (var j = 0 ; j < players.length ; j++) {
-                //if the current player_game is in the clicked game, get the player that matches that player game
-                if (players[j].pk == player_games[i].fields.player) {
-                    $lineup_list.append('<li>'+players[j].fields.name+'</li>');
-                    break;
-                }                    
-            }            
-        }
     }
 }
 

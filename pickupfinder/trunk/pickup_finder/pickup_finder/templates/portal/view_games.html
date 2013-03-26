@@ -1,5 +1,14 @@
 {% extends 'portal/base.html' %}
 
+{% block js_spec %}
+    <script>
+        var games = {{ games_json|safe }};
+        var player_games = {{ player_game_json|safe }}
+        var players = {{ players_json|safe }}
+    </script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/mine/game_lineup.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/mine/view_games.js"></script>
+{% endblock %}
 {% block content %}
     <div class="view-games">
         <table class="table table-hover">
@@ -11,11 +20,13 @@
                 </tr>                
             </thead>
             <tbody>
+                {% for game in games %}
                 <tr>
-                    <td>YAY THIS</td>
-                    <td>WILL HAVE RELEVANT</td>
-                    <td><a href="#">INFORMATION</a></td>
+                    <td>{{ game.starts_at }}</td>
+                    <td>{{ game.normalized_location }}</td>
+                    <td class="roster"><a href="#" class="{{ game.id }}">roster</a></td>
                 </tr>
+            {% endfor %}
             </tbody>
         </table>
         <div class="game-lineup">
@@ -26,9 +37,11 @@
                             <h4>Game Lineup<i class="icon-list"></i></h4>
                         </a>
                     </div>
-                    <div id="collapsible" class="accordion-body collapse">
+                    <div id="collapsible" class="accordion-body collapse in">
                         <div class="accordion-inner">
-                            lineup
+                            <h4>Click a roster to see the lineup!</h4>
+                            <ul>                                
+                            </ul>
                         </div>
                     </div>
                 </div>

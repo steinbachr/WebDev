@@ -12,6 +12,13 @@
 
 }
 
+/***GLOBALS***/
+ul {
+  list-style-type: none;
+}
+
+
+/***PORTAL GLOBAL***/
 .header {
   height: 50px;
   text-align: center;
@@ -37,6 +44,7 @@
   }
 }
 
+/***PORTAL***/
 .content-container {
   text-align: center;
   .content {
@@ -73,6 +81,9 @@
     /***CREATE GAME***/
     .create-game {
       .top-form {
+        .control-group {
+          margin-bottom: 15px;
+        }
         label {
           cursor: default;
         }
@@ -90,10 +101,9 @@
           height: 200px;                    
           position: fixed;          
           left: 250px;
-          ul {
-            list-style-type: none;
-            margin: auto;
-            overflow: scroll;
+          overflow-x: hidden;
+          ul {            
+            margin: auto;            
             height: 155px;
             li {
               background: @light-green;
@@ -109,8 +119,7 @@
           height: 200px;
           width: 150px; 
           padding-left: 130px;
-          ul {
-            list-style-type: none;             
+          ul {                         
             li {
               color: white;
               cursor: pointer;
@@ -129,8 +138,7 @@
     }
     /***HELP***/
     .help {
-      ul {
-        list-style-type: none;
+      ul {        
         li {
           background: url('../../images/help_list_image.png') no-repeat left top;  
           height: 120px;

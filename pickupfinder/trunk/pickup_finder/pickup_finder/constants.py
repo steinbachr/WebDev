@@ -1,3 +1,6 @@
+class FormattingConstants():
+    DATE_FORMAT = '%m/%d/%Y %I:%M%p';
+
 class ChanceAttendingConstants():
     #data source options
     NOT_RESPONDED=  (-1, "na")

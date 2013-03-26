@@ -2,9 +2,13 @@
 
 {% block css %}
     <link rel="stylesheet/less" type="text/css" href="{{ STATIC_URL }}css/less/portal.less" />
+    {% block css_spec %}
+    {% endblock %}
 {% endblock %}
 {% block js %}
     <script type="text/javascript" src="{{ STATIC_URL }}js/mine/login.js"></script>
+    {% block js_spec %}
+    {% endblock %}
 {% endblock %}
 {% block facebook %}{% endblock %}
 {% block body %}

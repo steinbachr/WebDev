@@ -1,6 +1,7 @@
 from pickup_finder.forms import *
 from pickup_finder.constants import *
 from pickup_finder.models import *
+from pickup_finder.components import *
 from django.core import serializers
 from django.db import IntegrityError
 
@@ -33,7 +34,7 @@ class CreateUserController(Controller):
             form = UserForm(self.request.POST)
     
             if form.is_valid():
-                name = '%s:%s' % (form.cleaned_data['name'], form.cleaned_data['fb_id'])
+                name = form.cleaned_data['fb_id']
                 password = form.cleaned_data['name']
                 
                 #if the user already exists, log them in, o/w create them         
@@ -50,22 +51,17 @@ class CreateUserController(Controller):
         else:
             form = UserForm()
         
-        context = RequestContext(self.request, {'form' : form, 'facebook_id' : APIKeys.FACEBOOK_DEV})
+        context = RequestContext(self.request, {'form' : form, 'facebook_id' : APIKeys.FACEBOOK_PROD})
         return render_to_response("index.html", context)             
 
 ###PORTAL CONTROLLERS###
 class DashboardController(PortalController):
     def __init__(self, request):        
-        PortalController.__init__(self, request, 'dashboard')    
-        self.games = Game.objects.filter(creator=self.request.user)        
-        self.player_games = PlayerGame.objects.filter(game__in=self.games)
-        self.players = [pg.player for pg in self.player_games]
+        PortalController.__init__(self, request, 'dashboard')   
+        self.lineup_component = GameLineup(request)
 
     def dashboard(self):      
-        self.tpl_vars['google_key'] = APIKeys.GOOGLE    
-        self.tpl_vars['games_json'] = serializers.serialize("json", self.games, fields=('latitude','longitude'))
-        self.tpl_vars['player_game_json'] = serializers.serialize("json", self.player_games)
-        self.tpl_vars['players_json'] = serializers.serialize("json", self.players)
+        self.tpl_vars.update(self.lineup_component.tpl_vars()) 
         return self.tpl_vars
     
 class CreateGameController(PortalController):
@@ -74,7 +70,8 @@ class CreateGameController(PortalController):
         
     def create_game(self):
         from geopy.geocoders.googlev3 import GoogleV3
-        import datetime
+        from decimal import Decimal
+        import datetime               
         
         if self.request.method == "POST":
             form = GameForm(self.request.POST)       
@@ -82,10 +79,11 @@ class CreateGameController(PortalController):
             
             if form.is_valid():
                 location = form.cleaned_data['location']
-                place, (lat, lng) = google.geocode(location)
+                place, (lat, lng) = list(google.geocode(location, exactly_one=False))[0] #go back and fix
                 public = form.cleaned_data['public']
                 player_cap = form.cleaned_data['player_cap'] if public else None
-                start = form.cleaned_data['start']
+                start = datetime.datetime.strptime("%s %s" % (form.cleaned_data['start_date'], form.cleaned_data['start_time']), 
+                                                   FormattingConstants.DATE_FORMAT)                
                 player_names = form.cleaned_data['player_names']
                 player_ids = form.cleaned_data['player_ids']
                 
@@ -93,8 +91,8 @@ class CreateGameController(PortalController):
                 split_ids = player_ids.split(',')[1:]
 
                 #create the model instances
-                game = Game(creator=self.request.user, latitude=lat, longitude=lng, normalized_location=location, public=public,
-                            person_cap=player_cap, starts_at=datetime.datetime.now())
+                game = Game(creator=self.request.user, latitude=Decimal(lat), longitude=Decimal(lng), normalized_location=location, public=public,
+                            person_cap=player_cap, starts_at=start)
                 game.save()
                 for index,name in enumerate(split_names):                    
                     (player, created) = Player.objects.get_or_create(name=name, fb_id=split_ids[index])                                 
@@ -104,14 +102,17 @@ class CreateGameController(PortalController):
             form = GameForm()
             
         self.tpl_vars['form'] = form
-        self.tpl_vars['facebook_id'] = APIKeys.FACEBOOK_DEV
+        self.tpl_vars['facebook_id'] = APIKeys.FACEBOOK_PROD
         return self.tpl_vars
 
 class ViewGamesController(PortalController):
     def __init__(self, request):
         PortalController.__init__(self, request, 'view-games')
+        self.lineup_component = GameLineup(request)
 
-    def view_games(self):
+    def view_games(self):        
+        self.tpl_vars.update(self.lineup_component.tpl_vars())
+        self.tpl_vars['games'] = Game.games_by_creator(self.request.user)
         return self.tpl_vars
 
 

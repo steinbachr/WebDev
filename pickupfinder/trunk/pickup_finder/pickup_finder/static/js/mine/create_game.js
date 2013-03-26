@@ -5,6 +5,8 @@ $(document).ready(function() {
     var location_input = document.getElementById('id_location');    
     var $player_names = $('input[name="player_names"]');;
     var $player_ids = $('input[name="player_ids"]');
+
+    $(".datepicker" ).datepicker();    
     
     $droppable.on('drop', function(evt, ui) {
         add_player($(evt.target), ui.draggable);        
@@ -17,16 +19,22 @@ $(document).ready(function() {
             $player_cap.attr('disabled', 'true');
         }
     });
-
+    
+    $('form').submit(function() {
+        publish_to_feed();
+    });
 
     var options = {types: ['geocode']};
     autocomplete = new google.maps.places.Autocomplete(location_input, options);
     
+    var added_users = [];   //the users added to the box
+    //add the dragged player to the box
     function add_player(player_box, player) {
         var old_player_names = $player_names.val();
         var old_player_ids = $player_ids.val();;
         
         player_box.find('ul').append(player);
+        added_users.push(player.attr('id'));
         
         //add the player to the player_names input and the player_ids input
         $player_names.val(old_player_names + ',' + player.text())
@@ -34,6 +42,17 @@ $(document).ready(function() {
         
         //remove the weird css on the dragged item        
         player.css('position', 'static');        
+    }
+
+    //when the user has submitted the form, publish the confirmation link to each invited players' profile
+    function publish_to_feed() {
+        FB.api('/me/feed', 'post', { message : "TEST", tags : added_users.join(',')}, function(response) {
+            if (!response || response.error) {
+                alert('Error occured');
+            } else {
+                alert('Post ID: ' + response.id);
+            }
+        });
     }
 });
 

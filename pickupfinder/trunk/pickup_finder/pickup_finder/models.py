@@ -15,7 +15,11 @@ class Game(models.Model):
     #datetime fields
     created = models.DateTimeField(auto_now_add=True)
     modified = models.DateTimeField(auto_now=True)
-    starts_at = models.DateTimeField() 
+    starts_at = models.DateTimeField()
+    
+    @classmethod
+    def games_by_creator(cls, creator):
+        return cls.objects.filter(creator=creator)
     
 class Player(models.Model):
     fb_id = models.CharField(max_length=50, unique=True)
@@ -25,3 +29,7 @@ class PlayerGame(models.Model):
     player = models.ForeignKey(Player)
     game = models.ForeignKey(Game)
     chance_attending = models.SmallIntegerField(choices=ChanceAttendingConstants.choices_for_model())
+
+    @classmethod
+    def players_in_games(cls, games):
+        return cls.objects.filter(game__in=games)

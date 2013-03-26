@@ -2,15 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="078c4814-d8f8-427c-84b9-a50693064042" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pickupfinder/trunk/pickup_finder/pickup_finder/static/js/libraries/jquery-1.8.0.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pickupfinder/trunk/pickup_finder/pickup_finder/static/js/libraries/jquery-1.8.3.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pickupfinder/trunk/requirements.txt" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pickupfinder/trunk/pickup_finder/pickup_finder/templates/base.html" afterPath="$PROJECT_DIR$/pickupfinder/trunk/pickup_finder/pickup_finder/templates/base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pickupfinder/trunk/pickup_finder/pickup_finder/settings.py" afterPath="$PROJECT_DIR$/pickupfinder/trunk/pickup_finder/pickup_finder/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/styles/stylesheet.less" afterPath="$PROJECT_DIR$/public/styles/stylesheet.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pickupfinder/trunk/pickup_finder/pickup_finder/urls.py" afterPath="$PROJECT_DIR$/pickupfinder/trunk/pickup_finder/pickup_finder/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pickupfinder/trunk/pickup_finder/pickup_finder/templates/portal/base.html" afterPath="$PROJECT_DIR$/pickupfinder/trunk/pickup_finder/pickup_finder/templates/portal/base.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pickupfinder/trunk/pickup_finder/pickup_finder/constants.py" afterPath="$PROJECT_DIR$/pickupfinder/trunk/pickup_finder/pickup_finder/constants.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pickupfinder/trunk/pickup_finder/pickup_finder/controllers.py" afterPath="$PROJECT_DIR$/pickupfinder/trunk/pickup_finder/pickup_finder/controllers.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pickupfinder/trunk/pickup_finder/pickup_finder/static/js/mine/core.js" afterPath="$PROJECT_DIR$/pickupfinder/trunk/pickup_finder/pickup_finder/static/js/mine/core.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pickupfinder/trunk/pickup_finder/pickup_finder/templates/portal/create_game.html" afterPath="$PROJECT_DIR$/pickupfinder/trunk/pickup_finder/pickup_finder/templates/portal/create_game.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pickupfinder/trunk/pickup_finder/pickup_finder/static/js/mine/create_game.js" afterPath="$PROJECT_DIR$/pickupfinder/trunk/pickup_finder/pickup_finder/static/js/mine/create_game.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pickupfinder/trunk/pickup_finder/pickup_finder/templates/portal/dashboard.html" afterPath="$PROJECT_DIR$/pickupfinder/trunk/pickup_finder/pickup_finder/templates/portal/dashboard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pickupfinder/trunk/pickup_finder/pickup_finder/static/js/mine/dashboard.js" afterPath="$PROJECT_DIR$/pickupfinder/trunk/pickup_finder/pickup_finder/static/js/mine/dashboard.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pickupfinder/trunk/pickup_finder/pickup_finder/forms.py" afterPath="$PROJECT_DIR$/pickupfinder/trunk/pickup_finder/pickup_finder/forms.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pickupfinder/trunk/pickup_finder/pickup_finder/models.py" afterPath="$PROJECT_DIR$/pickupfinder/trunk/pickup_finder/pickup_finder/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pickupfinder/trunk/pickup_finder/pickup_finder/static/css/less/portal.less" afterPath="$PROJECT_DIR$/pickupfinder/trunk/pickup_finder/pickup_finder/static/css/less/portal.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pickupfinder/trunk/pickup_finder/pickup_finder/templates/portal/view_games.html" afterPath="$PROJECT_DIR$/pickupfinder/trunk/pickup_finder/pickup_finder/templates/portal/view_games.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pickupfinder/trunk/pickup_finder/.idea/workspace.xml" afterPath="$PROJECT_DIR$/pickupfinder/trunk/pickup_finder/.idea/workspace.xml" />
     </list>
     <ignored path="WebDev.iws" />
@@ -19,7 +22,7 @@
     <file path="/index.html" changelist="078c4814-d8f8-427c-84b9-a50693064042" time="1363055743179" ignored="false" />
     <file path="/stylesheet.less" changelist="078c4814-d8f8-427c-84b9-a50693064042" time="1360696210609" ignored="false" />
     <file path="/scripts.js" changelist="078c4814-d8f8-427c-84b9-a50693064042" time="1360695951465" ignored="false" />
-    <file path="/Dummy.txt" changelist="078c4814-d8f8-427c-84b9-a50693064042" time="1363055303633" ignored="false" />
+    <file path="/Dummy.txt" changelist="078c4814-d8f8-427c-84b9-a50693064042" time="1364319861676" ignored="false" />
     <file path="/client_script.js" changelist="078c4814-d8f8-427c-84b9-a50693064042" time="1359135316119" ignored="false" />
     <file path="/styles.less" changelist="078c4814-d8f8-427c-84b9-a50693064042" time="1359313471555" ignored="false" />
     <file path="/database.php" changelist="078c4814-d8f8-427c-84b9-a50693064042" time="1359752799773" ignored="false" />
@@ -116,7 +119,7 @@
       <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="42" selection-start="1339" selection-end="1339" vertical-scroll-proportion="-0.018675722">
+            <state line="28" column="42" selection-start="1339" selection-end="1339" vertical-scroll-proportion="0.04584041">
               <folding />
             </state>
           </provider>
@@ -218,17 +221,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -257,11 +249,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="styles" />
+              <option name="myItemId" value="project1" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -275,12 +263,49 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
+              <option name="myItemId" value="project1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebDev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebDev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Config" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -290,18 +315,18 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="options.lastSelected" value="preferences.general" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../PersonalSite" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.includeJavaFiles" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="FullScreen" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
+    <property name="FullScreen" value="false" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -414,7 +439,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16207455" sideWeight="0.9847095" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16126418" sideWeight="0.9847095" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -481,11 +506,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/project1/app/View/Layouts/default.ctp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.20877944" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/project1/app/View/Emails/html/confirm_request.ctp">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="33" selection-start="14" selection-end="33" vertical-scroll-proportion="0.0" />
@@ -549,9 +569,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/project1/app/Controller/TimeRequestsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="33" selection-start="2492" selection-end="2492" vertical-scroll-proportion="0.28692698">
-          <folding />
-        </state>
+        <state line="57" column="33" selection-start="2492" selection-end="2492" vertical-scroll-proportion="0.28692698" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/project1/app/webroot/js/scripts.js">
@@ -568,9 +586,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/project1/app/Config/database.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="69" column="31" selection-start="2429" selection-end="2429" vertical-scroll-proportion="0.5016611">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="42" selection-start="1339" selection-end="1339" vertical-scroll-proportion="-0.018675722">
+        <state line="28" column="42" selection-start="1339" selection-end="1339" vertical-scroll-proportion="0.04584041">
           <folding />
         </state>
       </provider>
