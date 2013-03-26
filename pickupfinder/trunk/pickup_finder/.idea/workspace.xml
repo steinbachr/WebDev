@@ -99,7 +99,7 @@
       <file leaf-file-name="controllers.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pickup_finder/controllers.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="104" column="60" selection-start="4690" selection-end="4690" vertical-scroll-proportion="0.36378467">
+            <state line="105" column="26" selection-start="4717" selection-end="4717" vertical-scroll-proportion="0.3882545">
               <folding />
             </state>
           </provider>
@@ -160,7 +160,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/pickup_finder/models.py" />
         <option value="$PROJECT_DIR$/pickup_finder/static/js/mine/view_games.js" />
         <option value="$PROJECT_DIR$/pickup_finder/static/js/mine/game_lineup.js" />
@@ -176,6 +175,7 @@
         <option value="$PROJECT_DIR$/pickup_finder/templates/portal/create_game.html" />
         <option value="$PROJECT_DIR$/pickup_finder/static/css/less/portal.less" />
         <option value="$PROJECT_DIR$/pickup_finder/controllers.py" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -229,20 +229,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="pickup_finder" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pickup_finder" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pickup_finder" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pickup_finder" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="pickup_finder" />
@@ -484,11 +470,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pickup_finder/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="26" selection-start="229" selection-end="229" vertical-scroll-proportion="0.14950167" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pickup_finder/templates/portal/view_games.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="28" selection-start="620" selection-end="620" vertical-scroll-proportion="0.42358804" />
@@ -571,9 +552,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="17" selection-start="35" selection-end="35" vertical-scroll-proportion="0.07188498">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pickup_finder/controllers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="104" column="60" selection-start="4690" selection-end="4690" vertical-scroll-proportion="0.36378467">
+        <state line="105" column="26" selection-start="4717" selection-end="4717" vertical-scroll-proportion="0.3882545">
           <folding />
         </state>
       </provider>
