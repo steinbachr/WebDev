@@ -5,39 +5,43 @@
     <ignored path="pickup_finder.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="$PROJECT_DIR$/pickup_finder/static/images/__init__.py" changelist="dd60c8b2-8abc-4575-9ca4-fb5b274fb4d5" time="1362165411375" ignored="false" />
-    <file path="/base.html" changelist="dd60c8b2-8abc-4575-9ca4-fb5b274fb4d5" time="1363713063589" ignored="false" />
+    <file path="/base.html" changelist="dd60c8b2-8abc-4575-9ca4-fb5b274fb4d5" time="1364579680551" ignored="false" />
     <file path="/index.less" changelist="dd60c8b2-8abc-4575-9ca4-fb5b274fb4d5" time="1363296105586" ignored="false" />
     <file path="/index.html" changelist="dd60c8b2-8abc-4575-9ca4-fb5b274fb4d5" time="1363321557783" ignored="false" />
-    <file path="/settings.py" changelist="dd60c8b2-8abc-4575-9ca4-fb5b274fb4d5" time="1364321057700" ignored="false" />
-    <file path="/urls.py" changelist="dd60c8b2-8abc-4575-9ca4-fb5b274fb4d5" time="1363272060039" ignored="false" />
-    <file path="/views.py" changelist="dd60c8b2-8abc-4575-9ca4-fb5b274fb4d5" time="1363290897259" ignored="false" />
-    <file path="/forms.py" changelist="dd60c8b2-8abc-4575-9ca4-fb5b274fb4d5" time="1363715717062" ignored="false" />
-    <file path="/models.py" changelist="dd60c8b2-8abc-4575-9ca4-fb5b274fb4d5" time="1363709552563" ignored="false" />
-    <file path="/constants.py" changelist="dd60c8b2-8abc-4575-9ca4-fb5b274fb4d5" time="1363716149920" ignored="false" />
+    <file path="/settings.py" changelist="dd60c8b2-8abc-4575-9ca4-fb5b274fb4d5" time="1364321375038" ignored="false" />
+    <file path="/urls.py" changelist="dd60c8b2-8abc-4575-9ca4-fb5b274fb4d5" time="1364323583690" ignored="false" />
+    <file path="/views.py" changelist="dd60c8b2-8abc-4575-9ca4-fb5b274fb4d5" time="1364503000387" ignored="false" />
+    <file path="/forms.py" changelist="dd60c8b2-8abc-4575-9ca4-fb5b274fb4d5" time="1364581410077" ignored="false" />
+    <file path="/models.py" changelist="dd60c8b2-8abc-4575-9ca4-fb5b274fb4d5" time="1364520504128" ignored="false" />
+    <file path="/constants.py" changelist="dd60c8b2-8abc-4575-9ca4-fb5b274fb4d5" time="1364580736351" ignored="false" />
     <file path="/login.js" changelist="dd60c8b2-8abc-4575-9ca4-fb5b274fb4d5" time="1363231048082" ignored="false" />
     <file path="/models_factory.py" changelist="dd60c8b2-8abc-4575-9ca4-fb5b274fb4d5" time="1363117698353" ignored="false" />
-    <file path="/controllers.py" changelist="dd60c8b2-8abc-4575-9ca4-fb5b274fb4d5" time="1364320163950" ignored="false" />
+    <file path="/controllers.py" changelist="dd60c8b2-8abc-4575-9ca4-fb5b274fb4d5" time="1364600680371" ignored="false" />
     <file path="/core.js" changelist="dd60c8b2-8abc-4575-9ca4-fb5b274fb4d5" time="1363712110052" ignored="false" />
     <file path="/http.py" changelist="dd60c8b2-8abc-4575-9ca4-fb5b274fb4d5" time="1363121256341" ignored="false" />
     <file path="/services.py" changelist="dd60c8b2-8abc-4575-9ca4-fb5b274fb4d5" time="1363121416952" ignored="false" />
-    <file path="/portal.less" changelist="dd60c8b2-8abc-4575-9ca4-fb5b274fb4d5" time="1363715907464" ignored="false" />
-    <file path="/core.less" changelist="dd60c8b2-8abc-4575-9ca4-fb5b274fb4d5" time="1363321002303" ignored="false" />
-    <file path="/dashboard.html" changelist="dd60c8b2-8abc-4575-9ca4-fb5b274fb4d5" time="1363717264471" ignored="false" />
-    <file path="/create_game.html" changelist="dd60c8b2-8abc-4575-9ca4-fb5b274fb4d5" time="1364314208950" ignored="false" />
-    <file path="/view_games.html" changelist="dd60c8b2-8abc-4575-9ca4-fb5b274fb4d5" time="1363713098502" ignored="false" />
+    <file path="/portal.less" changelist="dd60c8b2-8abc-4575-9ca4-fb5b274fb4d5" time="1364582711502" ignored="false" />
+    <file path="/core.less" changelist="dd60c8b2-8abc-4575-9ca4-fb5b274fb4d5" time="1364582703491" ignored="false" />
+    <file path="/dashboard.html" changelist="dd60c8b2-8abc-4575-9ca4-fb5b274fb4d5" time="1364579319061" ignored="false" />
+    <file path="/create_game.html" changelist="dd60c8b2-8abc-4575-9ca4-fb5b274fb4d5" time="1364581216804" ignored="false" />
+    <file path="/view_games.html" changelist="dd60c8b2-8abc-4575-9ca4-fb5b274fb4d5" time="1364580011761" ignored="false" />
     <file path="/help.html" changelist="dd60c8b2-8abc-4575-9ca4-fb5b274fb4d5" time="1363278026785" ignored="false" />
-    <file path="/create_game.js" changelist="dd60c8b2-8abc-4575-9ca4-fb5b274fb4d5" time="1364314329940" ignored="false" />
+    <file path="/create_game.js" changelist="dd60c8b2-8abc-4575-9ca4-fb5b274fb4d5" time="1364583767604" ignored="false" />
     <file path="/dashboard.js" changelist="dd60c8b2-8abc-4575-9ca4-fb5b274fb4d5" time="1363738867551" ignored="false" />
     <file path="$PROJECT_DIR$/../../../../BarWatch/dev/BarWatch/trunk/barwatch/location.py" changelist="dd60c8b2-8abc-4575-9ca4-fb5b274fb4d5" time="1363376341066" ignored="false" />
     <file path="/location.py" changelist="dd60c8b2-8abc-4575-9ca4-fb5b274fb4d5" time="1363376340332" ignored="false" />
     <file path="$PROJECT_DIR$/../../../../BarWatch/dev/BarWatch/trunk/requirements.txt" changelist="dd60c8b2-8abc-4575-9ca4-fb5b274fb4d5" time="1363376226882" ignored="false" />
     <file path="/requirements.txt" changelist="dd60c8b2-8abc-4575-9ca4-fb5b274fb4d5" time="1363405355075" ignored="false" />
-    <file path="/components.py" changelist="dd60c8b2-8abc-4575-9ca4-fb5b274fb4d5" time="1363709849672" ignored="false" />
+    <file path="/components.py" changelist="dd60c8b2-8abc-4575-9ca4-fb5b274fb4d5" time="1364578841079" ignored="false" />
     <file path="/view_games.js" changelist="dd60c8b2-8abc-4575-9ca4-fb5b274fb4d5" time="1363710863559" ignored="false" />
-    <file path="/game_lineup.js" changelist="dd60c8b2-8abc-4575-9ca4-fb5b274fb4d5" time="1363711848044" ignored="false" />
+    <file path="/game_lineup.js" changelist="dd60c8b2-8abc-4575-9ca4-fb5b274fb4d5" time="1364579089276" ignored="false" />
     <file path="$PROJECT_DIR$/../../../../PersonalSite/dev_blog/static/css/stylesheet.less" changelist="dd60c8b2-8abc-4575-9ca4-fb5b274fb4d5" time="1364319497692" ignored="false" />
     <file path="/stylesheet.less" changelist="dd60c8b2-8abc-4575-9ca4-fb5b274fb4d5" time="1364319497350" ignored="false" />
     <file path="/Dummy.txt" changelist="dd60c8b2-8abc-4575-9ca4-fb5b274fb4d5" time="1364319838362" ignored="false" />
+    <file path="/game.html" changelist="dd60c8b2-8abc-4575-9ca4-fb5b274fb4d5" time="1364503836412" ignored="false" />
+    <file path="/foursquare_script.py" changelist="dd60c8b2-8abc-4575-9ca4-fb5b274fb4d5" time="1364328434624" ignored="false" />
+    <file path="/yelp_script.py" changelist="dd60c8b2-8abc-4575-9ca4-fb5b274fb4d5" time="1364328715613" ignored="false" />
+    <file path="/a.py" changelist="dd60c8b2-8abc-4575-9ca4-fb5b274fb4d5" time="1364327512825" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,64 +100,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="controllers.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pickup_finder/controllers.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="105" column="26" selection-start="4717" selection-end="4717" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="settings.py" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pickup_finder/settings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="67" selection-start="717" selection-end="717" vertical-scroll-proportion="0.47923324">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".gitignore" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="0" selection-start="30" selection-end="30" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pickup_finder/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="32" column="38" selection-start="1239" selection-end="1239" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="create_game.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pickup_finder/templates/portal/create_game.html">
+      <file leaf-file-name="controllers.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pickup_finder/controllers.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="97" selection-start="152" selection-end="152" vertical-scroll-proportion="-1.875">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="portal.less" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pickup_finder/static/css/less/portal.less">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="82" column="12" selection-start="2051" selection-end="2051" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dashboard.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pickup_finder/templates/portal/dashboard.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="19" selection-start="1493" selection-end="1493" vertical-scroll-proportion="-20.083334">
+            <state line="18" column="90" selection-start="655" selection-end="655" vertical-scroll-proportion="0.3321976">
               <folding />
             </state>
           </provider>
@@ -162,7 +121,45 @@
       <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pickup_finder/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="19" selection-start="580" selection-end="580" vertical-scroll-proportion="0.0">
+            <state line="38" column="32" selection-start="1304" selection-end="1304" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="create_game.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pickup_finder/templates/portal/create_game.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="38" column="34" selection-start="1779" selection-end="1779" vertical-scroll-proportion="-6.25">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="create_game.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pickup_finder/static/js/mine/create_game.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="5" selection-start="504" selection-end="504" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="constants.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pickup_finder/constants.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="19" column="31" selection-start="617" selection-end="617" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="portal.less" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pickup_finder/static/css/less/portal.less">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="100" column="24" selection-start="2405" selection-end="2405" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -178,22 +175,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/pickup_finder/static/js/mine/view_games.js" />
+        <option value="$PROJECT_DIR$/pickup_finder/templates/base.html" />
+        <option value="$PROJECT_DIR$/pickup_finder/views.py" />
+        <option value="$PROJECT_DIR$/pickup_finder/templates/portal/game.html" />
+        <option value="$PROJECT_DIR$/pickup_finder/models.py" />
+        <option value="$PROJECT_DIR$/pickup_finder/components.py" />
         <option value="$PROJECT_DIR$/pickup_finder/static/js/mine/game_lineup.js" />
-        <option value="$PROJECT_DIR$/pickup_finder/static/js/mine/core.js" />
         <option value="$PROJECT_DIR$/pickup_finder/templates/portal/base.html" />
         <option value="$PROJECT_DIR$/pickup_finder/templates/portal/view_games.html" />
         <option value="$PROJECT_DIR$/pickup_finder/constants.py" />
-        <option value="$PROJECT_DIR$/pickup_finder/components.py" />
         <option value="$PROJECT_DIR$/pickup_finder/templates/portal/dashboard.html" />
-        <option value="$PROJECT_DIR$/pickup_finder/static/js/mine/dashboard.js" />
-        <option value="$PROJECT_DIR$/pickup_finder/forms.py" />
-        <option value="$PROJECT_DIR$/pickup_finder/static/js/mine/create_game.js" />
         <option value="$PROJECT_DIR$/pickup_finder/templates/portal/create_game.html" />
+        <option value="$PROJECT_DIR$/pickup_finder/forms.py" />
+        <option value="$PROJECT_DIR$/pickup_finder/static/css/less/core.less" />
         <option value="$PROJECT_DIR$/pickup_finder/static/css/less/portal.less" />
+        <option value="$PROJECT_DIR$/pickup_finder/static/js/mine/create_game.js" />
         <option value="$PROJECT_DIR$/pickup_finder/controllers.py" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/pickup_finder/settings.py" />
       </list>
     </option>
   </component>
@@ -229,8 +226,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -267,8 +262,68 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pickup_finder" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pickup_finder" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pickup_finder" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pickup_finder" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pickup_finder" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pickup_finder" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pickup_finder" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pickup_finder" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pickup_finder" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -278,18 +333,26 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.lastSelected" value="preferences.sourceCode.Python" />
     <property name="MemberChooser.sorted" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../PersonalSite" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../../Northeastern_University/Spring 2013/GIS/yelp/yelp_data.csv" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="GoToClass.includeJavaFiles" value="false" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="MemberChooser.showClasses" value="true" />
     <property name="FullScreen" value="false" />
+    <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+  </component>
+  <component name="PyConsoleOptionsProvider">
+    <option name="myPythonConsoleState">
+      <PyConsoleSettings />
+    </option>
+    <option name="myDjangoConsoleState">
+      <PyConsoleSettings />
+    </option>
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -301,14 +364,6 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="Remote" factoryName="Remote">
-      <option name="USE_SOCKET_TRANSPORT" value="true" />
-      <option name="SERVER_MODE" value="false" />
-      <option name="SHMEM_ADDRESS" value="javadebug" />
-      <option name="HOST" value="localhost" />
-      <option name="PORT" value="5005" />
-      <method />
-    </configuration>
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -322,6 +377,14 @@
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="" />
       <option name="PARAMETERS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Unittests">
@@ -435,7 +498,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18638574" sideWeight="0.6712538" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27147487" sideWeight="0.6712538" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -503,100 +566,118 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pickup_finder/templates/portal/base.html">
+    <entry file="file://$PROJECT_DIR$/pickup_finder/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="24" selection-start="617" selection-end="617" vertical-scroll-proportion="0.48387095" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pickup_finder/constants.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="4" selection-start="305" selection-end="305" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pickup_finder/components.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="8" selection-start="861" selection-end="861" vertical-scroll-proportion="0.47923324" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pickup_finder/static/js/mine/dashboard.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="31" selection-start="1272" selection-end="1272" vertical-scroll-proportion="0.7428115" />
+        <state line="32" column="38" selection-start="1239" selection-end="1239" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pickup_finder/static/js/mine/game_lineup.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="315" selection-end="315" vertical-scroll-proportion="0.14376996" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pickup_finder/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="67" selection-start="1238" selection-end="1238" vertical-scroll-proportion="0.5990415" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pickup_finder/migrations/0004_auto__add_field_game_creator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="24" selection-end="24" vertical-scroll-proportion="0.019575857" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pickup_finder/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="19" selection-start="580" selection-end="580" vertical-scroll-proportion="0.0">
+        <state line="8" column="1" selection-start="408" selection-end="408" vertical-scroll-proportion="0.19900498">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pickup_finder/templates/portal/dashboard.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="19" selection-start="1493" selection-end="1493" vertical-scroll-proportion="-20.083334">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pickup_finder/static/js/mine/create_game.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="35" selection-start="408" selection-end="408" vertical-scroll-proportion="0.19169329">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pickup_finder/views.py">
+    <entry file="file://$PROJECT_DIR$/pickup_finder/static/js/mine/view_games.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pickup_finder/components.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="21" selection-start="520" selection-end="520" vertical-scroll-proportion="0.23961662">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pickup_finder/templates/portal/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="30" selection-start="2155" selection-end="2155" vertical-scroll-proportion="0.91001695">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pickup_finder/templates/portal/view_games.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="111" selection-start="1800" selection-end="1846" vertical-scroll-proportion="-15.083333">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pickup_finder/templates/portal/dashboard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="40" selection-start="1423" selection-end="1423" vertical-scroll-proportion="-16.083334">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pickup_finder/static/js/mine/dashboard.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="42" selection-start="981" selection-end="981" vertical-scroll-proportion="0.63559324">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pickup_finder/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="87" selection-start="823" selection-end="823" vertical-scroll-proportion="0.4661017">
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pickup_finder/constants.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="31" selection-start="617" selection-end="617" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pickup_finder/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="32" selection-start="1304" selection-end="1304" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pickup_finder/templates/portal/create_game.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="97" selection-start="152" selection-end="152" vertical-scroll-proportion="-1.875">
+        <state line="38" column="34" selection-start="1779" selection-end="1779" vertical-scroll-proportion="-6.25">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pickup_finder/static/css/less/core.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="14" selection-start="142" selection-end="142" vertical-scroll-proportion="0.15254237">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pickup_finder/static/css/less/portal.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="82" column="12" selection-start="2051" selection-end="2051" vertical-scroll-proportion="0.0">
+        <state line="100" column="24" selection-start="2405" selection-end="2405" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pickup_finder/static/js/mine/create_game.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="5" selection-start="504" selection-end="504" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pickup_finder/controllers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="105" column="26" selection-start="4717" selection-end="4717" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="30" selection-end="30" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pickup_finder/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="67" selection-start="717" selection-end="717" vertical-scroll-proportion="0.47923324">
+        <state line="18" column="90" selection-start="655" selection-end="655" vertical-scroll-proportion="0.3321976">
           <folding />
         </state>
       </provider>

@@ -16,7 +16,7 @@ class AjaxController(Controller):
 class PortalController(Controller):
     def __init__(self, request, current_tab):        
         Controller.__init__(self, request)        
-        self.tpl_vars = {'current_tab' : current_tab}
+        self.tpl_vars = {'current_tab' : current_tab, 'facebook_id' : APIKeys.FACEBOOK_DEV}
 
 class CreateUserController(Controller):
     '''the request for creating a new user'''
@@ -51,7 +51,7 @@ class CreateUserController(Controller):
         else:
             form = UserForm()
         
-        context = RequestContext(self.request, {'form' : form, 'facebook_id' : APIKeys.FACEBOOK_PROD})
+        context = RequestContext(self.request, {'form' : form, 'facebook_id' : APIKeys.FACEBOOK_DEV})
         return render_to_response("index.html", context)             
 
 ###PORTAL CONTROLLERS###
@@ -101,8 +101,7 @@ class CreateGameController(PortalController):
         else:
             form = GameForm()
             
-        self.tpl_vars['form'] = form
-        self.tpl_vars['facebook_id'] = APIKeys.FACEBOOK_PROD
+        self.tpl_vars['form'] = form        
         return self.tpl_vars
 
 class ViewGamesController(PortalController):
@@ -121,4 +120,25 @@ class HelpController(PortalController):
         PortalController.__init__(self, request, 'help')
 
     def help(self):        
+        return self.tpl_vars
+    
+class GameRsvpController(PortalController):
+    def __init__(self, request, game):
+        PortalController.__init__(self, request, 'rsvp')
+        self.game = game
+
+    def rsvp(self):
+        if self.request.method == "POST":
+            form = GameRsvpForm(self.game, self.request.POST)
+            if form.is_valid():
+                player = Player.for_fb_id(form.cleaned_data['player'])
+                rsvp_status = form.cleaned_data['rsvp_status']
+                
+                player_game = PlayerGame.objects.filter(player=player).filter(game=self.game)
+                player_game.chance_attending = rsvp_status
+                player_game.save()
+        else:
+            form = GameRsvpForm(self.game)
+            
+        self.tpl_vars.update({'game' : self.game, 'form' : form})
         return self.tpl_vars

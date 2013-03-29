@@ -6,7 +6,23 @@ $(document).ready(function() {
     var $player_names = $('input[name="player_names"]');;
     var $player_ids = $('input[name="player_ids"]');
 
-    $(".datepicker" ).datepicker();    
+    $(".datepicker" ).datepicker();
+    
+    //form validation stuff
+    $.validator.addMethod("time",function(value,element)
+    {
+        return this.optional(element) || /^\d+:\d\d(AM|PM)$/i.test(value);
+    },"Please use a valid time");
+    $("form").validate({rules : {
+        'start_date' : {
+            'required' : true, 
+            'date' : true
+        },
+        'start_time' : {
+            'required' : true,
+            'time' : true
+        }
+    }});
     
     $droppable.on('drop', function(evt, ui) {
         add_player($(evt.target), ui.draggable);        
@@ -20,8 +36,12 @@ $(document).ready(function() {
         }
     });
     
-    $('form').submit(function() {
+    $('form').submit(function() {        
         publish_to_feed();
+        $("form").find('.error').each(function() {
+            //add error class to the parent control group
+            $(this).parent().parent('.control-group').addClass('error');            
+        })
     });
 
     var options = {types: ['geocode']};
@@ -45,12 +65,10 @@ $(document).ready(function() {
     }
 
     //when the user has submitted the form, publish the confirmation link to each invited players' profile
-    function publish_to_feed() {
-        FB.api('/me/feed', 'post', { message : "TEST", tags : added_users.join(',')}, function(response) {
-            if (!response || response.error) {
-                alert('Error occured');
-            } else {
-                alert('Post ID: ' + response.id);
+    function publish_to_feed() {                    
+        FB.api('/me/instapickup_test:create', 'post', {game: window.location, message : "Come play with me! @["+added_users[0]+"]"}, function(response) {
+            if (!response || response.error) {                
+            } else {                
             }
         });
     }

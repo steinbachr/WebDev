@@ -27,6 +27,11 @@ def help(request):
     controller = HelpController(request)
     context = RequestContext(request, controller.help())
     return render_to_response("portal/help.html", context)
+
+def game_rsvp(request, game=None):
+    controller = GameRsvpController(request, Game.for_id(game))
+    context = RequestContext(request, controller.rsvp())
+    return render_to_response("portal/game.html", context)
     
     
 

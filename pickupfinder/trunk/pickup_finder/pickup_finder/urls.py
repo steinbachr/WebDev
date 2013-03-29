@@ -13,6 +13,7 @@ urlpatterns = patterns('pickup_finder.views',
     url(r'^portal/create-game/', 'create_game'),
     url(r'^portal/view-games/', 'view_games'),
     url(r'^portal/help/', 'help'),
+    url(r'^portal/game/(?P<game>\d+)', 'game_rsvp'),
 )
 
 #ADMIN

@@ -3,8 +3,6 @@
 {% block js_spec %}
     <script>
         var games = {{ games_json|safe }};
-        var player_games = {{ player_game_json|safe }}
-        var players = {{ players_json|safe }}
     </script>
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key={{ google_key }}&sensor=true"></script>
     <script type="text/javascript" src="{{ STATIC_URL }}js/mine/game_lineup.js"></script>
@@ -26,7 +24,10 @@
                 <div id="collapsible" class="accordion-body collapse in">
                     <div class="accordion-inner">
                         <h4>Click a marker to see the lineup!</h4>
-                        <ul>                            
+                        <ul>
+                            {% for pg in player_games %}
+                                <li class="{{ pg.game.id }}">{{ pg.player.name }}---{{ pg.verbose_status }}</li>
+                            {% endfor %}
                         </ul>
                     </div>
                 </div>

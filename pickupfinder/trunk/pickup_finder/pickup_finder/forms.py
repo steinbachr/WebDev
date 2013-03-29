@@ -1,4 +1,6 @@
 from django import forms
+from pickup_finder.models import PlayerGame
+from pickup_finder.constants import ChanceAttendingConstants
 
 class UserForm(forms.Form):  
     name = forms.CharField(max_length=80, widget=forms.HiddenInput())
@@ -17,10 +19,18 @@ class UserForm(forms.Form):
     
     
 class GameForm(forms.Form):
-    location = forms.CharField(max_length=50)
+    location = forms.CharField(max_length=50, widget=forms.TextInput(attrs={'class' : 'required'}))
     public = forms.BooleanField(widget=forms.CheckboxInput(), initial=True, required=False)
     player_cap = forms.IntegerField(max_value=50, widget=forms.TextInput(), required=False)
-    start_date = forms.CharField(max_length=50, widget=forms.TextInput(attrs={'class' : 'datepicker'}))
-    start_time = forms.CharField(max_length=50, widget=forms.TextInput(attrs={'placeholder' : 'e.g. 3:45PM'}))
+    start_date = forms.CharField(max_length=50, widget=forms.TextInput(attrs={'class' : 'datepicker required'}))
+    start_time = forms.CharField(max_length=50, widget=forms.TextInput(attrs={'placeholder' : 'e.g. 3:45PM', 'class' : 'required'}))
     player_names = forms.CharField(max_length=500, widget=forms.HiddenInput(), required=False)
     player_ids = forms.CharField(max_length=500, widget=forms.HiddenInput(), required=False)
+    
+class GameRsvpForm(forms.Form):
+    def __init__(self, game, *args, **kwargs):
+        super(GameRsvpForm, self).__init__(*args, **kwargs)
+        self.fields['player'] = forms.ChoiceField(choices=[(player.fb_id, player.name) for player in PlayerGame.all_players_for_game(game)], label='Who are you?')
+        
+    rsvp_status = forms.ChoiceField(choices=ChanceAttendingConstants.choices_for_model(), label='Are you coming?')
+    

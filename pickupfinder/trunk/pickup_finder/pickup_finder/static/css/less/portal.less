@@ -20,13 +20,19 @@ ul {
 
 /***PORTAL GLOBAL***/
 .header {
-  height: 50px;
-  text-align: center;
+  height: 50px;  
   color: white;
   .header-gradient;
   padding-top: 30px;
   font-size: 40px;
-  border-bottom: solid @dark-grey 2px  
+  border-bottom: solid @dark-grey 2px;  
+  .header-title {
+    text-align: center;
+  }
+  .fb-like {
+    display: block;
+    text-align: right;
+  }
 }
 .container {
   width: 800px;  
@@ -51,10 +57,13 @@ ul {
     display: inline-block;
     .game-lineup {
       margin-top: 20px;
+      li {
+        display: none;
+      }
       i {
         vertical-align: text-bottom;
         margin-left: 10px;
-      }
+      }      
       .accordion-heading {
         background: @light-green;
         a:hover {
@@ -74,9 +83,6 @@ ul {
         margin: auto;
         .border-radius;
       }
-      .game-lineup ul {
-        list-style-type: none;
-      }
     }
     /***CREATE GAME***/
     .create-game {
@@ -89,6 +95,11 @@ ul {
         }
         .controls {
           text-align: left;
+          label {
+            display: inline-block;
+            padding-left: 20px;
+            color: @red;
+          }
         }
       }
       .bottom-form { 

@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 
+{% block fb_graph %}{% endblock %}
 {% block css %}
     <link rel="stylesheet/less" type="text/css" href="{{ STATIC_URL }}css/less/portal.less" />
     {% block css_spec %}
@@ -10,9 +11,23 @@
     {% block js_spec %}
     {% endblock %}
 {% endblock %}
-{% block facebook %}{% endblock %}
 {% block body %}
-    <div class="header">InstaPickup</div>
+    <div id="fb-root"></div>
+    <script type="text/javascript">
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId={{ facebook_id }}";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <div class="header">
+        <div class="header-title">
+            InstaPickup
+        </div>
+        <div class="fb-like" data-send="true" data-width="200" data-show-faces="false"></div>
+    </div>    
     <div class="container">
         <div class="navbar">
             <div class="navbar-inner">                
