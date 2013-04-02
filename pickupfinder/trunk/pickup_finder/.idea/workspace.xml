@@ -16,7 +16,7 @@
     <file path="/constants.py" changelist="dd60c8b2-8abc-4575-9ca4-fb5b274fb4d5" time="1364824501445" ignored="false" />
     <file path="/login.js" changelist="dd60c8b2-8abc-4575-9ca4-fb5b274fb4d5" time="1363231048082" ignored="false" />
     <file path="/models_factory.py" changelist="dd60c8b2-8abc-4575-9ca4-fb5b274fb4d5" time="1363117698353" ignored="false" />
-    <file path="/controllers.py" changelist="dd60c8b2-8abc-4575-9ca4-fb5b274fb4d5" time="1364875441793" ignored="false" />
+    <file path="/controllers.py" changelist="dd60c8b2-8abc-4575-9ca4-fb5b274fb4d5" time="1364876637197" ignored="false" />
     <file path="/core.js" changelist="dd60c8b2-8abc-4575-9ca4-fb5b274fb4d5" time="1363712110052" ignored="false" />
     <file path="/http.py" changelist="dd60c8b2-8abc-4575-9ca4-fb5b274fb4d5" time="1364861346469" ignored="false" />
     <file path="/services.py" changelist="dd60c8b2-8abc-4575-9ca4-fb5b274fb4d5" time="1363121416952" ignored="false" />
@@ -130,7 +130,7 @@
       <file leaf-file-name="view_games.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pickup_finder/templates/portal/view_games.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="19" selection-start="866" selection-end="866" vertical-scroll-proportion="-15.0">
+            <state line="6" column="61" selection-start="185" selection-end="185" vertical-scroll-proportion="-3.75">
               <folding />
             </state>
           </provider>
@@ -157,7 +157,7 @@
       <file leaf-file-name="controllers.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pickup_finder/controllers.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="42" selection-start="522" selection-end="522" vertical-scroll-proportion="0.36378467">
+            <state line="24" column="32" selection-start="885" selection-end="885" vertical-scroll-proportion="0.46166396">
               <folding>
                 <element signature="e#0#44#0" expanded="true" />
               </folding>
@@ -279,76 +279,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pickup_finder" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pickup_finder" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pickup_finder" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pickup_finder" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pickup_finder" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pickup_finder" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="portal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pickup_finder" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pickup_finder" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pickup_finder" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mine" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -642,23 +572,9 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pickup_finder/components.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="8" selection-start="286" selection-end="334" vertical-scroll-proportion="0.12437811">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pickup_finder/templates/portal/dashboard.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="40" column="119" selection-start="1866" selection-end="1866" vertical-scroll-proportion="0.61799663">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pickup_finder/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="7" selection-start="1365" selection-end="1365" vertical-scroll-proportion="0.6217617">
           <folding />
         </state>
       </provider>
@@ -692,13 +608,6 @@
           <folding>
             <element signature="e#0#24#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pickup_finder/templates/portal/view_games.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="19" selection-start="866" selection-end="866" vertical-scroll-proportion="-15.0">
-          <folding />
         </state>
       </provider>
     </entry>
@@ -757,9 +666,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pickup_finder/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="7" selection-start="1365" selection-end="1365" vertical-scroll-proportion="0.59800667">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pickup_finder/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pickup_finder/templates/portal/view_games.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="61" selection-start="185" selection-end="185" vertical-scroll-proportion="-3.75">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pickup_finder/controllers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="42" selection-start="522" selection-end="522" vertical-scroll-proportion="0.36378467">
+        <state line="24" column="32" selection-start="885" selection-end="885" vertical-scroll-proportion="0.46166396">
           <folding>
             <element signature="e#0#44#0" expanded="true" />
           </folding>

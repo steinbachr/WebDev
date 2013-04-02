@@ -18,7 +18,7 @@ class AjaxController(Controller):
 class PortalController(Controller):
     def __init__(self, request, current_tab):        
         Controller.__init__(self, request)        
-        self.tpl_vars = {'current_tab' : current_tab, 'facebook_id' : APIKeys.FACEBOOK_DEV}
+        self.tpl_vars = {'current_tab' : current_tab, 'facebook_id' : APIKeys.FACEBOOK_PROD}
 
 class CreateUserController(Controller):
     '''the request for creating a new user'''
@@ -51,7 +51,7 @@ class CreateUserController(Controller):
         else:
             form = UserForm()
         
-        context = RequestContext(self.request, {'form' : form, 'facebook_id' : APIKeys.FACEBOOK_DEV})
+        context = RequestContext(self.request, {'form' : form, 'facebook_id' : APIKeys.FACEBOOK_PROD})
         return render_to_response("index.html", context)             
 
 ###PORTAL CONTROLLERS###
@@ -95,7 +95,7 @@ class CreateGameController(PortalController):
                 split_ids = player_ids.split(',')[1:]
 
                 #create the model instances
-                game = Game(creator=self.request.user, latitude=Decimal(lat), longitude=Decimal(lng), 
+                game = Game(creator=self.request.user, latitude=Decimal(str(lat)), longitude=Decimal(str(lng)), 
                             normalized_location=location, public=public, person_cap=player_cap, starts_at=start)
                 game.save()
                 for index,name in enumerate(split_names):                    
