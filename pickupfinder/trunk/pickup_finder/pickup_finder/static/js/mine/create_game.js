@@ -7,6 +7,9 @@ $(document).ready(function() {
     var $player_ids = $('input[name="player_ids"]');
 
     $(".datepicker" ).datepicker();
+    $('.modal').modal();
+    var options = {types: ['geocode']};
+    autocomplete = new google.maps.places.Autocomplete(location_input, options);
     
     //form validation stuff
     $.validator.addMethod("time",function(value,element)
@@ -43,9 +46,6 @@ $(document).ready(function() {
             $(this).parent().parent('.control-group').addClass('error');            
         })
     });
-
-    var options = {types: ['geocode']};
-    autocomplete = new google.maps.places.Autocomplete(location_input, options);
     
     var added_users = [];   //the users added to the box
     //add the dragged player to the box

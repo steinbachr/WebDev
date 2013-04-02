@@ -9,11 +9,13 @@ admin.autodiscover()
 #VIEWS
 urlpatterns = patterns('pickup_finder.views',    
     url(r'^$', 'home'), 
-    url(r'^portal/dashboard/', 'dashboard'),
-    url(r'^portal/create-game/', 'create_game'),
-    url(r'^portal/view-games/', 'view_games'),
-    url(r'^portal/help/', 'help'),
-    url(r'^portal/game/(?P<game>\d+)', 'game_rsvp'),
+    url(r'^portal/dashboard/$', 'dashboard'),
+    url(r'^portal/create-game/$', 'create_game'),
+    url(r'^portal/view-games/$', 'view_games'),
+    url(r'^portal/help/$', 'help'),
+    url(r'^portal/explore/$', 'explore'),
+    url(r'^game/(?P<game>\d+)/$', 'game_rsvp'),
+    url(r'^game/(?P<game>\d+)/thanks/$', 'game_rsvp_thanks'),
 )
 
 #ADMIN

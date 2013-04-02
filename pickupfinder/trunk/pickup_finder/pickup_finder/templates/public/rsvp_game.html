@@ -1,0 +1,39 @@
+{% extends 'public/base.html' %}
+
+{% block fb_graph %}
+    <meta property="fb:app_id" content="{{ facebook_id }}" />
+    <meta property="og:type"   content="instapickup_test:game" />
+    <meta property="og:url"    content="http://localhost:8000{% url pickup_finder.views.game_rsvp game.id %}" />
+    <meta property="og:title"  content="Sample Game" />
+    <meta property="og:image"  content="https://fbstatic-a.akamaihd.net/images/devsite/attachment_blank.png" />
+{% endblock %}
+{% block content %}
+    <div class="rsvp-form">
+        {% if game.can_rsvp %}
+        <form method="post">              
+            <div style="margin-bottom: 50px;">
+                {{ form.rsvp_status.label }}
+                <br />
+                {{ form.rsvp_status }}
+            </div>
+            <div>                
+                {{ form.player.label }}
+                <br />
+                {{ form.player }}                
+                {% if game.public %}
+                    <h4>or</h4>
+                    <div>
+                        {{ form.player_name.label }}
+                        <br />
+                        {{ form.player_name }}
+                    </div>
+                {% endif %}
+            </div>
+            <br />
+            <button class="btn btn-large btn-primary">Submit</button>
+        </form>
+        {% else %}
+            <h1>Sorry, this game has filled up. Stay tuned for future games!</h1>            
+        {% endif %}
+    </div>
+{% endblock %}

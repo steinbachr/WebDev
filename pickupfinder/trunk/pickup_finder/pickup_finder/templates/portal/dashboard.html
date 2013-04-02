@@ -13,7 +13,7 @@
     <h1>Current Games</h1>
     <div id="map-canvas" class="map-holder">        
     </div>
-    <div class="game-lineup">
+    <div class="game-lineup bottom-box">
         <div class="accordion" id="lineup_accordion">
             <div class="accordion-group">
                 <div class="accordion-heading"> 
@@ -29,6 +29,29 @@
                                 <li class="{{ pg.game.id }}">{{ pg.player.name }}---{{ pg.verbose_status }}</li>
                             {% endfor %}
                         </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="game-details bottom-box">
+        <div class="accordion" id="details_accordion">
+            <div class="accordion-group">
+                <div class="accordion-heading">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#details_accordion" href="#details_collapsible">
+                        <h4>Game Details<i class="icon-info-sign"></i></h4>
+                    </a>
+                </div>
+                <div id="details_collapsible"class="accordion-body collapse in">
+                    <div class="accordion-inner">
+                        <h4>Click a marker to see the details!</h4>
+                        {% for game in games %}
+                            <ul>
+                                <li class="{{ game.id }}"><b>Date / Time</b> {{ game.starts_at }}</li>
+                                <li class="{{ game.id }}"><b>Public</b> {{ game.public }}</li>                            
+                                <li class="{{ game.id }}"><b>Location</b> {{ game.normalized_location }}</li>                            
+                            </ul>
+                        {% endfor %}
                     </div>
                 </div>
             </div>

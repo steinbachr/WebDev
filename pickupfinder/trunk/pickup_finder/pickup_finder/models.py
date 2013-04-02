@@ -1,5 +1,6 @@
 import json
 from django.db import models
+from django.core.urlresolvers import reverse
 from django.contrib.auth.models import User
 from pickup_finder.constants import ChanceAttendingConstants
     
@@ -16,6 +17,18 @@ class Game(models.Model):
     created = models.DateTimeField(auto_now_add=True)
     modified = models.DateTimeField(auto_now=True)
     starts_at = models.DateTimeField()
+    
+    @property
+    def rsvp_link(self):
+        return 'http://instapickup-steinbachr.dotcloud.com%s' % reverse('pickup_finder.views.game_rsvp', args=(self.id,))
+    
+    @property
+    def players_count(self):
+        return PlayerGame.objects.filter(game=self.id).count()
+    
+    @property
+    def can_rsvp(self):
+        return self.players_count < self.person_cap or (self.public and self.person_cap is None)
     
     @classmethod
     def games_by_creator(cls, creator):
@@ -40,7 +53,7 @@ class PlayerGame(models.Model):
     
     @property
     def verbose_status(self):
-        return ChanceAttendingConstants.get_verbose(self.chance_attending)
+        return ChanceAttendingConstants.get_verbose(self.chance_attending)    
 
     @classmethod
     def players_in_games(cls, games):
@@ -48,5 +61,5 @@ class PlayerGame(models.Model):
     
     @classmethod
     def all_players_for_game(cls, game):
-        return [pg.player for pg in cls.objects.filter(game=game).all()]
+        return [pg.player for pg in cls.objects.filter(game=game).all()]        
         

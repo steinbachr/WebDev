@@ -10,30 +10,31 @@ def home(request):
 ##PORTALS
 def dashboard(request):
     controller = DashboardController(request)    
-    context = RequestContext(request, controller.dashboard())
-    return render_to_response("portal/dashboard.html", context)
+    return controller.dashboard()
 
 def create_game(request):
-    controller = CreateGameController(request)    
-    context = RequestContext(request, controller.create_game())
-    return render_to_response("portal/create_game.html", context)
+    controller = CreateGameController(request)  
+    return controller.create_game()        
 
 def view_games(request):
     controller = ViewGamesController(request)
-    context = RequestContext(request, controller.view_games())
-    return render_to_response("portal/view_games.html", context)
+    return controller.view_games()    
 
 def help(request):
-    controller = HelpController(request)
-    context = RequestContext(request, controller.help())
-    return render_to_response("portal/help.html", context)
+    controller = HelpController(request)    
+    return controller.help()
+
+def explore(request):
+    controller = ExploreController(request)    
+    return controller.explore()
 
 def game_rsvp(request, game=None):
     controller = GameRsvpController(request, Game.for_id(game))
-    context = RequestContext(request, controller.rsvp())
-    return render_to_response("portal/game.html", context)
-    
-    
+    return controller.rsvp()
+
+def game_rsvp_thanks(request, game=None):
+    context = RequestContext(request, {'game' : Game.for_id(game)})
+    return render_to_response("public/rsvp_thanks.html", context)
 
 
 

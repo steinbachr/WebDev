@@ -1,9 +1,11 @@
+from django.http import HttpResponseRedirect
+from django.core.urlresolvers import reverse
+from django.shortcuts import render_to_response
+from django.template import RequestContext
 from pickup_finder.forms import *
 from pickup_finder.constants import *
 from pickup_finder.models import *
 from pickup_finder.components import *
-from django.core import serializers
-from django.db import IntegrityError
 
 class Controller():
     def __init__(self, request):
@@ -26,8 +28,6 @@ class CreateUserController(Controller):
     def create_user(self):
         from django.contrib.auth import authenticate, login
         from django.contrib.auth.models import User        
-        from django.shortcuts import render_to_response
-        from django.template import RequestContext
         from pickup_finder.http import Http
 
         if self.request.method == 'POST':
@@ -57,12 +57,16 @@ class CreateUserController(Controller):
 ###PORTAL CONTROLLERS###
 class DashboardController(PortalController):
     def __init__(self, request):        
-        PortalController.__init__(self, request, 'dashboard')   
+        PortalController.__init__(self, request, 'dashboard')        
         self.lineup_component = GameLineup(request)
 
+        self.tpl_vars.update(self.lineup_component.tpl_vars())
+        self.tpl_vars['games'] = self.lineup_component.games
+
     def dashboard(self):      
-        self.tpl_vars.update(self.lineup_component.tpl_vars()) 
-        return self.tpl_vars
+        context = RequestContext(self.request, self.tpl_vars)
+        return render_to_response("portal/dashboard.html", context)
+    
     
 class CreateGameController(PortalController):
     def __init__(self, request):
@@ -91,36 +95,55 @@ class CreateGameController(PortalController):
                 split_ids = player_ids.split(',')[1:]
 
                 #create the model instances
-                game = Game(creator=self.request.user, latitude=Decimal(lat), longitude=Decimal(lng), normalized_location=location, public=public,
-                            person_cap=player_cap, starts_at=start)
+                game = Game(creator=self.request.user, latitude=Decimal(lat), longitude=Decimal(lng), 
+                            normalized_location=location, public=public, person_cap=player_cap, starts_at=start)
                 game.save()
                 for index,name in enumerate(split_names):                    
                     (player, created) = Player.objects.get_or_create(name=name, fb_id=split_ids[index])                                 
                     player_game = PlayerGame(player=player, game=game, chance_attending=ChanceAttendingConstants.NOT_RESPONDED[0])
                     player_game.save()                    
+                return HttpResponseRedirect('%s?created=True&game=%s'%(reverse('pickup_finder.views.create_game'), int(game.id)))
         else:
+            self.tpl_vars['created'] = self.request.GET.get('created', None)
+            self.tpl_vars['rsvp_link'] = Game.for_id(self.request.GET.get('game', None)).rsvp_link if self.tpl_vars['created'] else None
             form = GameForm()
-            
-        self.tpl_vars['form'] = form        
-        return self.tpl_vars
+        
+        self.tpl_vars['form'] = form
+        context = RequestContext(self.request, self.tpl_vars)
+        return render_to_response("portal/create_game.html", context)        
 
 class ViewGamesController(PortalController):
     def __init__(self, request):
         PortalController.__init__(self, request, 'view-games')
         self.lineup_component = GameLineup(request)
 
-    def view_games(self):        
         self.tpl_vars.update(self.lineup_component.tpl_vars())
         self.tpl_vars['games'] = Game.games_by_creator(self.request.user)
-        return self.tpl_vars
+
+    def view_games(self):        
+        context = RequestContext(self.request, self.tpl_vars)
+        return render_to_response("portal/view_games.html", context)        
 
 
 class HelpController(PortalController):
     def __init__(self, request):
         PortalController.__init__(self, request, 'help')
 
-    def help(self):        
-        return self.tpl_vars
+    def help(self):
+        context = RequestContext(self.request, self.tpl_vars)
+        return render_to_response("portal/help.html", context)
+
+
+class ExploreController(PortalController):
+    def __init__(self, request):
+        PortalController.__init__(self, request, 'explore')
+
+        self.tpl_vars['games'] = Game.objects.filter(public=True).all()
+
+    def explore(self):        
+        context = RequestContext(self.request, self.tpl_vars)        
+        return render_to_response("portal/explore.html", context)
+    
     
 class GameRsvpController(PortalController):
     def __init__(self, request, game):
@@ -132,13 +155,24 @@ class GameRsvpController(PortalController):
             form = GameRsvpForm(self.game, self.request.POST)
             if form.is_valid():
                 player = Player.for_fb_id(form.cleaned_data['player'])
-                rsvp_status = form.cleaned_data['rsvp_status']
+                player_name = form.cleaned_data['player_name']
+                rsvp_status = form.cleaned_data['rsvp_status']                
                 
-                player_game = PlayerGame.objects.filter(player=player).filter(game=self.game)
-                player_game.chance_attending = rsvp_status
-                player_game.save()
+                #if the user is not a FB friend and its a public game, create a new player out of the given player_name
+                if player_name:
+                    player = Player(name=player_name)
+                    player.save()
+                    pg = PlayerGame(player=player, game=self.game, chance_attending=rsvp_status)
+                    pg.save()
+                else:
+                    player_game = PlayerGame.objects.filter(player=player).get(game=self.game)
+                    player_game.chance_attending = rsvp_status
+                    player_game.save()
+                    
+                return HttpResponseRedirect(reverse('pickup_finder.views.game_rsvp_thanks', args=(int(self.game.id),)))
         else:
-            form = GameRsvpForm(self.game)
+            form = GameRsvpForm(self.game)  
             
         self.tpl_vars.update({'game' : self.game, 'form' : form})
-        return self.tpl_vars
+        context = RequestContext(self.request, self.tpl_vars)
+        return render_to_response("public/rsvp_game.html", context)        

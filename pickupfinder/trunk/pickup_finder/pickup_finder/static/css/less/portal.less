@@ -35,7 +35,7 @@ ul {
   }
 }
 .container {
-  width: 800px;  
+  width: 900px;  
   padding: 15px 30px;
   border-left: solid 2px @dark-grey;
   border-right: solid 2px @dark-grey;
@@ -55,7 +55,7 @@ ul {
   text-align: center;
   .content {
     display: inline-block;
-    .game-lineup {
+    .game-lineup, .game-details {
       margin-top: 20px;
       li {
         display: none;
@@ -73,6 +73,9 @@ ul {
           color: white;
         }
       }
+      .accordion-body {
+        text-align: left;
+      }
     }
     /***DASHBOARD***/
     .dashboard {      
@@ -83,7 +86,18 @@ ul {
         margin: auto;
         .border-radius;
       }
-    }
+      .bottom-box {
+        float: left;        
+        width: 350px;
+        
+      }
+      .game-details {
+        margin-left: 10px;
+        .accordion-heading {
+          background: @dark-purple;
+        }
+      } 
+    }    
     /***CREATE GAME***/
     .create-game {
       .top-form {
@@ -155,6 +169,12 @@ ul {
           height: 120px;
           padding: 40px 120px;
         }        
+      }
+    }
+    /***RSVP***/
+    .rsvp-form {
+      button {
+        margin-top: 40px;
       }
     }
   }    

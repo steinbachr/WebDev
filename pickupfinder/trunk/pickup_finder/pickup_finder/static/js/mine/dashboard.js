@@ -34,9 +34,19 @@ function initialize() {
 
             //give the marker the games' id so we can use it if the marker is clicked
             google.maps.event.addListener(marker, 'click', function() {                
-                populate_lineup(this.id);           
+                populate_lineup(this.id);
+                populate_details(this.id);
             });
         }               
+    }
+    
+    function populate_details(game_id) {
+        var $details = $('.game-details');
+        var $details_header = $('.game-details').find('.accordion-inner h4');         
+        $details_header.remove();
+
+        $details.find('li').css('display', 'none');
+        $details.find('li.'+game_id).css('display', 'block');
     }
 }
 

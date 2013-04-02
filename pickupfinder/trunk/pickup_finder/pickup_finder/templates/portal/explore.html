@@ -1,0 +1,27 @@
+{% extends 'portal/base.html' %}
+
+{% block content %}
+    <div class="explore">
+        <h3>These are public games that you might be interested in joining</h3>        
+        <table class="table table-bordered">
+            <thead>
+                <th>Player Cap</th>
+                <th>Players Count</th>
+                <th>RSVP Link</th>
+                <th>Location</th>
+                <th>Date / Time</th>
+            </thead>
+            <tbody>
+            {% for game in games %}
+                <tr class="{% if game.can_rsvp %}success{% else %}error{% endif %}">
+                    <td>{{ game.person_cap }}</td>
+                    <td>{{ game.players_count }}</td>
+                    <td><a href="{{ game.rsvp_link }}">{{ game.rsvp_link }}</a></td>
+                    <td>{{ game.normalized_location }}</td>
+                    <td>{{ game.starts_at }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>        
+    </div>
+{% endblock %}

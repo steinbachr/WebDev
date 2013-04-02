@@ -14,7 +14,10 @@
                 <tr>
                     <th>Date / Time</th>
                     <th>Location</th>
-                    <th>Players</th>
+                    <th>Public</th>
+                    <th>Player Cap</th>                    
+                    <th>Players</th>                    
+                    <th>Reservation Link</th>
                 </tr>                
             </thead>
             <tbody>
@@ -22,12 +25,15 @@
                 <tr>
                     <td>{{ game.starts_at }}</td>
                     <td>{{ game.normalized_location }}</td>
-                    <td class="roster"><a href="#" class="{{ game.id }}">roster</a></td>
+                    <td>{{ game.public }}</td>
+                    <td>{% if game.public %}{{ game.person_cap }}{% else %}N/A{% endif %}</td>                    
+                    <td class="roster"><a href="#lineup" class="{{ game.id }}">roster</a></td>
+                    <td class="rsvp-link"><a href="#" class="{{ game.id }}">link</a></td>
                 </tr>
             {% endfor %}
             </tbody>
         </table>
-        <div class="game-lineup">
+        <div id="lineup" class="game-lineup">
             <div class="accordion" id="lineup_accordion">
                 <div class="accordion-group">
                     <div class="accordion-heading">
@@ -47,6 +53,17 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+    <div id="rsvp-modal" class="modal hide fade">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h3>Confirmation Link</h3>
+        </div>
+        <div class="modal-body">
+            <p>Send this link to your friends for them to rsvp for the game</p>
+            <b>link: </b>
+            <span class="rsvp-link">http://instapickup-steinbachr.dotcloud.com{% url pickup_finder.views.game_rsvp 0 %}</span>
         </div>
     </div>
 {% endblock %}

@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block css %}
+    <link rel="stylesheet/less" type="text/css" href="{{ STATIC_URL }}css/less/portal.less" />
+{% endblock %}
+{% block body %}    
+    <div class="header">
+        <div class="header-title">
+            InstaPickup
+        </div>        
+    </div>
+    <div class="container">
+        <div class="content-container">
+            <div class="content">
+                {% block content %}
+                {% endblock %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
