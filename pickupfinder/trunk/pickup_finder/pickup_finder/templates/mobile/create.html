@@ -1,0 +1,35 @@
+{% extends 'mobile/base.html' %}
+
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/libraries/datepicker.css" />
+{% endblock %}
+{% block js %}
+    <script type="text/javascript" src="{{ STATIC_URL }}js/libraries/jquery-ui-1.9.2.custom.min.js"></script>
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places&sensor=true"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/libraries/jquery-validation/dist/jquery.validate.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/libraries/bootstrap-datepicker.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/mine/create_game.js"></script>    
+{% endblock %}
+{% block back %}
+    <a href="#" data-rel="back" data-theme="c" class="back-button">Back</a>
+{% endblock %}
+{% block facebook %}
+    <div id="fb-root"></div>
+    <script type="text/javascript">                
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId={{ facebook_id }}";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+{% endblock %}
+{% block content %}
+    <div class="create-game">
+        <form method="post">                       
+            {{ form }}
+            <input type="submit" value="Submit" data-theme="b">
+        </form>
+    </div>
+{% endblock %}

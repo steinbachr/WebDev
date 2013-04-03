@@ -1,6 +1,6 @@
 from django import forms
 from pickup_finder.models import PlayerGame
-from pickup_finder.constants import ChanceAttendingConstants
+from pickup_finder.constants import ChanceAttendingConstants, GameTypeConstants
 
 class UserForm(forms.Form):
     name = forms.CharField(max_length=80, widget=forms.HiddenInput())
@@ -20,9 +20,10 @@ class UserForm(forms.Form):
 
 class GameForm(forms.Form):
     location = forms.CharField(max_length=50, widget=forms.TextInput(attrs={'class' : 'required'}))
+    game_type = forms.ChoiceField(choices=GameTypeConstants.choices_for_model())
     public = forms.BooleanField(widget=forms.CheckboxInput(), initial=True, required=False)
     player_cap = forms.IntegerField(max_value=50, widget=forms.TextInput(), required=False)
-    start_date = forms.CharField(max_length=50, widget=forms.TextInput(attrs={'class' : 'datepicker required'}))
+    start_date = forms.CharField(max_length=50, widget=forms.TextInput(attrs={'placeholder' : '06/05/2013', 'class' : 'datepicker required'}))
     start_time = forms.CharField(max_length=50, widget=forms.TextInput(attrs={'placeholder' : 'e.g. 3:45PM', 'class' : 'required'}))
     player_names = forms.CharField(max_length=500, widget=forms.HiddenInput(), required=False)
     player_ids = forms.CharField(max_length=500, widget=forms.HiddenInput(), required=False)

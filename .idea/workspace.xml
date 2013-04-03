@@ -2,19 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="078c4814-d8f8-427c-84b9-a50693064042" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pickupfinder/trunk/pickup_finder/pickup_finder/templates/portal/base.html" afterPath="$PROJECT_DIR$/pickupfinder/trunk/pickup_finder/pickup_finder/templates/portal/base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pickupfinder/trunk/pickup_finder/pickup_finder/constants.py" afterPath="$PROJECT_DIR$/pickupfinder/trunk/pickup_finder/pickup_finder/constants.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pickupfinder/trunk/pickup_finder/pickup_finder/controllers.py" afterPath="$PROJECT_DIR$/pickupfinder/trunk/pickup_finder/pickup_finder/controllers.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pickupfinder/trunk/pickup_finder/pickup_finder/static/js/mine/core.js" afterPath="$PROJECT_DIR$/pickupfinder/trunk/pickup_finder/pickup_finder/static/js/mine/core.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pickupfinder/trunk/pickup_finder/pickup_finder/templates/portal/create_game.html" afterPath="$PROJECT_DIR$/pickupfinder/trunk/pickup_finder/pickup_finder/templates/portal/create_game.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pickupfinder/trunk/pickup_finder/pickup_finder/static/js/mine/create_game.js" afterPath="$PROJECT_DIR$/pickupfinder/trunk/pickup_finder/pickup_finder/static/js/mine/create_game.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pickupfinder/trunk/pickup_finder/pickup_finder/templates/portal/dashboard.html" afterPath="$PROJECT_DIR$/pickupfinder/trunk/pickup_finder/pickup_finder/templates/portal/dashboard.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pickupfinder/trunk/pickup_finder/pickup_finder/static/js/mine/dashboard.js" afterPath="$PROJECT_DIR$/pickupfinder/trunk/pickup_finder/pickup_finder/static/js/mine/dashboard.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pickupfinder/trunk/pickup_finder/pickup_finder/forms.py" afterPath="$PROJECT_DIR$/pickupfinder/trunk/pickup_finder/pickup_finder/forms.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pickupfinder/trunk/pickup_finder/pickup_finder/controllers.py" afterPath="$PROJECT_DIR$/pickupfinder/trunk/pickup_finder/pickup_finder/controllers.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pickupfinder/trunk/pickup_finder/pickup_finder/models.py" afterPath="$PROJECT_DIR$/pickupfinder/trunk/pickup_finder/pickup_finder/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pickupfinder/trunk/pickup_finder/pickup_finder/static/css/less/portal.less" afterPath="$PROJECT_DIR$/pickupfinder/trunk/pickup_finder/pickup_finder/static/css/less/portal.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pickupfinder/trunk/pickup_finder/pickup_finder/templates/portal/view_games.html" afterPath="$PROJECT_DIR$/pickupfinder/trunk/pickup_finder/pickup_finder/templates/portal/view_games.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pickupfinder/trunk/pickup_finder/pickup_finder/templates/portal/base.html" afterPath="$PROJECT_DIR$/pickupfinder/trunk/pickup_finder/pickup_finder/templates/portal/base.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pickupfinder/trunk/pickup_finder/pickup_finder/static/js/mine/create_game.js" afterPath="$PROJECT_DIR$/pickupfinder/trunk/pickup_finder/pickup_finder/static/js/mine/create_game.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pickupfinder/trunk/pickup_finder/pickup_finder/constants.py" afterPath="$PROJECT_DIR$/pickupfinder/trunk/pickup_finder/pickup_finder/constants.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pickupfinder/trunk/pickup_finder/pickup_finder/templates/portal/create_game.html" afterPath="$PROJECT_DIR$/pickupfinder/trunk/pickup_finder/pickup_finder/templates/portal/create_game.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pickupfinder/trunk/pickup_finder/pickup_finder/static/js/mine/dashboard.js" afterPath="$PROJECT_DIR$/pickupfinder/trunk/pickup_finder/pickup_finder/static/js/mine/dashboard.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pickupfinder/trunk/pickup_finder/.idea/workspace.xml" afterPath="$PROJECT_DIR$/pickupfinder/trunk/pickup_finder/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pickupfinder/trunk/pickup_finder/pickup_finder/static/js/mine/core.js" afterPath="$PROJECT_DIR$/pickupfinder/trunk/pickup_finder/pickup_finder/static/js/mine/core.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pickupfinder/trunk/pickup_finder/pickup_finder/templates/portal/view_games.html" afterPath="$PROJECT_DIR$/pickupfinder/trunk/pickup_finder/pickup_finder/templates/portal/view_games.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pickupfinder/trunk/pickup_finder/pickup_finder/static/css/less/portal.less" afterPath="$PROJECT_DIR$/pickupfinder/trunk/pickup_finder/pickup_finder/static/css/less/portal.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pickupfinder/trunk/pickup_finder/pickup_finder/forms.py" afterPath="$PROJECT_DIR$/pickupfinder/trunk/pickup_finder/pickup_finder/forms.py" />
     </list>
     <ignored path="WebDev.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -63,7 +63,7 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
+    <breakpoint_any>
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
         <option name="NOTIFY_UNCAUGHT" value="true" />
@@ -74,7 +74,7 @@
         <option name="SUSPEND" value="true" />
         <option name="COUNT_FILTER_ENABLED" value="false" />
         <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="false" />
+        <option name="CONDITION_ENABLED" value="true" />
         <option name="CLASS_FILTERS_ENABLED" value="false" />
         <option name="INSTANCE_FILTERS_ENABLED" value="false" />
         <option name="CONDITION" value="" />
@@ -90,14 +90,13 @@
         <option name="SUSPEND" value="true" />
         <option name="COUNT_FILTER_ENABLED" value="false" />
         <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="false" />
+        <option name="CONDITION_ENABLED" value="true" />
         <option name="CLASS_FILTERS_ENABLED" value="false" />
         <option name="INSTANCE_FILTERS_ENABLED" value="false" />
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -119,7 +118,7 @@
       <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="42" selection-start="1339" selection-end="1339" vertical-scroll-proportion="0.04584041">
+            <state line="28" column="42" selection-start="1339" selection-end="1339" vertical-scroll-proportion="0.02538071">
               <folding />
             </state>
           </provider>
@@ -221,6 +220,17 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -295,17 +305,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -322,11 +321,11 @@
     <property name="GoToClass.includeJavaFiles" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="MemberChooser.showClasses" value="true" />
     <property name="FullScreen" value="false" />
+    <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -424,10 +423,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1280" height="774" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -438,14 +436,15 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16126418" sideWeight="0.9847095" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16045381" sideWeight="0.9847095" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -595,7 +594,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="42" selection-start="1339" selection-end="1339" vertical-scroll-proportion="0.04584041">
+        <state line="28" column="42" selection-start="1339" selection-end="1339" vertical-scroll-proportion="0.02538071">
           <folding />
         </state>
       </provider>

@@ -18,6 +18,15 @@ urlpatterns = patterns('pickup_finder.views',
     url(r'^game/(?P<game>\d+)/thanks/$', 'game_rsvp_thanks'),
 )
 
+#MOBILE
+urlpatterns += patterns('pickup_finder.views',
+    url(r'^mobile/view/$', 'mobile_view_games'),
+    url(r'^mobile/view/(?P<game>\d+)/details/$', 'mobile_game_details'),
+    url(r'^mobile/view/(?P<game>\d+)/details/rsvp/$', 'mobile_game_rsvp'),
+    url(r'^mobile/view/(?P<game>\d+)/details/rsvp/thanks/$', 'mobile_game_rsvp_thanks'),
+    url(r'^mobile/create/$', 'mobile_create_game'),
+)
+
 #ADMIN
 urlpatterns += patterns('pickup_finder.views',
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),

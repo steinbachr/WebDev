@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>    
+    <title>Welcome to InstaPickup</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.min.css" />
+    <link rel="stylesheet/less" type="text/css" href="{{ STATIC_URL }}css/less/mobile.less" />
+    {% block css %}{% endblock %}
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.min.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/libraries/less-1.3.1.min.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/mine/mobile.js"></script>
+    {% block js %}{% endblock %}
+</head>
+<body>
+    {% block facebook %}{% endblock %}
+    <div data-role="page">
+        <div data-role="header">
+            {% block back %}{% endblock %}
+            <h1>InstaPickup</h1>
+            {% block nav %}
+                <div class="navbar" data-role="navbar">
+                    <ul>
+                        <li><a href="{% url pickup_finder.views.mobile_view_games %}" class="ui-btn-active ui-state-persist">Find a Game</a></li>
+                        <li><a href="{% url pickup_finder.views.mobile_create_game %}" class="ui-state-persist">Create a Game</a></li>
+                    </ul>
+                </div><!-- /navbar -->
+            {% endblock %}
+        </div>    
+        <div data-role="content">
+            {% block content %}{% endblock %}
+        </div>
+        <div data-role="footer" data-position="fixed" data-fullscreen="true"><h4>Copyright 2013 Bobby Steinbach</h4></div>
+    </div>
+</body>
+</html>

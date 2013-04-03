@@ -10,6 +10,7 @@ from pickup_finder.components import *
 class Controller():
     def __init__(self, request):
         self.request = request
+        self.tpl_vars = {'facebook_id' : APIKeys.FACEBOOK_PROD}
 
 class AjaxController(Controller):
     def __init__(self, request):
@@ -18,7 +19,11 @@ class AjaxController(Controller):
 class PortalController(Controller):
     def __init__(self, request, current_tab):        
         Controller.__init__(self, request)        
-        self.tpl_vars = {'current_tab' : current_tab, 'facebook_id' : APIKeys.FACEBOOK_PROD}
+        self.tpl_vars['current_tab'] = current_tab
+        
+class MobileController(Controller):
+    def __init__(self, request):
+        Controller.__init__(self, request)        
 
 class CreateUserController(Controller):
     '''the request for creating a new user'''
@@ -69,8 +74,9 @@ class DashboardController(PortalController):
     
     
 class CreateGameController(PortalController):
-    def __init__(self, request):
+    def __init__(self, request, tpl_file="portal/create_game.html"):
         PortalController.__init__(self, request, 'create-game')
+        self.tpl_file = tpl_file
         
     def create_game(self):
         from geopy.geocoders.googlev3 import GoogleV3
@@ -83,6 +89,7 @@ class CreateGameController(PortalController):
             
             if form.is_valid():
                 location = form.cleaned_data['location']
+                game_type = form.cleaned_data['game_type']
                 place, (lat, lng) = list(google.geocode(location, exactly_one=False))[0] #go back and fix
                 public = form.cleaned_data['public']
                 player_cap = form.cleaned_data['player_cap'] if public else None
@@ -96,7 +103,7 @@ class CreateGameController(PortalController):
 
                 #create the model instances
                 game = Game(creator=self.request.user, latitude=Decimal(str(lat)), longitude=Decimal(str(lng)), 
-                            normalized_location=location, public=public, person_cap=player_cap, starts_at=start)
+                            normalized_location=location, public=public, game_type=game_type, person_cap=player_cap, starts_at=start)
                 game.save()
                 for index,name in enumerate(split_names):                    
                     (player, created) = Player.objects.get_or_create(name=name, fb_id=split_ids[index])                                 
@@ -110,7 +117,7 @@ class CreateGameController(PortalController):
         
         self.tpl_vars['form'] = form
         context = RequestContext(self.request, self.tpl_vars)
-        return render_to_response("portal/create_game.html", context)        
+        return render_to_response(self.tpl_file, context)        
 
 class ViewGamesController(PortalController):
     def __init__(self, request):
@@ -138,7 +145,7 @@ class ExploreController(PortalController):
     def __init__(self, request):
         PortalController.__init__(self, request, 'explore')
 
-        self.tpl_vars['games'] = Game.objects.filter(public=True).all()
+        self.tpl_vars['games'] = Game.public_games()
 
     def explore(self):        
         context = RequestContext(self.request, self.tpl_vars)        
@@ -146,9 +153,10 @@ class ExploreController(PortalController):
     
     
 class GameRsvpController(PortalController):
-    def __init__(self, request, game):
+    def __init__(self, request, game, base_tpl='public/base.html'):
         PortalController.__init__(self, request, 'rsvp')
         self.game = game
+        self.base_tpl = base_tpl
 
     def rsvp(self):
         if self.request.method == "POST":
@@ -173,6 +181,46 @@ class GameRsvpController(PortalController):
         else:
             form = GameRsvpForm(self.game)  
             
-        self.tpl_vars.update({'game' : self.game, 'form' : form})
+        self.tpl_vars.update({'game' : self.game, 'form' : form, 'mobile_or_public' : self.base_tpl, 'back_button' : False})
         context = RequestContext(self.request, self.tpl_vars)
-        return render_to_response("public/rsvp_game.html", context)        
+        return render_to_response("public/rsvp_game.html", context)     
+    
+class GameRsvpThanksController(PortalController):
+    def __init__(self, request, game, base_tpl='public/base.html'):
+        PortalController.__init__(self, request, 'rsvp')
+        self.game = game
+        self.base_tpl = base_tpl
+    
+    def render(self):
+        self.tpl_vars.update({'game' : self.game, 'mobile_or_public' : self.base_tpl})
+        context = RequestContext(self.request, self.tpl_vars)
+        return render_to_response("public/rsvp_thanks.html", context)
+    
+####MOBILE CONTROLLERS####
+class MobileViewGamesController(MobileController):
+    def __init__(self, request):
+        MobileController.__init__(self, request)
+        
+        #we bucket the games by their game type
+        game_dict = {}
+        for game in Game.public_games():
+            if game.verbose_game_type not in game_dict:
+                game_dict[game.verbose_game_type] = [game]
+            else:
+                game_dict[game.verbose_game_type].append(game)
+
+        self.tpl_vars.update({'games' : game_dict})
+        
+    def render(self):
+        context = RequestContext(self.request, self.tpl_vars)        
+        return render_to_response("mobile/view.html", context)
+    
+class MobileGameDetailsController(MobileController):
+    def __init__(self, request, game):
+        MobileController.__init__(self, request)
+        self.game = game
+        self.tpl_vars['game'] = self.game
+
+    def render(self):
+        context = RequestContext(self.request, self.tpl_vars)
+        return render_to_response("mobile/game_details.html", context)    

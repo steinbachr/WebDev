@@ -18,6 +18,26 @@ class ChanceAttendingConstants():
         for choice in cls.choices_for_model():
             if choice[0] == key:
                 return choice[1]
+            
+class GameTypeConstants():
+    SOCCER = (0, "soccer")
+    FOOTBALL = (1, "tennis")
+    BASKETBALL = (2, "basketball")
+    SOFTBALL = (3, "softball")
+    BASEBALL = (4, "baseball")
+    WIFFLE_BALL = (5, "wiffle ball")
+    OTHER = (6, "other")
+
+
+    @classmethod
+    def choices_for_model(cls):
+        return (cls.SOCCER, cls.FOOTBALL, cls.BASKETBALL, cls.SOFTBALL, cls.BASEBALL, cls.WIFFLE_BALL, cls.OTHER)
+
+    @classmethod
+    def get_verbose(cls, key):
+        for choice in cls.choices_for_model():
+            if choice[0] == key:
+                return choice[1]
 
 
 class APIKeys():

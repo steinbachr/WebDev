@@ -47,6 +47,7 @@
                         <h4>Click a marker to see the details!</h4>
                         {% for game in games %}
                             <ul>
+                                <li class="{{ game.id }}"><b>Game Type</b> {{ game.verbose_game_type }}</li>
                                 <li class="{{ game.id }}"><b>Date / Time</b> {{ game.starts_at }}</li>
                                 <li class="{{ game.id }}"><b>Public</b> {{ game.public }}</li>                            
                                 <li class="{{ game.id }}"><b>Location</b> {{ game.normalized_location }}</li>                            
@@ -58,5 +59,4 @@
         </div>
     </div>
 </div>
-<!--INFO WINDOWS-->
 {% endblock %}

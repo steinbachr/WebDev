@@ -2,7 +2,7 @@ import json
 from django.db import models
 from django.core.urlresolvers import reverse
 from django.contrib.auth.models import User
-from pickup_finder.constants import ChanceAttendingConstants
+from pickup_finder.constants import ChanceAttendingConstants, GameTypeConstants
     
 class Game(models.Model):
     creator = models.ForeignKey(User)
@@ -13,6 +13,7 @@ class Game(models.Model):
     #meta info
     public = models.BooleanField()
     person_cap = models.IntegerField(blank=True, null=True)
+    game_type = models.SmallIntegerField(choices=GameTypeConstants.choices_for_model())
     #datetime fields
     created = models.DateTimeField(auto_now_add=True)
     modified = models.DateTimeField(auto_now=True)
@@ -29,6 +30,14 @@ class Game(models.Model):
     @property
     def can_rsvp(self):
         return self.players_count < self.person_cap or (self.public and self.person_cap is None)
+    
+    @property
+    def verbose_game_type(self):
+        return GameTypeConstants.get_verbose(self.game_type)
+    
+    @classmethod
+    def public_games(cls):
+        return cls.objects.filter(public=True).all()
     
     @classmethod
     def games_by_creator(cls, creator):

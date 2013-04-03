@@ -1,0 +1,14 @@
+{% extends 'mobile/base.html' %}
+
+{% block content %}
+    <div class="view-games">
+        <ul data-role="listview">
+            {% for type,games in games.items %}
+                <li data-role="list-divider" data-theme="e">{{ type }}</li>
+                {% for game in games %}
+                    <li><a href="{% url pickup_finder.views.mobile_game_details game.id %}">{{ game.normalized_location }}</a></li>
+                {% endfor %}               
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}

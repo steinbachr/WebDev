@@ -33,8 +33,30 @@ def game_rsvp(request, game=None):
     return controller.rsvp()
 
 def game_rsvp_thanks(request, game=None):
-    context = RequestContext(request, {'game' : Game.for_id(game)})
-    return render_to_response("public/rsvp_thanks.html", context)
+    controller = GameRsvpThanksController(request, Game.for_id(game))
+    return controller.render()
+
+##MOBILE
+def mobile_view_games(request):
+    controller = MobileViewGamesController(request)
+    return controller.render()
+
+def mobile_create_game(request):
+    controller = CreateGameController(request, tpl_file='mobile/create.html')
+    return controller.create_game()
+
+def mobile_game_details(request, game=None):
+    controller = MobileGameDetailsController(request, Game.for_id(game))
+    return controller.render()
+
+def mobile_game_rsvp(request, game=None):
+    controller = GameRsvpController(request, Game.for_id(game), base_tpl='mobile/base.html')
+    return controller.rsvp()
+
+def mobile_game_rsvp_thanks(request, game=None):
+    controller = GameRsvpThanksController(request, Game.for_id(game), base_tpl='mobile/base.html')
+    return controller.render()
+    
 
 
 

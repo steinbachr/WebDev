@@ -13,6 +13,7 @@
             <thead>
                 <tr>
                     <th>Date / Time</th>
+                    <th>Game Type</th>
                     <th>Location</th>
                     <th>Public</th>
                     <th>Player Cap</th>                    
@@ -24,6 +25,7 @@
                 {% for game in games %}
                 <tr>
                     <td>{{ game.starts_at }}</td>
+                    <td>{{ game.verbose_game_type }}</td>
                     <td>{{ game.normalized_location }}</td>
                     <td>{{ game.public }}</td>
                     <td>{% if game.public %}{{ game.person_cap }}{% else %}N/A{% endif %}</td>                    

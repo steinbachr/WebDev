@@ -1,0 +1,25 @@
+{% extends 'mobile/base.html' %}
+
+{% block back %}
+    <a href="#" data-rel="back" data-theme="c" class="back-button">Back</a>
+{% endblock %}
+{% block nav %}{% endblock %}
+{% block content %}
+    <div class="game-details">
+        <table data-role="table">
+            <thead>
+                <th>Date / Time</th>
+                <th>Location</th>
+                <th>Player Cap</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{ game.starts_at }}</td>
+                    <td>{{ game.normalized_location }}</td>
+                    <td>{{ game.person_cap }}</td>
+                </tr>
+            </tbody>
+        </table>
+        <a href="{% url pickup_finder.views.mobile_game_rsvp game.id %}" data-role="button" data-icon="star" data-theme="e" data-rel="dialog">rsvp now</a>        
+    </div>
+{% endblock %}
