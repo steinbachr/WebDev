@@ -37,12 +37,16 @@ def game_rsvp_thanks(request, game=None):
     return controller.render()
 
 ##MOBILE
+def mobile_home(request):
+    controller = CreateUserController(request, mobile=True)
+    return controller.create_user()
+
 def mobile_view_games(request):
     controller = MobileViewGamesController(request)
     return controller.render()
 
 def mobile_create_game(request):
-    controller = CreateGameController(request, tpl_file='mobile/create.html')
+    controller = CreateGameController(request, mobile=True)
     return controller.create_game()
 
 def mobile_game_details(request, game=None):

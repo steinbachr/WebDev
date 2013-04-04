@@ -9,7 +9,7 @@ from pickup_finder.components import *
 
 class Controller():
     def __init__(self, request):
-        self.request = request
+        self.request = request        
         self.tpl_vars = {'facebook_id' : APIKeys.FACEBOOK_PROD}
 
 class AjaxController(Controller):
@@ -17,8 +17,9 @@ class AjaxController(Controller):
         Controller.__init__(self, request)
         
 class PortalController(Controller):
-    def __init__(self, request, current_tab):        
-        Controller.__init__(self, request)        
+    def __init__(self, request, current_tab, mobile=False):        
+        Controller.__init__(self, request)  
+        self.mobile = mobile
         self.tpl_vars['current_tab'] = current_tab
         
 class MobileController(Controller):
@@ -27,8 +28,9 @@ class MobileController(Controller):
 
 class CreateUserController(Controller):
     '''the request for creating a new user'''
-    def __init__(self, request):
+    def __init__(self, request, mobile=False):
         Controller.__init__(self, request)
+        self.mobile = mobile
         
     def create_user(self):
         from django.contrib.auth import authenticate, login
@@ -51,8 +53,11 @@ class CreateUserController(Controller):
                     user.save()
                     user = authenticate(username=name, password=password)
                     login(self.request, user)
-                    
-                return Http.redirect('pickup_finder.views.dashboard')
+                
+                if self.mobile:
+                    return Http.redirect('pickup_finder.views.mobile_view_games')
+                else:
+                    return Http.redirect('pickup_finder.views.dashboard')
         else:
             form = UserForm()
         
@@ -74,9 +79,8 @@ class DashboardController(PortalController):
     
     
 class CreateGameController(PortalController):
-    def __init__(self, request, tpl_file="portal/create_game.html"):
-        PortalController.__init__(self, request, 'create-game')
-        self.tpl_file = tpl_file
+    def __init__(self, request, mobile=False):
+        PortalController.__init__(self, request, 'create-game', mobile=mobile)    
         
     def create_game(self):
         from geopy.geocoders.googlev3 import GoogleV3
@@ -108,8 +112,13 @@ class CreateGameController(PortalController):
                 for index,name in enumerate(split_names):                    
                     (player, created) = Player.objects.get_or_create(name=name, fb_id=split_ids[index])                                 
                     player_game = PlayerGame(player=player, game=game, chance_attending=ChanceAttendingConstants.NOT_RESPONDED[0])
-                    player_game.save()                    
-                return HttpResponseRedirect('%s?created=True&game=%s'%(reverse('pickup_finder.views.create_game'), int(game.id)))
+                    player_game.save()      
+                
+                if self.mobile:
+                    return HttpResponseRedirect(reverse('pickup_finder.views.mobile_create_game'))
+                else:
+                    return HttpResponseRedirect('%s?created=True&game=%s'%(reverse('pickup_finder.views.create_game'), int(game.id)))
+                    
         else:
             self.tpl_vars['created'] = self.request.GET.get('created', None)
             self.tpl_vars['rsvp_link'] = Game.for_id(self.request.GET.get('game', None)).rsvp_link if self.tpl_vars['created'] else None
@@ -117,7 +126,9 @@ class CreateGameController(PortalController):
         
         self.tpl_vars['form'] = form
         context = RequestContext(self.request, self.tpl_vars)
-        return render_to_response(self.tpl_file, context)        
+        
+        tpl_file =  "mobile/create.html"  if self.mobile else "portal/create_game.html"
+        return render_to_response(tpl_file, context)        
 
 class ViewGamesController(PortalController):
     def __init__(self, request):

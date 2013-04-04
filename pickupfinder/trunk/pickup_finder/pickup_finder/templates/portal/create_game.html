@@ -35,7 +35,7 @@
             // Additional init code here
             FB.getLoginStatus(function(response) {
                 if (response.status === 'connected') {
-                    get_users_friends();
+                    get_users_friends(false); //not mobile
                 } else if (response.status === 'not_authorized') {
                     facebook.login();
                 } else {
@@ -59,20 +59,19 @@
                     {{ field }}
                     {% endif %}                
                 {% endfor %}                          
-            </div>     
-            <div class="bottom-form">
+            </div>
+            <button class="btn btn-large">Finish Up</button>
+            <div class="bottom-form">                
                 <div class="player-drag-box">
                     <h4>Drag friends here</h4>
                     <ul></ul>
-                </div>
+                </div>                
                 <div class="friends-list">
                     <img src="{{ STATIC_URL }}images/loader.gif" class="spinner" />
                     <ul>
                     </ul>
-                </div>
-            </div>
-            <div class="clearfix"></div>            
-            <button class="btn btn-large">Finish Up</button>            
+                </div>                
+            </div>                                                     
         </form>
     </div>
     {% if created %}

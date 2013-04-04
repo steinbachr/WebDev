@@ -28,7 +28,7 @@ $(document).ready(function() {
         if ($(evt.target).is(':checked')) {
             $player_cap.removeAttr('disabled');                     
         } else {
-            $player_cap.attr('disabled', 'true');
+            $player_cap.attr('disabled', 'disabled');
         }
     });
     
@@ -69,16 +69,28 @@ function add_player(player_box, player) {
     player.css('position', 'static');
 }
 
-function get_users_friends() {
-    FB.api('/me/friends', function(response) {
+function get_users_friends(is_mobile) {
+    FB.api('/me/friends?fields=picture,name,id', function(response) {
         var $friends_list = $('.friends-list ul');
         var friends = response.data;
         
         for (var i = 0 ; i < friends.length ;  i++) {
-            $friends_list.append('<li class="draggable" id="'+friends[i].id+'">'+friends[i].name+'</li>');
+            if (is_mobile) {
+                $friends_list.append('<li class="draggable" id="'+friends[i].id+'"><img class="ui-li-icon" src="'
+                                      +friends[i].picture.data.url+'" />'+friends[i].name+'</li>');
+            } else {
+                $friends_list.append('<li class="draggable" id="'+friends[i].id+'">'+friends[i].name+'</li>');
+            }
+            
         }
         
-        var $draggable = $('.draggable').draggable({opacity : .7});
+        //we only use the draggable if its not being used as mobile
+        if (!is_mobile) {
+            var $draggable = $('.draggable').draggable({opacity : .7});    
+        } else {
+            $friends_list.listview("refresh");
+        }
+        
         //remove spinner
         $('.spinner').remove();
     });

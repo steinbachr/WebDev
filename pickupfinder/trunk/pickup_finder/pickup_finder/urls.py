@@ -20,6 +20,7 @@ urlpatterns = patterns('pickup_finder.views',
 
 #MOBILE
 urlpatterns += patterns('pickup_finder.views',
+    url(r'^mobile/$', 'mobile_home'),
     url(r'^mobile/view/$', 'mobile_view_games'),
     url(r'^mobile/view/(?P<game>\d+)/details/$', 'mobile_game_details'),
     url(r'^mobile/view/(?P<game>\d+)/details/rsvp/$', 'mobile_game_rsvp'),

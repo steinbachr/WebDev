@@ -4,11 +4,15 @@
     <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/libraries/datepicker.css" />
 {% endblock %}
 {% block js %}
+    <script type="text/javascript">
+        var facebook = {};
+    </script>
     <script type="text/javascript" src="{{ STATIC_URL }}js/libraries/jquery-ui-1.9.2.custom.min.js"></script>
     <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places&sensor=true"></script>
     <script type="text/javascript" src="{{ STATIC_URL }}js/libraries/jquery-validation/dist/jquery.validate.js"></script>
     <script type="text/javascript" src="{{ STATIC_URL }}js/libraries/bootstrap-datepicker.js"></script>
     <script type="text/javascript" src="{{ STATIC_URL }}js/mine/create_game.js"></script>    
+    <script type="text/javascript" src="{{ STATIC_URL }}js/mine/login.js"></script>    
 {% endblock %}
 {% block back %}
     <a href="#" data-rel="back" data-theme="c" class="back-button">Back</a>
@@ -23,12 +27,48 @@
             js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId={{ facebook_id }}";
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
+        
+        // Additional JS functions here
+            window.fbAsyncInit = function() {
+        FB.init({
+            appId      : "{{ facebook_id }}", // App ID
+            channelUrl : '', // Channel File
+            status     : true, // check login status
+            cookie     : true, // enable cookies to allow the server to access the session
+            xfbml      : true  // parse XFBML
+        });
+
+        // Additional init code here
+        FB.getLoginStatus(function(response) {
+            if (response.status === 'connected') {
+                get_users_friends(true); //mobile                
+            } else if (response.status === 'not_authorized') {
+                facebook.login();
+            } else {
+                facebook.login();
+            }
+        });
+        
+        $(document).ready(function() {
+            $('.friends-list ul').on('click', "li", function(evt, ui) {
+                $(evt.target).addClass('ui-btn-active');
+                add_player($('document'), $(evt.target));
+                //might not be best solution, but have to cancel out positioning stuff we did in non mobile flow
+                $(evt.target).css('position', 'relative');
+            });
+        })    
+    };    
     </script>
 {% endblock %}
 {% block content %}
     <div class="create-game">
         <form method="post">                       
             {{ form }}
+            <h2>Pick friends to invite</h2>
+            <div class="friends-list">                
+                <ul data-role="listview" data-inset="true" data-filter="true" data-filter-placeholder="filter friends">                    
+                </ul>                
+            </div>
             <input type="submit" value="Submit" data-theme="b">
         </form>
     </div>
