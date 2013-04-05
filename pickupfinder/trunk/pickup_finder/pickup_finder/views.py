@@ -54,12 +54,17 @@ def mobile_game_details(request, game=None):
     return controller.render()
 
 def mobile_game_rsvp(request, game=None):
-    controller = GameRsvpController(request, Game.for_id(game), base_tpl='mobile/base.html')
+    controller = GameRsvpController(request, Game.for_id(game), mobile=True)
     return controller.rsvp()
 
 def mobile_game_rsvp_thanks(request, game=None):
-    controller = GameRsvpThanksController(request, Game.for_id(game), base_tpl='mobile/base.html')
+    controller = GameRsvpThanksController(request, Game.for_id(game), mobile=True)
     return controller.render()
+
+##AJAX
+def ajax_seen_notifications(request):
+    controller = AjaxNotificationsController(request)
+    return controller.seen_notifications()
     
 
 

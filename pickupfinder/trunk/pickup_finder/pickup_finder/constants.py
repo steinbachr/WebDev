@@ -1,7 +1,14 @@
+class Constants():    
+    @classmethod
+    def get_verbose(cls, key):
+        for choice in cls.choices_for_model():
+            if choice[0] == key:
+                return choice[1]
+
 class FormattingConstants():
     DATE_FORMAT = '%m/%d/%Y %I:%M%p';
 
-class ChanceAttendingConstants():
+class ChanceAttendingConstants(Constants):
     #data source options
     NOT_RESPONDED=  (-1, "not responded")
     DEFINITE     =  (0, "definitely")
@@ -12,14 +19,8 @@ class ChanceAttendingConstants():
     @classmethod
     def choices_for_model(cls):
         return (cls.NOT_RESPONDED, cls.DEFINITE, cls.MAYBE, cls.PROBABLY_NOT, cls.NOT)
-    
-    @classmethod
-    def get_verbose(cls, key):
-        for choice in cls.choices_for_model():
-            if choice[0] == key:
-                return choice[1]
             
-class GameTypeConstants():
+class GameTypeConstants(Constants):
     SOCCER = (0, "soccer")
     FOOTBALL = (1, "tennis")
     BASKETBALL = (2, "basketball")
@@ -28,16 +29,17 @@ class GameTypeConstants():
     WIFFLE_BALL = (5, "wiffle ball")
     OTHER = (6, "other")
 
-
     @classmethod
     def choices_for_model(cls):
         return (cls.SOCCER, cls.FOOTBALL, cls.BASKETBALL, cls.SOFTBALL, cls.BASEBALL, cls.WIFFLE_BALL, cls.OTHER)
+    
+            
+class NotificationTypeConstants(Constants):
+    PLAYER_JOINED = (0, lambda player,game: "%s has joined the game at %s" % (player.name, game.normalized_location))
 
     @classmethod
-    def get_verbose(cls, key):
-        for choice in cls.choices_for_model():
-            if choice[0] == key:
-                return choice[1]
+    def choices_for_model(cls):
+        return (cls.PLAYER_JOINED,)
 
 
 class APIKeys():

@@ -28,6 +28,11 @@ urlpatterns += patterns('pickup_finder.views',
     url(r'^mobile/create/$', 'mobile_create_game'),
 )
 
+#AJAX
+urlpatterns += patterns('pickup_finder.views',
+    url(r'^ajax/seen-notifications/$', 'ajax_seen_notifications'),    
+    )
+
 #ADMIN
 urlpatterns += patterns('pickup_finder.views',
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),

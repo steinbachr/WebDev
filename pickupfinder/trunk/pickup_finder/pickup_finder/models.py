@@ -2,7 +2,7 @@ import json
 from django.db import models
 from django.core.urlresolvers import reverse
 from django.contrib.auth.models import User
-from pickup_finder.constants import ChanceAttendingConstants, GameTypeConstants
+from pickup_finder.constants import *
     
 class Game(models.Model):
     creator = models.ForeignKey(User)
@@ -70,5 +70,29 @@ class PlayerGame(models.Model):
     
     @classmethod
     def all_players_for_game(cls, game):
-        return [pg.player for pg in cls.objects.filter(game=game).all()]        
+        return [pg.player for pg in cls.objects.filter(game=game).all()]
+    
+    
+class Notification(models.Model):
+    game = models.ForeignKey(Game)
+    player = models.ForeignKey(Player, blank=True, null=True)
+    type = models.SmallIntegerField(choices=NotificationTypeConstants.choices_for_model())
+    seen = models.BooleanField()
         
+    @property
+    def format_notification(self):
+        formatter = NotificationTypeConstants.get_verbose(self.type)
+        return formatter(self.player, self.game)
+        
+    @classmethod
+    def unseen_notifications(cls, user):        
+        return cls.objects.filter(game__creator=user).filter(seen=False).all()
+    
+    @classmethod
+    def mark_as_seen(cls, user):
+        '''when the user clicks the notifications, for now we'll just assume hes seen everything
+        so we use this method to mark all the notifications for a user as seen'''
+        unseen = cls.unseen_notifications(user)
+        for notif in unseen:
+            notif.seen = True
+            notif.save()                        

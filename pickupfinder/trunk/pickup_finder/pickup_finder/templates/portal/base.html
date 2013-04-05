@@ -37,6 +37,7 @@
                     <li{% if current_tab == "view-games" %} class="active"{% endif %}><a href="{% url pickup_finder.views.view_games %}"><i class="icon-eye-open"></i>View My Games</a></li>
                     <li{% if current_tab == "help" %} class="active"{% endif %}><a href="{% url pickup_finder.views.help %}"><i class="icon-question-sign"></i>Help</a></li>
                     <li{% if current_tab == "explore" %} class="active"{% endif %}><a href="{% url pickup_finder.views.explore %}"><i class="icon-search"></i>Explore</a></li>
+                    <li class="notifications"><a href="#" id="notifs" data-rel="popover">Notifications</a><span class="notifs-count">{{ notifications|length }}</span></li>
                 </ul>                
             </div>
         </div>
@@ -46,5 +47,12 @@
                 {% endblock %}
             </div>            
         </div>
+    </div>
+    <div class="notifications-popover" style="display: none;">
+        {% for notification in notifications %}
+            <div class="alert alert-info">
+                {{ notification.format_notification }}
+            </div>
+        {% endfor %}
     </div>
 {% endblock %}

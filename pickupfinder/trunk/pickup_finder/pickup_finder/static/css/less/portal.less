@@ -45,6 +45,22 @@ ul {
       display: inline-block;
       ul li {
         width: 150px;
+        height: 50px;
+        &:last-child {
+          width: 90px;
+          font-size: 12px;
+        }
+        span.notifs-count {
+          position: relative;
+          top: -53px;
+          left: 50px;
+          width: 35px;
+          height: 29px;
+          display: inline-block;
+          color: white;
+          background: url('../../images/notifications_badge.png') no-repeat center;
+          padding-top: 8px;
+        }
       }
     }
   }

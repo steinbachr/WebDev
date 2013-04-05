@@ -62,14 +62,22 @@
 {% endblock %}
 {% block content %}
     <div class="create-game">
-        <form method="post">                       
+        <form method="post" data-ajax="false">                       
             {{ form }}
             <h2>Pick friends to invite</h2>
             <div class="friends-list">                
                 <ul data-role="listview" data-inset="true" data-filter="true" data-filter-placeholder="filter friends">                    
                 </ul>                
             </div>
-            <input type="submit" value="Submit" data-theme="b">
+            <input type="submit" value="Submit" data-theme="b">            
         </form>
     </div>
+    {#  Confirmation link popup  #}
+    {% if created %}
+    <div class="game-created-popup" data-role="popup" id="popupBasic">
+        <h4>Game Created!</h4>
+        <p>Send this link to your friends for them to rsvp for the game</p>
+        <b>link: </b>{{ rsvp_link }}    
+    </div>
+    {% endif %}
 {% endblock %}
