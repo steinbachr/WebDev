@@ -4,7 +4,9 @@
     <link rel="stylesheet/less" type="text/css" href="{{ STATIC_URL }}css/less/index.less" />
 {% endblock %}
 {% block js %}
+    <script type="text/javascript" src="{{ STATIC_URL }}js/libraries/jquery.scrollTo.js"></script>
     <script type="text/javascript" src="{{ STATIC_URL }}js/mine/login.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/mine/public.js"></script>
 {% endblock %}
 {% block body %}
     <div id="fb-root"></div>
@@ -48,13 +50,46 @@
             <img src="{{ STATIC_URL }}images/button_pointer_right.png" class="right-pointer" alt="hi"/>
         </div>
         <div class="span12">
+            <span class="scroll-down">
+                <i class="icon-hand-down"></i>                                
+            </span>
             <div class="button-container">
                 <form id="create_user" method="post">
                 {{ form }}
                 <button class="btn btn-primary btn-large">Sign Up Now</button>
-                </form>
-            </div>            
-        </div>    
+                </form>                
+            </div>     
+        </div> 
+        <div class="span12 info-section-divider divider-1">            
+        </div>
+        <div class="span12 info-section info-1">
+            <h1>InstaPickup for your InstaLifestyle</h1>
+            <p>I want to play a pickup game now. I want to play right this second but I don't want to
+            go to the park only to find no pickup games are happening. Before, this would mean one of two things. 
+            Either I could choose the lazy route and continue watching my Breaking Bad marathon. Or, I could risk
+            my time and disappointment with the hope that a game will in fact be ocurring.</p>
+        </div>
+        <div class="span12 info-section-divider divider-2">
+        </div>
+        <div class="span12 info-section info-2">
+            <h1>InstaPickup vs. Facebook</h1>
+            <p>lorem ipsum dolorem lorem ipsum doloremlorem ipsum doloremlorem ipsum dolorem</p>
+        </div>
+        <div class="span12 info-section-divider divider-3">
+        </div>
+        <div class="span12 info-section info-3">
+            <h1>Find games on the go</h1>
+            <img src="{{ STATIC_URL }}images/mobile_public_image.png" class="img-circle">
+            <p>If you're like me, sometimes you just have a hankering for a pickup game. But you're
+            not always by a computer (if you are, get outside vampire!). For all those outdoorsman, we
+            created the mobile version of InstaPickup so you can find pickup games whenever, wherever.</p>
+            <p>With the mobile site you can:</p>
+            <ul>
+                <li>find public pickup games</li>
+                <li>rsvp your spot in public games</li>
+                <li>..and create new pickup games</li>
+            </ul>
+        </div>
     </div>    
 {% endblock %}
 

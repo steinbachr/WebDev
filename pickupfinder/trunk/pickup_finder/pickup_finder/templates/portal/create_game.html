@@ -8,6 +8,7 @@
     <script type="text/javascript" src="{{ STATIC_URL }}js/libraries/jquery-ui-1.9.2.custom.min.js"></script>
     <script type="text/javascript" src="{{ STATIC_URL }}js/libraries/jquery-validation/dist/jquery.validate.js"></script>
     <script type="text/javascript" src="{{ STATIC_URL }}js/libraries/bootstrap-datepicker.js"></script>    
+    <script type="text/javascript" src="{{ STATIC_URL }}js/libraries/jquery.liveFilter.js"></script>    
     <script type="text/javascript" src="{{ STATIC_URL }}js/mine/create_game.js"></script>
     <script>
         $(document).ready(function() {            
@@ -16,7 +17,7 @@
 
             $droppable.on('drop', function(evt, ui) {
                 add_player($(evt.target), ui.draggable);
-            });
+            });                        
         })
     </script>
 {% endblock %}
@@ -36,6 +37,13 @@
             FB.getLoginStatus(function(response) {
                 if (response.status === 'connected') {
                     get_users_friends(false); //not mobile
+                    
+                    //if this is the page load after a successful public game creation, post to the users feed
+                    var was_successful_creation = $('span.rsvp-link').length;
+                    var was_public = $('span.public-game').length;
+                    if (was_successful_creation && was_public) {
+                        publish_to_feed();
+                    }                    
                 } else if (response.status === 'not_authorized') {
                     facebook.login();
                 } else {
@@ -68,21 +76,32 @@
                 </div>                
                 <div class="friends-list">
                     <img src="{{ STATIC_URL }}images/loader.gif" class="spinner" />
-                    <ul>
+                    <input id="search_friends" type="text" value="" placeholder="Filter friends" />
+                    <ul id="friends">
                     </ul>
                 </div>                
             </div>                                                     
         </form>
     </div>
-    {% if created %}
+    {% if created %}        
         <div class="modal fade">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h3>Game Created</h3>
+                {% if created == 'True' %}
+                    <h3>Game Created</h3>
+                {% else %}
+                    <h3>Game Unable to be Created</h3>
+                {% endif %}
             </div>
             <div class="modal-body">
-                <p>Send this link to your friends for them to rsvp for the game</p>
-                <b>link: </b>{{ rsvp_link }}
+                {% if created == 'True' %}
+                    <p>Send this link to your friends for them to rsvp for the game</p>
+                    <b>link: </b>
+                    {% if game.public %}<span class="public-game" style="display: none;"></span>{% endif %}
+                    <span class="rsvp-link">{{ game.rsvp_link }}</span>
+                {% else %}
+                    <p>Oops, something went wrong and we were unable to create your game, please try again</p>                    
+                {% endif %}
             </div>
         </div>
     {% endif %}

@@ -27,6 +27,7 @@ class GameForm(forms.Form):
     start_time = forms.CharField(max_length=50, widget=forms.TextInput(attrs={'placeholder' : 'e.g. 3:45PM', 'class' : 'required'}))
     player_names = forms.CharField(max_length=500, widget=forms.HiddenInput(), required=False)
     player_ids = forms.CharField(max_length=500, widget=forms.HiddenInput(), required=False)
+    
 
 class GameRsvpForm(forms.Form):
     def __init__(self, game, *args, **kwargs):

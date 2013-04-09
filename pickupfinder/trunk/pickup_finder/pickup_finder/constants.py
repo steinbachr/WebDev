@@ -27,15 +27,16 @@ class GameTypeConstants(Constants):
     SOFTBALL = (3, "softball")
     BASEBALL = (4, "baseball")
     WIFFLE_BALL = (5, "wiffle ball")
-    OTHER = (6, "other")
+    VOLLEYBALL = (6, "volleyball")
+    OTHER = (7, "other")
 
     @classmethod
     def choices_for_model(cls):
-        return (cls.SOCCER, cls.FOOTBALL, cls.BASKETBALL, cls.SOFTBALL, cls.BASEBALL, cls.WIFFLE_BALL, cls.OTHER)
+        return (cls.SOCCER, cls.FOOTBALL, cls.BASKETBALL, cls.SOFTBALL, cls.BASEBALL, cls.WIFFLE_BALL, cls.VOLLEYBALL, cls.OTHER)
     
             
 class NotificationTypeConstants(Constants):
-    PLAYER_JOINED = (0, lambda player,game: "%s has joined the game at %s" % (player.name, game.normalized_location))
+    PLAYER_JOINED = (0, lambda player_game,game: "%s\'s status is now %s for the game at %s" % (player_game.player.name, player_game.verbose_status, game.normalized_location))
 
     @classmethod
     def choices_for_model(cls):

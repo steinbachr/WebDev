@@ -1,9 +1,35 @@
 @import "core";
 
+.scrolldown-anim () {
+  from {top: 0px;}
+  to {top: 20px;}
+}
+
+@keyframes scrolldown
+{
+  .scrolldown-anim;
+}
+
+@-moz-keyframes scrolldown /* Firefox */
+{
+  .scrolldown-anim;
+}
+
+@-webkit-keyframes scrolldown /* Safari and Chrome */
+{
+  .scrolldown-anim;
+}
+
+@-o-keyframes scrolldown /* Opera */
+{
+  .scrolldown-anim;
+}
+
 body {
   .container {
     margin: 0px;
     width: 100%;
+    overflow-x: hidden;
     .header {            
       text-align: center;
       color: white;      
@@ -37,6 +63,67 @@ body {
           background: @dark-purple;          
         }
       }
+      .scroll-down {
+        float: right;
+        margin: 150px 75px;        
+        i {
+          font-size: 50px;
+          position: relative;
+          cursor: pointer;
+          animation: scrolldown 2s infinite;
+        /* Firefox: */
+          -moz-animation: scrolldown 2s infinite;
+        /* Safari and Chrome: */
+          -webkit-animation: scrolldown 2s infinite;
+        /* Opera: */
+          -o-animation: scrolldown 2s infinite;
+        }
+      }
+    }
+    .span12.info-section {
+      padding: 10px 100px;
+      p, ul li {
+        font-size: 18px;
+        line-height: 30px;
+        padding-right: 200px;
+      }
+      h1 {
+        color: white;
+      }
+      &.info-1 {
+        background: @lightest-purple;
+        color: #666;
+      }
+      &.info-2 {
+        background: @light-purple;
+        color: #bbb;
+      }
+      &.info-3 {
+        background: @dark-purple;
+        color: #ddd;
+        img {
+          width: 300px;
+          height: 300px;
+          float: right;
+          margin-right: 200px;
+        }
+      }
+    }
+    .span12.info-section-divider {      
+        height: 10px;
+        border-top: 100px solid transparent;
+        border-bottom:0;
+        border-left:0;
+        border-right:0;
+        &.divider-1 {
+          .border-image;
+        }
+        &.divider-2 {
+          .border-image('../../images/home_border_image_2.png');
+        }
+        &.divider-3 {
+          .border-image('../../images/home_border_image_3.png');
+        }
     }
   }
 }

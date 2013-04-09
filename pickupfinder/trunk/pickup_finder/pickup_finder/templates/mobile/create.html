@@ -10,7 +10,7 @@
     <script type="text/javascript" src="{{ STATIC_URL }}js/libraries/jquery-ui-1.9.2.custom.min.js"></script>
     <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places&sensor=true"></script>
     <script type="text/javascript" src="{{ STATIC_URL }}js/libraries/jquery-validation/dist/jquery.validate.js"></script>
-    <script type="text/javascript" src="{{ STATIC_URL }}js/libraries/bootstrap-datepicker.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/libraries/bootstrap-datepicker.js"></script>    
     <script type="text/javascript" src="{{ STATIC_URL }}js/mine/create_game.js"></script>    
     <script type="text/javascript" src="{{ STATIC_URL }}js/mine/login.js"></script>    
 {% endblock %}
@@ -77,7 +77,7 @@
     <div class="game-created-popup" data-role="popup" id="popupBasic">
         <h4>Game Created!</h4>
         <p>Send this link to your friends for them to rsvp for the game</p>
-        <b>link: </b>{{ rsvp_link }}    
+        <b>link: </b>{{ game.rsvp_link }}    
     </div>
     {% endif %}
 {% endblock %}

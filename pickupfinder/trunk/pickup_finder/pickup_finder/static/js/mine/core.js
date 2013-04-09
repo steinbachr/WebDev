@@ -8,7 +8,7 @@ $(document).ready(function() {
     $notifications_link.click(function() {
         $.post(SEEN_NOTIFICATIONS_URL);
         $(this).parent().find('span.notifs-count').html(0);
-    });
+    });    
 });
 
 

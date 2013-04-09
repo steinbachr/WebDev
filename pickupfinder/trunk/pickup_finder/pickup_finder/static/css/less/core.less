@@ -1,6 +1,7 @@
 @light-green: #b4df5b;
 @dark-purple: #64247F;
 @light-purple: #A058BF;
+@lightest-purple: #CFBEDF;
 @darkest-grey: #666;
 @dark-grey: #999;
 @light-grey: #bbb;
@@ -21,4 +22,10 @@
   -webkit-border-radius: @radius;
   -moz-border-radius: @radius;
   border-radius: @radius;
+}
+
+.border-image(@url: '../../images/home_border_image.png') {
+  -webkit-border-image: url(@url) 100 52 repeat; /* Safari 5 */
+  -o-border-image: url(@url) 100 52 repeat; /* Opera */
+  border-image: url(@url) 100 52 repeat;
 }

@@ -32,22 +32,12 @@ $(document).ready(function() {
         }
     });
     
-    $('form').submit(function() {        
-        publish_to_feed();
+    $('form').submit(function() {                     
         $("form").find('.error').each(function() {
             //add error class to the parent control group
             $(this).parent().parent('.control-group').addClass('error');            
         })
     });        
-
-    //when the user has submitted the form, publish the confirmation link to each invited players' profile
-    function publish_to_feed() {                    
-        FB.api('/me/instapickup_test:create', 'post', {game: window.location, message : "Come play with me! @["+added_users[0]+"]"}, function(response) {
-            if (!response || response.error) {                
-            } else {                
-            }
-        });
-    }
 });
 
 var added_users = [];   //the users added to the box
@@ -76,7 +66,7 @@ function get_users_friends(is_mobile) {
         
         for (var i = 0 ; i < friends.length ;  i++) {
             if (is_mobile) {
-                $friends_list.append('<li class="draggable" id="'+friends[i].id+'"><img class="ui-li-icon" src="'
+                $friends_list.append('<li id="'+friends[i].id+'"><img class="ui-li-icon" src="'
                                       +friends[i].picture.data.url+'" />'+friends[i].name+'</li>');
             } else {
                 $friends_list.append('<li class="draggable" id="'+friends[i].id+'">'+friends[i].name+'</li>');
@@ -86,12 +76,25 @@ function get_users_friends(is_mobile) {
         
         //we only use the draggable if its not being used as mobile
         if (!is_mobile) {
-            var $draggable = $('.draggable').draggable({opacity : .7});    
+            var $draggable = $('.draggable').draggable({opacity : .7});
+            $('#friends').liveFilter('#search_friends', 'li');
         } else {
             $friends_list.listview("refresh");
         }
         
         //remove spinner
         $('.spinner').remove();
+    });
+}
+
+//when the user creates a public game, publish it to FB
+function publish_to_feed() {
+    var options = {
+        message : "I just created a public game with InstaPickup! Click the link to join the game!",
+        link : $('span.rsvp-link').text()
+    };
+
+    FB.api('/me/feed', 'post', options, function(response) {
+        console.log(response);
     });
 }

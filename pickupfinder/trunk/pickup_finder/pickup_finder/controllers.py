@@ -10,7 +10,7 @@ from pickup_finder.components import *
 class Controller():
     def __init__(self, request):
         self.request = request            
-        self.tpl_vars = {'facebook_id' : APIKeys.FACEBOOK_PROD}
+        self.tpl_vars = {'facebook_id' : APIKeys.FACEBOOK_DEV}
 
 class AjaxController(Controller):
     def __init__(self, request):
@@ -61,7 +61,7 @@ class CreateUserController(Controller):
         else:
             form = UserForm()
         
-        context = RequestContext(self.request, {'form' : form, 'facebook_id' : APIKeys.FACEBOOK_PROD})
+        context = RequestContext(self.request, {'form' : form, 'facebook_id' : APIKeys.FACEBOOK_DEV})
         return render_to_response("index.html", context)             
 
 ###PORTAL CONTROLLERS###
@@ -83,7 +83,7 @@ class CreateGameController(PortalController):
         PortalController.__init__(self, request, 'create-game', mobile=mobile)    
         
     def create_game(self):
-        from geopy.geocoders.googlev3 import GoogleV3
+        from geopy.geocoders.googlev3 import *
         from decimal import Decimal
         import datetime               
         
@@ -94,7 +94,11 @@ class CreateGameController(PortalController):
             if form.is_valid():
                 location = form.cleaned_data['location']
                 game_type = form.cleaned_data['game_type']
-                place, (lat, lng) = list(google.geocode(location, exactly_one=False))[0] #go back and fix
+                try:
+                    place, (lat, lng) = list(google.geocode(location, exactly_one=False))[0] #go back and fix
+                except GQueryError:
+                    return HttpResponseRedirect('%s?created=False'%(reverse('pickup_finder.views.create_game')))
+                    
                 public = form.cleaned_data['public']
                 player_cap = form.cleaned_data['player_cap'] if public else None
                 start = datetime.datetime.strptime("%s %s" % (form.cleaned_data['start_date'], form.cleaned_data['start_time']), 
@@ -120,8 +124,8 @@ class CreateGameController(PortalController):
                     return HttpResponseRedirect('%s?created=True&game=%s'%(reverse('pickup_finder.views.create_game'), int(game.id)))
                     
         else:
-            self.tpl_vars['created'] = self.request.GET.get('created', None)
-            self.tpl_vars['rsvp_link'] = Game.for_id(self.request.GET.get('game', None)).rsvp_link if self.tpl_vars['created'] else None
+            self.tpl_vars['created'] = self.request.GET.get('created', None)            
+            self.tpl_vars['game'] = Game.for_id(self.request.GET.get('game', None)) if self.tpl_vars['created'] == 'True' else None
             form = GameForm()
         
         self.tpl_vars['form'] = form
@@ -180,15 +184,15 @@ class GameRsvpController(PortalController):
                 if player_name:
                     player = Player(name=player_name)
                     player.save()
-                    pg = PlayerGame(player=player, game=self.game, chance_attending=rsvp_status)
-                    pg.save()
+                    player_game = PlayerGame(player=player, game=self.game, chance_attending=rsvp_status)
+                    player_game.save()
                 else:
                     player_game = PlayerGame.objects.filter(player=player).get(game=self.game)
                     player_game.chance_attending = rsvp_status
                     player_game.save()
                     
                 #create the notification
-                notification = Notification(game=self.game, player=player, type=NotificationTypeConstants.PLAYER_JOINED[0], seen=False)
+                notification = Notification(game=self.game, player_game=player_game, type=NotificationTypeConstants.PLAYER_JOINED[0], seen=False)
                 notification.save()
                     
                 if self.mobile:

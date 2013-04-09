@@ -75,14 +75,14 @@ class PlayerGame(models.Model):
     
 class Notification(models.Model):
     game = models.ForeignKey(Game)
-    player = models.ForeignKey(Player, blank=True, null=True)
+    player_game = models.ForeignKey(PlayerGame, blank=True, null=True)
     type = models.SmallIntegerField(choices=NotificationTypeConstants.choices_for_model())
     seen = models.BooleanField()
         
     @property
     def format_notification(self):
         formatter = NotificationTypeConstants.get_verbose(self.type)
-        return formatter(self.player, self.game)
+        return formatter(self.player_game, self.game)
         
     @classmethod
     def unseen_notifications(cls, user):        
