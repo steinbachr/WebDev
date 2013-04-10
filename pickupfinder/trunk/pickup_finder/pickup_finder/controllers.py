@@ -10,7 +10,7 @@ from pickup_finder.components import *
 class Controller():
     def __init__(self, request):
         self.request = request            
-        self.tpl_vars = {'facebook_id' : APIKeys.FACEBOOK_DEV}
+        self.tpl_vars = {'facebook_id' : APIKeys.FACEBOOK_PROD}
 
 class AjaxController(Controller):
     def __init__(self, request):
@@ -61,7 +61,7 @@ class CreateUserController(Controller):
         else:
             form = UserForm()
         
-        context = RequestContext(self.request, {'form' : form, 'facebook_id' : APIKeys.FACEBOOK_DEV})
+        context = RequestContext(self.request, {'form' : form, 'facebook_id' : APIKeys.FACEBOOK_PROD})
         return render_to_response("index.html", context)             
 
 ###PORTAL CONTROLLERS###
