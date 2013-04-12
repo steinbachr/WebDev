@@ -4,4 +4,4 @@ PyRSS2Gen==1.0.0
 South==0.7.6
 virtualenv==1.7.1.2
 geopy==0.95
-
+django-mobility==0.1

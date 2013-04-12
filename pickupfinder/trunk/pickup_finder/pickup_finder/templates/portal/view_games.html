@@ -12,8 +12,8 @@
         <table class="table table-hover">
             <thead>
                 <tr>
-                    <th>Date / Time</th>
-                    <th>Game Type</th>
+                    <th>Date</th>
+                    <th>Type</th>
                     <th>Location</th>
                     <th>Public</th>
                     <th>Player Cap</th>                    
@@ -47,9 +47,6 @@
                         <div class="accordion-inner">
                             <h4>Click a roster to see the lineup!</h4>
                             <ul>
-                                {% for pg in player_games %}
-                                    <li class="{{ pg.game.id }}">{{ pg.player.name }}---{{ pg.verbose_status }}</li>
-                                {% endfor %}
                             </ul>
                         </div>
                     </div>

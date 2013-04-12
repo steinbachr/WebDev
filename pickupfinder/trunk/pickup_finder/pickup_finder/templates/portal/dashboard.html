@@ -3,15 +3,23 @@
 {% block js_spec %}
     <script>
         var games = {{ games_json|safe }};
-    </script>
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key={{ google_key }}&sensor=true"></script>
+    </script>    
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places&key={{ google_key }}&sensor=true"></script>
     <script type="text/javascript" src="{{ STATIC_URL }}js/mine/game_lineup.js"></script>
     <script type="text/javascript" src="{{ STATIC_URL }}js/mine/dashboard.js"></script>
 {% endblock %}
 {% block content %}
-<div class="dashboard">
+<div class="dashboard">    
     <h1>Current Games</h1>
+    <div class="input-append map-search-div">
+        <input id="map-search" type="text" placeholder="search map" />        
+        <button class="btn" type="button">Search</button>
+    </div>  
     <div id="map-canvas" class="map-holder">        
+    </div>
+    <div class="legend">
+        <img src="{{ STATIC_URL }}images/my_game_marker.png" /><span> = Private Game</span>
+        <img src="{{ STATIC_URL }}images/public_game_marker.png" /><span> = Public Game</span>
     </div>
     <div class="game-lineup bottom-box">
         <div class="accordion" id="lineup_accordion">
@@ -25,9 +33,6 @@
                     <div class="accordion-inner">
                         <h4>Click a marker to see the lineup!</h4>
                         <ul>
-                            {% for pg in player_games %}
-                                <li class="{{ pg.game.id }}">{{ pg.player.name }}---{{ pg.verbose_status }}</li>
-                            {% endfor %}
                         </ul>
                     </div>
                 </div>

@@ -11,6 +11,12 @@ facebook.login = function login() {
     });
 }
 
+facebook.get_users_friends = function(cb) {
+    FB.api('/me/friends?fields=picture,name,id', function(response) {
+        cb(response);        
+    });
+}
+
 function populateForm() {    
     FB.api('/me', function(response) {
         $('form input[name="name"]').val(response.name);            

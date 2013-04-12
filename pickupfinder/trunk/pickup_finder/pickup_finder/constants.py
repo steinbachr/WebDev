@@ -36,11 +36,12 @@ class GameTypeConstants(Constants):
     
             
 class NotificationTypeConstants(Constants):
-    PLAYER_JOINED = (0, lambda player_game,game: "%s\'s status is now %s for the game at %s" % (player_game.player.name, player_game.verbose_status, game.normalized_location))
+    PLAYER_JOINED = (0, lambda player_game,game: "%s\'s status is now %s for the %s game at %s" % (player_game.player.name, player_game.verbose_status, game.verbose_game_type, game.normalized_location))
+    GAME_CREATED = (1, lambda player_game,game: "A new public game taking place %s at %s created" % (game.starts_at, game.normalized_location))
 
     @classmethod
     def choices_for_model(cls):
-        return (cls.PLAYER_JOINED,)
+        return (cls.PLAYER_JOINED,cls.GAME_CREATED)
 
 
 class APIKeys():

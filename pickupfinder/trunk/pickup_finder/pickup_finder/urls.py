@@ -14,6 +14,7 @@ urlpatterns = patterns('pickup_finder.views',
     url(r'^portal/view-games/$', 'view_games'),
     url(r'^portal/help/$', 'help'),
     url(r'^portal/explore/$', 'explore'),
+    url(r'^portal/logout/$', 'logout_user'),
     url(r'^game/(?P<game>\d+)/$', 'game_rsvp'),
     url(r'^game/(?P<game>\d+)/thanks/$', 'game_rsvp_thanks'),
 )
@@ -30,8 +31,9 @@ urlpatterns += patterns('pickup_finder.views',
 
 #AJAX
 urlpatterns += patterns('pickup_finder.views',
-    url(r'^ajax/seen-notifications/$', 'ajax_seen_notifications'),    
-    )
+    url(r'^ajax/seen-notifications/$', 'ajax_seen_notifications'),
+    url(r'^ajax/get-lineup/$', 'get_lineup'),
+)
 
 #ADMIN
 urlpatterns += patterns('pickup_finder.views',

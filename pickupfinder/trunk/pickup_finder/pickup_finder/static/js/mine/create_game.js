@@ -46,8 +46,8 @@ function add_player(player_box, player) {
     var $player_names = $('input[name="player_names"]');;
     var $player_ids = $('input[name="player_ids"]');
     var old_player_names = $player_names.val();
-    var old_player_ids = $player_ids.val();;
-
+    var old_player_ids = $player_ids.val();;    
+    
     player_box.find('ul').append(player);
     added_users.push(player.attr('id'));
 
@@ -60,20 +60,20 @@ function add_player(player_box, player) {
 }
 
 function get_users_friends(is_mobile) {
-    FB.api('/me/friends?fields=picture,name,id', function(response) {
+    facebook.get_users_friends(function(response) {
         var $friends_list = $('.friends-list ul');
         var friends = response.data;
-        
+
         for (var i = 0 ; i < friends.length ;  i++) {
             if (is_mobile) {
                 $friends_list.append('<li id="'+friends[i].id+'"><img class="ui-li-icon" src="'
-                                      +friends[i].picture.data.url+'" />'+friends[i].name+'</li>');
+                    +friends[i].picture.data.url+'" />'+friends[i].name+'</li>');
             } else {
                 $friends_list.append('<li class="draggable" id="'+friends[i].id+'">'+friends[i].name+'</li>');
             }
-            
+
         }
-        
+
         //we only use the draggable if its not being used as mobile
         if (!is_mobile) {
             var $draggable = $('.draggable').draggable({opacity : .7});
@@ -81,7 +81,7 @@ function get_users_friends(is_mobile) {
         } else {
             $friends_list.listview("refresh");
         }
-        
+
         //remove spinner
         $('.spinner').remove();
     });
@@ -91,7 +91,9 @@ function get_users_friends(is_mobile) {
 function publish_to_feed() {
     var options = {
         message : "I just created a public game with InstaPickup! Click the link to join the game!",
-        link : $('span.rsvp-link').text()
+        link : $('span.rsvp-link').text(),
+        name : "rsvp now!",
+        picture : "instapickup-steinbachr.dotcloud.com"+STATIC_URL+"images/home_public_image.png"
     };
 
     FB.api('/me/feed', 'post', options, function(response) {

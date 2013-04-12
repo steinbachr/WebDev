@@ -26,6 +26,7 @@
         <div class="header-title">
             InstaPickup
         </div>
+        <a href="{% url pickup_finder.views.logout_user %}" class="btn btn-primary logout-button">Logout</a>
         <div class="fb-like" data-send="true" data-width="200" data-show-faces="false"></div>
     </div>    
     <div class="container">
@@ -40,7 +41,7 @@
                     <li class="notifications"><a href="#" id="notifs" data-rel="popover">Notifications</a><span class="notifs-count">{{ notifications|length }}</span></li>
                 </ul>                
             </div>
-        </div>
+        </div>        
         <div class="content-container">
             <div class="content">
                 {% block content %}

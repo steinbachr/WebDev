@@ -1,20 +1,52 @@
 {% extends 'portal/base.html' %}
 
+{% block js_spec %}
+    <script type="text/javascript" src="{{ STATIC_URL }}js/mine/explore.js"></script>
+{% endblock %}
 {% block content %}
+    <script>
+        // Additional JS functions here
+        window.fbAsyncInit = function() {
+            FB.init({
+                appId      : "{{ facebook_id }}", // App ID
+                channelUrl : '', // Channel File
+                status     : true, // check login status
+                cookie     : true, // enable cookies to allow the server to access the session
+                xfbml      : true  // parse XFBML
+            });
+
+            // Additional init code here
+            FB.getLoginStatus(function(response) {
+                if (response.status === 'connected') {
+                    mark_friends_games();
+                }
+                else if (response.status === 'not_authorized') {
+                    facebook.login();
+                } else {
+                    facebook.login();
+                }
+            });
+        };
+    </script>
     <div class="explore">
         <h3>These are public games that you might be interested in joining</h3>        
         <table class="table table-bordered">
             <thead>
-                <th>Game Type</th>
+                <th><i class="icon-question-sign"></i>Know Creator?</th>
+                <th>Type</th>
                 <th>Player Cap</th>
-                <th>Players Count</th>
-                <th>RSVP Link</th>
+                <th>Players Joined</th>
+                <th>RSVP</th>
                 <th>Location</th>
-                <th>Date / Time</th>
+                <th>Date</th>
             </thead>
             <tbody>
-            {% for game in games %}
-                <tr class="{% if game.can_rsvp %}success{% else %}error{% endif %}">
+            {% for game in games %}                     
+                <tr id="{{ game.creator }}" class="{% if game.can_rsvp %}success{% else %}error{% endif %}">
+                    <td class="friends-game">
+                        <i class="icon-check"></i>
+                        {% if user == game.creator %}<img src="{{ STATIC_URL }}images/my_game_icon.png" />{% else %}<i class="icon-check-empty"></i>{% endif %}
+                    </td>
                     <td>{{ game.verbose_game_type }}</td>
                     <td>{{ game.person_cap }}</td>
                     <td>{{ game.players_count }}</td>

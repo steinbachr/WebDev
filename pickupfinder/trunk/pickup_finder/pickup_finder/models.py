@@ -1,4 +1,4 @@
-import json
+import datetime
 from django.db import models
 from django.core.urlresolvers import reverse
 from django.contrib.auth.models import User
@@ -14,11 +14,12 @@ class Game(models.Model):
     public = models.BooleanField()
     person_cap = models.IntegerField(blank=True, null=True)
     game_type = models.SmallIntegerField(choices=GameTypeConstants.choices_for_model())
+#    secret = models.CharField(max_length=200) #not currently used
     #datetime fields
     created = models.DateTimeField(auto_now_add=True)
     modified = models.DateTimeField(auto_now=True)
-    starts_at = models.DateTimeField()
-    
+    starts_at = models.DateTimeField()    
+        
     @property
     def rsvp_link(self):
         return 'http://instapickup-steinbachr.dotcloud.com%s' % reverse('pickup_finder.views.game_rsvp', args=(self.id,))
@@ -36,16 +37,19 @@ class Game(models.Model):
         return GameTypeConstants.get_verbose(self.game_type)
     
     @classmethod
-    def public_games(cls):
-        return cls.objects.filter(public=True).all()
+    def public_games(cls,only_active=True):           
+        games = cls.objects.filter(public=True)
+        return games.filter(starts_at__gte=datetime.datetime.now()) if only_active else games        
     
     @classmethod
-    def games_by_creator(cls, creator):
-        return cls.objects.filter(creator=creator)
+    def games_by_creator(cls, creator, only_active=True):
+        games = cls.objects.filter(creator=creator)
+        return games.filter(starts_at__gte=datetime.datetime.now()) if only_active else games
     
     @classmethod
     def for_id(cls, id):
-        return cls.objects.get(pk=id)        
+        return cls.objects.get(pk=id)      
+        
     
 class Player(models.Model):
     fb_id = models.CharField(max_length=50, unique=True, blank=True, null=True)

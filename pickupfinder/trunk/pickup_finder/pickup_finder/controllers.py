@@ -8,8 +8,9 @@ from pickup_finder.models import *
 from pickup_finder.components import *
 
 class Controller():
-    def __init__(self, request):
+    def __init__(self, request, mobile=False):
         self.request = request            
+        self.mobile = mobile
         self.tpl_vars = {'facebook_id' : APIKeys.FACEBOOK_PROD}
 
 class AjaxController(Controller):
@@ -18,13 +19,12 @@ class AjaxController(Controller):
         
 class PortalController(Controller):
     def __init__(self, request, current_tab, mobile=False):        
-        Controller.__init__(self, request)  
-        self.mobile = mobile        
+        Controller.__init__(self, request, mobile)       
         self.tpl_vars.update({'current_tab' : current_tab, 'notifications' : Notification.unseen_notifications(request.user)})
         
 class MobileController(Controller):
     def __init__(self, request):
-        Controller.__init__(self, request)        
+        Controller.__init__(self, request, mobile=True)        
 
 class CreateUserController(Controller):
     '''the request for creating a new user'''
@@ -34,8 +34,7 @@ class CreateUserController(Controller):
         
     def create_user(self):
         from django.contrib.auth import authenticate, login
-        from django.contrib.auth.models import User        
-        from pickup_finder.http import Http
+        from django.contrib.auth.models import User                
 
         if self.request.method == 'POST':
             form = UserForm(self.request.POST)
@@ -52,16 +51,20 @@ class CreateUserController(Controller):
                     user = User.objects.create_user(name, '', password)
                     user.save()
                     user = authenticate(username=name, password=password)
-                    login(self.request, user)
-                
-                if self.mobile:
-                    return Http.redirect('pickup_finder.views.mobile_view_games')
-                else:
-                    return Http.redirect('pickup_finder.views.dashboard')
+                    login(self.request, user)                
         else:
+            #if a mobile user goes to the non mobile site, redirect them to the mobile site
+            if self.request.MOBILE and not self.mobile:
+                return HttpResponseRedirect(reverse('pickup_finder.views.mobile_home'))
             form = UserForm()
-        
-        context = RequestContext(self.request, {'form' : form, 'facebook_id' : APIKeys.FACEBOOK_PROD})
+
+        if self.request.user.is_authenticated():
+            if self.mobile:
+                return HttpResponseRedirect(reverse('pickup_finder.views.mobile_view_games'))
+            else:
+                return HttpResponseRedirect(reverse('pickup_finder.views.dashboard'))
+            
+        context = RequestContext(self.request, {'form' : form, 'facebook_id' : APIKeys.FACEBOOK_PROD, 'mobile' : self.mobile})
         return render_to_response("index.html", context)             
 
 ###PORTAL CONTROLLERS###
@@ -71,7 +74,7 @@ class DashboardController(PortalController):
         self.lineup_component = GameLineup(request)
 
         self.tpl_vars.update(self.lineup_component.tpl_vars())
-        self.tpl_vars['games'] = self.lineup_component.games
+        self.tpl_vars['games'] = self.lineup_component.games        
 
     def dashboard(self):      
         context = RequestContext(self.request, self.tpl_vars)
@@ -83,7 +86,7 @@ class CreateGameController(PortalController):
         PortalController.__init__(self, request, 'create-game', mobile=mobile)    
         
     def create_game(self):
-        from geopy.geocoders.googlev3 import *
+        from geopy.geocoders.googlev3 import GoogleV3, GQueryError
         from decimal import Decimal
         import datetime               
         
@@ -101,8 +104,7 @@ class CreateGameController(PortalController):
                     
                 public = form.cleaned_data['public']
                 player_cap = form.cleaned_data['player_cap'] if public else None
-                start = datetime.datetime.strptime("%s %s" % (form.cleaned_data['start_date'], form.cleaned_data['start_time']), 
-                                                   FormattingConstants.DATE_FORMAT)                
+                start = form.cleaned_data['start']              
                 player_names = form.cleaned_data['player_names']
                 player_ids = form.cleaned_data['player_ids']
                 
@@ -116,7 +118,12 @@ class CreateGameController(PortalController):
                 for index,name in enumerate(split_names):                    
                     (player, created) = Player.objects.get_or_create(name=name, fb_id=split_ids[index])                                 
                     player_game = PlayerGame(player=player, game=game, chance_attending=ChanceAttendingConstants.NOT_RESPONDED[0])
-                    player_game.save()      
+                    player_game.save()
+
+                #create the notification only if the game being created is public
+                if game.public:                
+                    notif_controller = NotificationController(game)
+                    notif_controller.create_notification(NotificationTypeConstants.GAME_CREATED)
                 
                 if self.mobile:
                     return HttpResponseRedirect('%s?created=True&game=%s'%(reverse('pickup_finder.views.mobile_create_game'), int(game.id)))
@@ -129,6 +136,7 @@ class CreateGameController(PortalController):
             form = GameForm()
         
         self.tpl_vars['form'] = form
+        self.tpl_vars['form_errors'] = form.non_field_errors()
         context = RequestContext(self.request, self.tpl_vars)
         
         tpl_file =  "mobile/create.html"  if self.mobile else "portal/create_game.html"
@@ -160,16 +168,16 @@ class ExploreController(PortalController):
     def __init__(self, request):
         PortalController.__init__(self, request, 'explore')
 
-        self.tpl_vars['games'] = Game.public_games()
+        self.tpl_vars['games'] = Game.public_games().all()
 
     def explore(self):        
         context = RequestContext(self.request, self.tpl_vars)        
         return render_to_response("portal/explore.html", context)        
         
     
-class GameRsvpController(PortalController):
+class GameRsvpController(Controller):
     def __init__(self, request, game, mobile=False):
-        PortalController.__init__(self, request, 'rsvp', mobile=mobile)
+        Controller.__init__(self, request, mobile=mobile)
         self.game = game        
 
     def rsvp(self):
@@ -192,8 +200,8 @@ class GameRsvpController(PortalController):
                     player_game.save()
                     
                 #create the notification
-                notification = Notification(game=self.game, player_game=player_game, type=NotificationTypeConstants.PLAYER_JOINED[0], seen=False)
-                notification.save()
+                notif_controller = NotificationController(self.game, player_game)
+                notif_controller.create_notification(NotificationTypeConstants.PLAYER_JOINED)
                     
                 if self.mobile:
                     return HttpResponseRedirect(reverse('pickup_finder.views.mobile_game_rsvp_thanks', args=(int(self.game.id),)))                    
@@ -207,9 +215,9 @@ class GameRsvpController(PortalController):
         context = RequestContext(self.request, self.tpl_vars)
         return render_to_response("public/rsvp_game.html", context)     
     
-class GameRsvpThanksController(PortalController):
+class GameRsvpThanksController(Controller):
     def __init__(self, request, game, mobile=False):
-        PortalController.__init__(self, request, 'rsvp', mobile=mobile)
+        Controller.__init__(self, request, mobile=mobile)
         self.game = game
         self.tpl_file = "mobile/rsvp_thanks.html" if self.mobile else "public/rsvp_thanks.html"
     
@@ -218,15 +226,6 @@ class GameRsvpThanksController(PortalController):
         context = RequestContext(self.request, self.tpl_vars)
         return render_to_response(self.tpl_file, context)
     
-    
-####AJAX CONTROLLERS####
-class AjaxNotificationsController(AjaxController):
-    def __init__(self, request):
-        AjaxController.__init__(self, request)
-        
-    def seen_notifications(self):        
-        Notification.mark_as_seen(self.request.user)
-        return HttpResponse()
         
         
 ####MOBILE CONTROLLERS####
@@ -236,7 +235,7 @@ class MobileViewGamesController(MobileController):
         
         #we bucket the games by their game type
         game_dict = {}
-        for game in Game.public_games():
+        for game in Game.public_games().all():
             if game.verbose_game_type not in game_dict:
                 game_dict[game.verbose_game_type] = [game]
             else:
@@ -257,3 +256,16 @@ class MobileGameDetailsController(MobileController):
     def render(self):
         context = RequestContext(self.request, self.tpl_vars)
         return render_to_response("mobile/game_details.html", context)    
+    
+    
+    
+####OTHER CONTROLLERS####
+class NotificationController():
+    def __init__(self, game, player_game=None):
+        self.game = game
+        self.player_game = player_game
+        
+            
+    def create_notification(self, notification_type):
+        notification = Notification(game=self.game, player_game=self.player_game, type=notification_type[0], seen=False)
+        notification.save()

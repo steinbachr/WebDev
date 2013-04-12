@@ -27,7 +27,18 @@ class GameForm(forms.Form):
     start_time = forms.CharField(max_length=50, widget=forms.TextInput(attrs={'placeholder' : 'e.g. 3:45PM', 'class' : 'required'}))
     player_names = forms.CharField(max_length=500, widget=forms.HiddenInput(), required=False)
     player_ids = forms.CharField(max_length=500, widget=forms.HiddenInput(), required=False)
-    
+
+    def clean(self):     
+        import datetime
+        from pickup_finder.constants import FormattingConstants
+        
+        cleaned_data = super(GameForm, self).clean()
+        cleaned_data['start'] = datetime.datetime.strptime("%s %s" % (self.cleaned_data['start_date'], self.cleaned_data['start_time']),
+                                                            FormattingConstants.DATE_FORMAT)        
+        if cleaned_data['start'] < datetime.datetime.now(): #currently timezone naive, fix
+            raise forms.ValidationError("Can't create a game in the past")
+
+        return cleaned_data            
 
 class GameRsvpForm(forms.Form):
     def __init__(self, game, *args, **kwargs):

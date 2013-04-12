@@ -1,4 +1,17 @@
 function initialize() {    
+    var map;
+    var $map_filter = $('#map-search')
+    var options = {types: ['geocode']};
+    autocomplete = new google.maps.places.Autocomplete($map_filter.get(0), options);
+    
+    //the filter bar behavior for the map
+    $('.map-search-div .btn').click(function() {       
+        var geocoder = new google.maps.Geocoder();
+        geocoder.geocode({address : $map_filter.val()}, function(results, status) {
+            map.setCenter(results[0].geometry.location);
+        });    
+    });    
+    
     if (navigator.geolocation)
     {        
         navigator.geolocation.getCurrentPosition(add_map, function() {add_map(false);});        
@@ -20,7 +33,7 @@ function initialize() {
             mapOptions.zoom = 8;
         }
 
-        var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+        map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
         
         //add the games to the map        
         for (var i = 0 ; i < games.length ; i++) {
@@ -30,11 +43,16 @@ function initialize() {
                 map: map,
                 title: "games marker",
                 id: games[i].pk
-            });            
+            });   
+            if (games[i].fields.public) {
+                marker.setIcon(STATIC_URL+"images/public_game_marker.png");
+            } else {
+                marker.setIcon(STATIC_URL+"images/my_game_marker.png");
+            }
 
             //give the marker the games' id so we can use it if the marker is clicked
-            google.maps.event.addListener(marker, 'click', function() {                
-                populate_lineup(this.id);
+            google.maps.event.addListener(marker, 'click', function() {   
+                fetch_lineup(this.id)                
                 populate_details(this.id);
             });
         }               

@@ -3,7 +3,7 @@ $(document).ready(function() {
     var $reservation_click = $('td.rsvp-link a');
     
     $roster_click.click(function(evt) {
-        populate_lineup($(evt.target).attr('class'));
+        fetch_lineup($(evt.target).attr('class'));
     });
     
     $reservation_click.click(function(evt) {

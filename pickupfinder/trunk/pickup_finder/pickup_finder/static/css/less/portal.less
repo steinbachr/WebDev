@@ -33,6 +33,11 @@ ul {
     display: block;
     text-align: right;
   }
+  a.logout-button {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+  }
 }
 .container {
   width: 900px;  
@@ -41,6 +46,13 @@ ul {
   border-right: solid 2px @dark-grey;
   .popover {
     width: 280px;
+    div.alert {
+      color: white;
+      background-color: @light-green;
+      border-color: inherit;
+      font-size: 16px;
+      text-shadow: none;
+    }
   }
   .navbar {
     text-align: center;
@@ -78,7 +90,8 @@ ul {
     .game-lineup, .game-details {
       margin-top: 20px;
       li {
-        display: none;
+        border-bottom: solid 1px #aaa;
+        padding: 5px;
       }
       i {
         vertical-align: text-bottom;
@@ -94,7 +107,7 @@ ul {
         }
       }
       .accordion-body {
-        text-align: left;
+        text-align: left;        
       }
     }
     /***DASHBOARD***/
@@ -106,6 +119,9 @@ ul {
         margin: auto;
         .border-radius;
       }
+      .legend {
+        padding-top: 10px;
+      }
       .bottom-box {
         float: left;        
         width: 350px;
@@ -116,12 +132,20 @@ ul {
         .accordion-heading {
           background: @dark-purple;
         }
+        li {
+          display: none;
+        }
       } 
     }    
     /***CREATE GAME***/
     .create-game {
       button {
         float: right;
+      }
+      .alert {
+        position: absolute;
+        top: 0;
+        left: 0;
       }
       .top-form {
         .control-group {
@@ -143,6 +167,7 @@ ul {
         height: 200px;
         width: 500px;
         overflow-y: scroll;
+        float: left;
         .player-drag-box {
           border: dashed 3px #ccc;
           width: 330px;
@@ -169,9 +194,12 @@ ul {
           padding-left: 130px;
           input#search_friends {
             width: 150px;
-            margin: 0px 0px 10px 5px;
+            position: fixed;
+            z-index: 1;
+            margin-left: -70px;
           }
-          ul {                         
+          ul {
+            padding-top: 40px;
             li {
               color: white;
               cursor: pointer;
@@ -202,6 +230,27 @@ ul {
     .rsvp-form {
       button {
         margin-top: 40px;
+      }
+    }
+    /***EXPLORE***/
+    .explore {
+      i.icon-question-sign {
+        font-size: 18px;
+        float: right;
+        cursor: pointer;
+        padding: 5px;
+      }
+      td.friends-game {
+        text-align: center;
+        i {
+          color: @dark-purple;
+          &.icon-check {
+            display: none;
+          }
+          &.icon-check-empty {
+            display: inline-block;
+          }
+        }
       }
     }
   }    
