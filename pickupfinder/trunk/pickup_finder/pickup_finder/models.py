@@ -55,6 +55,16 @@ class Player(models.Model):
     fb_id = models.CharField(max_length=50, unique=True, blank=True, null=True)
     name = models.CharField(max_length=100)
     
+    @property
+    def player_is_user(self):
+        '''check if this player is also a user in our system'''
+        return len(User.objects.filter(username=self.fb_id)) > 0
+    
+    @property
+    def get_user(self):
+        '''get the user in our system that has this players fb_id. Make sure to only call when player_is_user has been called'''
+        return User.objects.get(username=self.fb_id)
+    
     @classmethod
     def for_fb_id(cls, fb_id):
         return cls.objects.get(fb_id=fb_id)
@@ -78,6 +88,7 @@ class PlayerGame(models.Model):
     
     
 class Notification(models.Model):
+    user = models.ForeignKey(User)
     game = models.ForeignKey(Game)
     player_game = models.ForeignKey(PlayerGame, blank=True, null=True)
     type = models.SmallIntegerField(choices=NotificationTypeConstants.choices_for_model())
@@ -90,7 +101,7 @@ class Notification(models.Model):
         
     @classmethod
     def unseen_notifications(cls, user):        
-        return cls.objects.filter(game__creator=user).filter(seen=False).all()
+        return cls.objects.filter(user=user).filter(seen=False).all()
     
     @classmethod
     def mark_as_seen(cls, user):

@@ -1,5 +1,31 @@
 $(document).ready(function() {
     $('.icon-question-sign').tooltip({container : 'body', trigger : 'click', title : 'If the game was created by one of your friends, it will have a check in this column'});
+    $('table').dataTable( {
+        "sDom": 't<"bottom"pi><"clear">',
+        "iDisplayLength": 10,        
+        "aoColumns": [
+            { "bSortable": false },
+            null,
+            null,
+            null,
+            null,
+            null,
+            { "sType": "datetime-us" }
+        ]
+    });
+    
+    $('table th').click(function(evt) {
+        $('table th').find('i').css('display', 'none');
+        $('table th').find('i.icon-sort').css('display', 'inline');
+        $(this).find('i').css('display', 'none');
+        $('table th').find('i.icon-question-sign').css('display', 'inline');
+        
+        if ($(this).hasClass('sorting_asc')) {
+            $(this).find('i.icon-sort-up').css('display', 'inline');
+        } else if ($(this).hasClass('sorting_desc')) {
+            $(this).find('i.icon-sort-down').css('display', 'inline');
+        }
+    })
 })
 
 function mark_friends_games() {

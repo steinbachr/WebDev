@@ -1,6 +1,8 @@
 {% extends 'portal/base.html' %}
 
-{% block js_spec %}
+{% block js_spec %}    
+    <script type="text/javascript" src="{{ STATIC_URL }}js/libraries/DataTables/media/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/libraries/datatable.datetime-us.js"></script>
     <script type="text/javascript" src="{{ STATIC_URL }}js/mine/explore.js"></script>
 {% endblock %}
 {% block content %}
@@ -32,13 +34,46 @@
         <h3>These are public games that you might be interested in joining</h3>        
         <table class="table table-bordered">
             <thead>
-                <th><i class="icon-question-sign"></i>Know Creator?</th>
-                <th>Type</th>
-                <th>Player Cap</th>
-                <th>Players Joined</th>
-                <th>RSVP</th>
-                <th>Location</th>
-                <th>Date</th>
+                <th class="friends">
+                    <i class="icon-question-sign"></i>
+                    Friends?                    
+                </th>
+                <th>
+                    <i class="icon-sort"></i>
+                    <i class="icon-sort-down"></i>
+                    <i class="icon-sort-up"></i>
+                    Type
+                </th>
+                <th>
+                    <i class="icon-sort"></i>
+                    <i class="icon-sort-down"></i>
+                    <i class="icon-sort-up"></i>
+                    Cap
+                </th>
+                <th class="confirmed">
+                    <i class="icon-sort"></i>
+                    <i class="icon-sort-down"></i>
+                    <i class="icon-sort-up"></i>
+                    Confirmed
+                </th>
+                <th>
+                    <i class="icon-sort"></i>
+                    <i class="icon-sort-down"></i>
+                    <i class="icon-sort-up"></i>
+                    RSVP
+                </th>
+                <th class="location">
+                    <i class="icon-sort"></i>
+                    <i class="icon-sort-down"></i>
+                    <i class="icon-sort-up"></i>
+                    Location
+                </th>
+                <th>
+                    <i class="icon-sort"></i>
+                    <i class="icon-sort-down"></i>
+                    <i class="icon-sort-up"></i>
+                    Date
+                </th>
             </thead>
             <tbody>
             {% for game in games %}                     
@@ -50,7 +85,7 @@
                     <td>{{ game.verbose_game_type }}</td>
                     <td>{{ game.person_cap }}</td>
                     <td>{{ game.players_count }}</td>
-                    <td><a href="{{ game.rsvp_link }}">{{ game.rsvp_link }}</a></td>
+                    <td><a href="{{ game.rsvp_link }}">rsvp here!</a></td>
                     <td>{{ game.normalized_location }}</td>
                     <td>{{ game.starts_at }}</td>
                 </tr>

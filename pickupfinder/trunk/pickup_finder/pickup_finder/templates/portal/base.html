@@ -52,7 +52,7 @@
     <div class="notifications-popover" style="display: none;">
         {% for notification in notifications %}
             <div class="alert alert-info">
-                {{ notification.format_notification }}
+                {{ notification.format_notification|safe }}
             </div>
         {% endfor %}
     </div>

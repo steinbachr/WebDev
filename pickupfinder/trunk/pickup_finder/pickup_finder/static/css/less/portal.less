@@ -234,11 +234,31 @@ ul {
     }
     /***EXPLORE***/
     .explore {
-      i.icon-question-sign {
-        font-size: 18px;
-        float: right;
+      th {
         cursor: pointer;
-        padding: 5px;
+        i {
+          float: right;
+          display: none;
+        }
+        i.icon-question-sign {
+          font-size: 13px;
+          cursor: pointer;
+          padding: 3px;
+          float: none;
+          display: inline;
+        }
+        i.icon-sort {
+          display: inline;
+        }
+      }
+      th.friends {
+        cursor: auto;
+      }
+      th.location {
+        width: 180px;
+      }
+      th.confirmed {
+        width: 115px;
       }
       td.friends-game {
         text-align: center;
@@ -252,6 +272,15 @@ ul {
           }
         }
       }
+      div.bottom {
+        a {
+          padding: 10px;
+          cursor: pointer;
+        }                
+        div.dataTables_info {
+          font-size: 12px;
+        }
+      }      
     }
   }    
 }

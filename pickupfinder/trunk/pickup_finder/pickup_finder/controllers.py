@@ -19,8 +19,9 @@ class AjaxController(Controller):
         
 class PortalController(Controller):
     def __init__(self, request, current_tab, mobile=False):        
-        Controller.__init__(self, request, mobile)       
-        self.tpl_vars.update({'current_tab' : current_tab, 'notifications' : Notification.unseen_notifications(request.user)})
+        Controller.__init__(self, request, mobile)  
+        self.user = request.user
+        self.tpl_vars.update({'current_tab' : current_tab, 'notifications' : Notification.unseen_notifications(self.user)})
         
 class MobileController(Controller):
     def __init__(self, request):
@@ -90,7 +91,7 @@ class CreateGameController(PortalController):
         from decimal import Decimal
         import datetime               
         
-        if self.request.method == "POST":
+        if self.request.method == "POST":            
             form = GameForm(self.request.POST)       
             google = GoogleV3()
             
@@ -115,14 +116,18 @@ class CreateGameController(PortalController):
                 game = Game(creator=self.request.user, latitude=Decimal(str(lat)), longitude=Decimal(str(lng)), 
                             normalized_location=location, public=public, game_type=game_type, person_cap=player_cap, starts_at=start)
                 game.save()
+                                
                 for index,name in enumerate(split_names):                    
-                    (player, created) = Player.objects.get_or_create(name=name, fb_id=split_ids[index])                                 
+                    (player, created) = Player.objects.get_or_create(name=name, fb_id=split_ids[index])                    
                     player_game = PlayerGame(player=player, game=game, chance_attending=ChanceAttendingConstants.NOT_RESPONDED[0])
+                    if player.player_is_user: #if the user being invited is a user in our system, create a notification for them
+                        notif_controller = NotificationController(player.get_user, game)                        
+                        notif_controller.create_notification(NotificationTypeConstants.USER_INVITED)
                     player_game.save()
 
                 #create the notification only if the game being created is public
-                if game.public:                
-                    notif_controller = NotificationController(game)
+                if game.public:
+                    notif_controller = NotificationController(self.user, game)
                     notif_controller.create_notification(NotificationTypeConstants.GAME_CREATED)
                 
                 if self.mobile:
@@ -200,7 +205,7 @@ class GameRsvpController(Controller):
                     player_game.save()
                     
                 #create the notification
-                notif_controller = NotificationController(self.game, player_game)
+                notif_controller = NotificationController(self.game.creator, self.game, player_game)
                 notif_controller.create_notification(NotificationTypeConstants.PLAYER_JOINED)
                     
                 if self.mobile:
@@ -261,11 +266,12 @@ class MobileGameDetailsController(MobileController):
     
 ####OTHER CONTROLLERS####
 class NotificationController():
-    def __init__(self, game, player_game=None):
+    def __init__(self, user, game, player_game=None):
+        self.user = user
         self.game = game
         self.player_game = player_game
         
             
     def create_notification(self, notification_type):
-        notification = Notification(game=self.game, player_game=self.player_game, type=notification_type[0], seen=False)
+        notification = Notification(user=self.user, game=self.game, player_game=self.player_game, type=notification_type[0], seen=False)
         notification.save()
