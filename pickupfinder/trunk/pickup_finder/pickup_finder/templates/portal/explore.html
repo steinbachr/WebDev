@@ -1,8 +1,6 @@
 {% extends 'portal/base.html' %}
 
 {% block js_spec %}    
-    <script type="text/javascript" src="{{ STATIC_URL }}js/libraries/DataTables/media/js/jquery.dataTables.min.js"></script>
-    <script type="text/javascript" src="{{ STATIC_URL }}js/libraries/datatable.datetime-us.js"></script>
     <script type="text/javascript" src="{{ STATIC_URL }}js/mine/explore.js"></script>
 {% endblock %}
 {% block content %}
@@ -31,66 +29,7 @@
         };
     </script>
     <div class="explore">
-        <h3>These are public games that you might be interested in joining</h3>        
-        <table class="table table-bordered">
-            <thead>
-                <th class="friends">
-                    <i class="icon-question-sign"></i>
-                    Friends?                    
-                </th>
-                <th>
-                    <i class="icon-sort"></i>
-                    <i class="icon-sort-down"></i>
-                    <i class="icon-sort-up"></i>
-                    Type
-                </th>
-                <th>
-                    <i class="icon-sort"></i>
-                    <i class="icon-sort-down"></i>
-                    <i class="icon-sort-up"></i>
-                    Cap
-                </th>
-                <th class="confirmed">
-                    <i class="icon-sort"></i>
-                    <i class="icon-sort-down"></i>
-                    <i class="icon-sort-up"></i>
-                    Confirmed
-                </th>
-                <th>
-                    <i class="icon-sort"></i>
-                    <i class="icon-sort-down"></i>
-                    <i class="icon-sort-up"></i>
-                    RSVP
-                </th>
-                <th class="location">
-                    <i class="icon-sort"></i>
-                    <i class="icon-sort-down"></i>
-                    <i class="icon-sort-up"></i>
-                    Location
-                </th>
-                <th>
-                    <i class="icon-sort"></i>
-                    <i class="icon-sort-down"></i>
-                    <i class="icon-sort-up"></i>
-                    Date
-                </th>
-            </thead>
-            <tbody>
-            {% for game in games %}                     
-                <tr id="{{ game.creator }}" class="{% if game.can_rsvp %}success{% else %}error{% endif %}">
-                    <td class="friends-game">
-                        <i class="icon-check"></i>
-                        {% if user == game.creator %}<img src="{{ STATIC_URL }}images/my_game_icon.png" />{% else %}<i class="icon-check-empty"></i>{% endif %}
-                    </td>
-                    <td>{{ game.verbose_game_type }}</td>
-                    <td>{{ game.person_cap }}</td>
-                    <td>{{ game.players_count }}</td>
-                    <td><a href="{{ game.rsvp_link }}">rsvp here!</a></td>
-                    <td>{{ game.normalized_location }}</td>
-                    <td>{{ game.starts_at }}</td>
-                </tr>
-            {% endfor %}
-            </tbody>
-        </table>        
+        <h3>These are public games that you might be interested in joining</h3>   
+        {% include 'portal/components/games_table.html' %}        
     </div>
 {% endblock %}

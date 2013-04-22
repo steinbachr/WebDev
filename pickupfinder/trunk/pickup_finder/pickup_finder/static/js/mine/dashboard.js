@@ -2,14 +2,14 @@ function initialize() {
     var map;
     var $map_filter = $('#map-search')
     var options = {types: ['geocode']};
-    autocomplete = new google.maps.places.Autocomplete($map_filter.get(0), options);
+    autocomplete = new google.maps.places.Autocomplete($map_filter.get(0), options);    
     
     //the filter bar behavior for the map
     $('.map-search-div .btn').click(function() {       
         var geocoder = new google.maps.Geocoder();
         geocoder.geocode({address : $map_filter.val()}, function(results, status) {
             map.setCenter(results[0].geometry.location);
-        });    
+        });
     });    
     
     if (navigator.geolocation)
@@ -20,7 +20,7 @@ function initialize() {
     }    
     
     /**add the google map to the window. If the user has geolocation set, given the users location, otherwise false**/
-    function add_map(position) {
+    function add_map(position) {                       
         var mapOptions = {            
             mapTypeId: google.maps.MapTypeId.ROADMAP
         };
@@ -55,7 +55,7 @@ function initialize() {
                 fetch_lineup(this.id)                
                 populate_details(this.id);
             });
-        }               
+        }      
     }
     
     function populate_details(game_id) {

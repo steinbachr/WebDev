@@ -11,7 +11,7 @@ class GameLineup():
         tpl_vars = {}
         
         tpl_vars['google_key'] = APIKeys.GOOGLE        
-        tpl_vars['games_json'] = serializers.serialize("json", self.games)        
+        tpl_vars['games_json'] = serializers.serialize("json", self.games) 
+        tpl_vars['games'] = self.games
         
         return tpl_vars
-        

@@ -1,4 +1,5 @@
-from django.http import HttpResponseRedirect, HttpResponse
+from django.http import HttpResponseRedirect
+from django.core import serializers
 from django.core.urlresolvers import reverse
 from django.shortcuts import render_to_response
 from django.template import RequestContext
@@ -74,8 +75,7 @@ class DashboardController(PortalController):
         PortalController.__init__(self, request, 'dashboard')        
         self.lineup_component = GameLineup(request)
 
-        self.tpl_vars.update(self.lineup_component.tpl_vars())
-        self.tpl_vars['games'] = self.lineup_component.games        
+        self.tpl_vars.update(self.lineup_component.tpl_vars())        
 
     def dashboard(self):      
         context = RequestContext(self.request, self.tpl_vars)
@@ -153,7 +153,7 @@ class ViewGamesController(PortalController):
         self.lineup_component = GameLineup(request)
 
         self.tpl_vars.update(self.lineup_component.tpl_vars())
-        self.tpl_vars['games'] = Game.games_by_creator(self.request.user)
+        self.tpl_vars['games'] = Game.games_by_creator(self.request.user)        
 
     def view_games(self):        
         context = RequestContext(self.request, self.tpl_vars)
@@ -172,8 +172,7 @@ class HelpController(PortalController):
 class ExploreController(PortalController):
     def __init__(self, request):
         PortalController.__init__(self, request, 'explore')
-
-        self.tpl_vars['games'] = Game.public_games().all()
+        self.tpl_vars['games'] = Game.public_games().all() 
 
     def explore(self):        
         context = RequestContext(self.request, self.tpl_vars)        

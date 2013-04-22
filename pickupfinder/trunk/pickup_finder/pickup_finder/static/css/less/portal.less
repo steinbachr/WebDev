@@ -17,7 +17,6 @@ ul {
   list-style-type: none;
 }
 
-
 /***PORTAL GLOBAL***/
 .header {
   height: 50px;  
@@ -78,6 +77,48 @@ ul {
           padding-top: 8px;
         }
       }
+    }
+  }
+  .datatable {
+    th {
+      cursor: pointer;
+      i {
+        float: right;
+        display: none;
+      }
+      i.icon-sort {
+        display: inline;
+      }
+    }
+    th.friends {
+      cursor: auto;
+    }
+    th.location {
+      width: 180px;
+    }
+    th.confirmed {
+      width: 115px;
+    }
+    td.friends-game {
+      text-align: center;
+      i {
+        color: @dark-purple;
+        &.icon-check {
+          display: none;
+        }
+        &.icon-check-empty {
+          display: inline-block;
+        }
+      }
+    }
+  }
+  div.bottom {
+    a {
+      padding: 10px;
+      cursor: pointer;
+    }
+    div.dataTables_info {
+      font-size: 12px;
     }
   }
 }
@@ -234,55 +275,15 @@ ul {
     }
     /***EXPLORE***/
     .explore {
-      th {
+      i.icon-question-sign {
+        font-size: 13px;
         cursor: pointer;
-        i {
-          float: right;
-          display: none;
-        }
-        i.icon-question-sign {
-          font-size: 13px;
-          cursor: pointer;
-          padding: 3px;
-          float: none;
-          display: inline;
-        }
-        i.icon-sort {
-          display: inline;
-        }
+        padding: 3px;
+        float: none;
+        display: inline;
       }
-      th.friends {
-        cursor: auto;
-      }
-      th.location {
-        width: 180px;
-      }
-      th.confirmed {
-        width: 115px;
-      }
-      td.friends-game {
-        text-align: center;
-        i {
-          color: @dark-purple;
-          &.icon-check {
-            display: none;
-          }
-          &.icon-check-empty {
-            display: inline-block;
-          }
-        }
-      }
-      div.bottom {
-        a {
-          padding: 10px;
-          cursor: pointer;
-        }                
-        div.dataTables_info {
-          font-size: 12px;
-        }
-      }      
     }
-  }    
+  }
 }
 
 

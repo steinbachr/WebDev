@@ -9,8 +9,7 @@
 {% endblock %}
 {% block nav %}{% endblock %} {# for mobile version #}
 {% block content %}
-    <div class="rsvp-form">
-        {% if game.can_rsvp %}
+    <div class="rsvp-form">        
         <form method="post">              
             <div style="margin-bottom: 50px;">
                 {{ form.rsvp_status.label }}
@@ -26,15 +25,26 @@
                     <div>
                         {{ form.player_name.label }}
                         <br />
-                        {{ form.player_name }}
+                        {% if game.can_rsvp %}
+                            {{ form.player_name }}
+                        {% else %}
+                            <div class="no-player">
+                                <input type="text" disabled="true"/>
+                            </div>
+                            <script type="text/javascript">
+                                var options = {
+                                    title : "Sorry, the game has filled up", 
+                                    trigger : 'hover', 
+                                    container: 'body'
+                                };
+                                $('.no-player').tooltip(options);                           
+                            </script>
+                        {% endif %}
                     </div>
                 {% endif %}
             </div>
             <br />
             <button class="btn btn-large btn-primary">Submit</button>
         </form>
-        {% else %}
-            <h1>Sorry, this game has filled up. Stay tuned for future games!</h1>            
-        {% endif %}
     </div>
 {% endblock %}

@@ -7,6 +7,8 @@
     {% endblock %}
 {% endblock %}
 {% block js %}
+    <script type="text/javascript" src="{{ STATIC_URL }}js/libraries/DataTables/media/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/libraries/datatable.datetime-us.js"></script>
     <script type="text/javascript" src="{{ STATIC_URL }}js/mine/login.js"></script>
     {% block js_spec %}
     {% endblock %}

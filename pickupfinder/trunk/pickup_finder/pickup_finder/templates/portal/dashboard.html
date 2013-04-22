@@ -2,7 +2,7 @@
 
 {% block js_spec %}
     <script>
-        var games = {{ games_json|safe }};
+        var games = {{ games_json|safe }};        
     </script>    
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places&key={{ google_key }}&sensor=true"></script>
     <script type="text/javascript" src="{{ STATIC_URL }}js/mine/game_lineup.js"></script>

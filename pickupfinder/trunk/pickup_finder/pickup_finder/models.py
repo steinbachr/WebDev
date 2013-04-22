@@ -30,7 +30,8 @@ class Game(models.Model):
     
     @property
     def can_rsvp(self):
-        return self.players_count < self.person_cap or (self.public and self.person_cap is None)
+        return (self.players_count < self.person_cap) or \
+               (self.public and self.person_cap is None)
     
     @property
     def verbose_game_type(self):
@@ -39,7 +40,14 @@ class Game(models.Model):
     @classmethod
     def public_games(cls,only_active=True):           
         games = cls.objects.filter(public=True)
-        return games.filter(starts_at__gte=datetime.datetime.now()) if only_active else games        
+        return games.filter(starts_at__gte=datetime.datetime.now()) if only_active else games
+
+    @classmethod
+    def games_from_past_week(cls):
+        '''get all public games that have occurred in the past week'''        
+        one_week_ago=datetime.datetime.now() - datetime.timedelta(days=7)
+        return cls.public_games(only_active=False).filter(starts_at__gte=one_week_ago).\
+                                                        filter(starts_at__lte=datetime.datetime.now())
     
     @classmethod
     def games_by_creator(cls, creator, only_active=True):

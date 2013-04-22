@@ -1,0 +1,76 @@
+<table class="table table-bordered datatable">
+    <thead>
+    <th class="friends">        
+        {% if current_tab == 'view-games' %}
+            Roster
+        {% else %}
+            <i class="icon-question-sign"></i>
+            Friends?
+        {% endif %}        
+    </th>
+    <th>
+        <i class="icon-sort"></i>
+        <i class="icon-sort-down"></i>
+        <i class="icon-sort-up"></i>
+        Type
+    </th>
+    <th>
+        <i class="icon-sort"></i>
+        <i class="icon-sort-down"></i>
+        <i class="icon-sort-up"></i>
+        Cap
+    </th>
+    <th class="confirmed">
+        <i class="icon-sort"></i>
+        <i class="icon-sort-down"></i>
+        <i class="icon-sort-up"></i>
+        Confirmed
+    </th>
+    <th>
+        <i class="icon-sort"></i>
+        <i class="icon-sort-down"></i>
+        <i class="icon-sort-up"></i>
+        RSVP
+    </th>
+    <th class="location">
+        <i class="icon-sort"></i>
+        <i class="icon-sort-down"></i>
+        <i class="icon-sort-up"></i>
+        Location
+    </th>
+    <th>
+        <i class="icon-sort"></i>
+        <i class="icon-sort-down"></i>
+        <i class="icon-sort-up"></i>
+        Date
+    </th>
+    </thead>
+    <tbody>
+    {% for game in games %}
+        <tr id="{{ game.creator }}" class="{% if game.can_rsvp %}success{% else %}error{% endif %}">
+            {% if current_tab == 'view-games' %}
+                <td class="roster">
+                    <a href="#" class="{{ game.id }}">roster</a>
+                </td>
+            {% else %}
+                <td class="friends-game">
+                    <i class="icon-check"></i>
+                    {% if user == game.creator %}<img src="{{ STATIC_URL }}images/my_game_icon.png" />{% else %}<i class="icon-check-empty"></i>{% endif %}
+                </td>
+            {% endif %}
+            <td>{{ game.verbose_game_type }}</td>
+            <td>{{ game.person_cap }}</td>
+            <td>{{ game.players_count }}</td>
+            <td class="rsvp-link">
+                {% if current_tab == 'view-games' %}
+                    <a href="#" class="{{ game.id }}">link</a>
+                {% else %}
+                    <a href="{{ game.rsvp_link }}">rsvp here!</a>
+                {% endif %}
+            </td>            
+            <td>{{ game.normalized_location }}</td>
+            <td>{{ game.starts_at }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>    

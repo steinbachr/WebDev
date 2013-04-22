@@ -10,32 +10,7 @@
 {% block content %}
     <div class="view-games">
         <h3>These are upcoming games that you've created</h3>
-        <table class="table table-hover">
-            <thead>
-                <tr>
-                    <th>Date</th>
-                    <th>Type</th>
-                    <th>Location</th>
-                    <th>Public</th>
-                    <th>Player Cap</th>                    
-                    <th>Players</th>                    
-                    <th>Reservation Link</th>
-                </tr>                
-            </thead>
-            <tbody>
-                {% for game in games %}
-                <tr>
-                    <td>{{ game.starts_at }}</td>
-                    <td>{{ game.verbose_game_type }}</td>
-                    <td>{{ game.normalized_location }}</td>
-                    <td>{{ game.public }}</td>
-                    <td>{% if game.public %}{{ game.person_cap }}{% else %}N/A{% endif %}</td>                    
-                    <td class="roster"><a href="#lineup" class="{{ game.id }}">roster</a></td>
-                    <td class="rsvp-link"><a href="#" class="{{ game.id }}">link</a></td>
-                </tr>
-            {% endfor %}
-            </tbody>
-        </table>
+        {% include 'portal/components/games_table.html' %}
         <div id="lineup" class="game-lineup">
             <div class="accordion" id="lineup_accordion">
                 <div class="accordion-group">
