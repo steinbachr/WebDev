@@ -2,6 +2,8 @@ $(document).ready(function() {
     var $roster_click = $('td.roster a');
     var $reservation_click = $('td.rsvp-link a');
     
+    create_datatables();
+    
     $roster_click.click(function(evt) {
         fetch_lineup($(evt.target).attr('class'));
     });

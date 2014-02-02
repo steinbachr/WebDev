@@ -8,9 +8,11 @@ $(document).ready(function() {
     $notifications_link.click(function() {
         $.post(SEEN_NOTIFICATIONS_URL);
         $(this).parent().find('span.notifs-count').html(0);
-    }); 
-    
-    /**datatables**/
+    });       
+});
+
+/**datatables**/
+function create_datatables() {
     $('table.datatable').dataTable( {
         "sDom": 't<"bottom"pi><"clear">',
         "iDisplayLength": 10,
@@ -24,7 +26,7 @@ $(document).ready(function() {
             { "sType": "datetime-us" }
         ]
     });
-
+    
     $('table th').click(function(evt) {
         $('table th').find('i').css('display', 'none');
         $('table th').find('i.icon-sort').css('display', 'inline');
@@ -37,6 +39,6 @@ $(document).ready(function() {
             $(this).find('i.icon-sort-down').css('display', 'inline');
         }
     });
-});
+}
 
 
