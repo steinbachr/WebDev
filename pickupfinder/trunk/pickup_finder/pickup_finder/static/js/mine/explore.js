@@ -1,5 +1,6 @@
 $(document).ready(function() {
-    $('.icon-question-sign').tooltip({container : 'body', trigger : 'click', title : 'If the game was created by one of your friends, it will have a check in this column'});    
+    $('.icon-question-sign').tooltip({container : 'body', trigger : 'click', title : 'If the game was created by one of your friends, it will have a check in this column'});
+    create_datatables();
 })
 
 function mark_friends_games() {
