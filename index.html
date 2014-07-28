@@ -1,60 +1,74 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta lang="en">
-    <meta name="description" content="Bobby Steinbach on the web. See Bobby's projects, hobbies, and all things Bobby.">
-    <meta name="keywords" content="Bobby Steinbach,Python,Programming,Jiu Jitsu,Javascript,Startups">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bobby Steinbach on the web. Bobby is primarily a Python web developer, however sees himself more abstractly as a generalist having built programs and services in Python, Java, Android, C#, PHP, and even Perl. This page comprises a listing of Bobby Steinbach's projects, hobbies, links, and all other things Bobby.">
     <meta name="author" content="Bobby Steinbach">
+		<meta property="og:url" content="http:/www.iambob.me" />
+		<meta property="og:site_name" content="Bobby Steinbach"/>
+		<meta property="og:title" content="Bobby Steinbach on the Web"/>
+		<meta property="og:image" content="public/images/Backstep_sm_fb.png" />
     <link rel="image_src" href="public/images/Backstep_sm_fb.png" />
     <link rel="shortcut icon" href="public/images/Backstep_small.png">
     <link rel="apple-touch-icon" href="public/images/Backstep_small.png">
     <link href="public/styles/bootstrap-theme.css" type="text/css" rel="stylesheet" />
     <link href="public/styles/bootstrap.css" type="text/css" rel="stylesheet" />
     <link href="public/styles/font-awesome.css" type="text/css" rel="stylesheet" />
-    <link href="public/styles/imgagine.css" type="text/css" rel="stylesheet" />
     <link href="public/styles/stylesheet.less" type="text/css" rel="stylesheet/less" />
     <script src="public/scripts/jquery-1.8.3.min.js" type="text/javascript"></script>
     <script src="public/scripts/bootstrap.min.js" type="text/javascript"></script>
     <script src="public/scripts/less-1.3.1.min.js" type="text/javascript"></script>
-    <script src="public/scripts/imgagine.min.js" type="text/javascript"></script>
     <title>Bobby Steinbach</title>
 </head>
 <body>
-    <div class="imgur-container">        
-    </div>
     <div class="big-container" itemscope itemtype="http://data-vocabulary.org/Person">
         <a href="http://blog.iambob.me" class="my-pic">
-            <img src="public/images/my_photo.jpg" itemprop="photo" />
+            <img src="public/images/my_photo.jpg" itemprop="photo" alt="Bobby Steinbach" />
             <div class="info">
-                <h2 itemprop="name">Bobby Steinbach</h2>
+                <h1 itemprop="name">Bobby Steinbach</h1>
                 <h4>Pythonista, Jiu Jitsu Ninja</h4>
                 <span>redditor, builder, rabid netflix watcher</span>
             </div>
         </a>
         <div class="container">
-            <div class="button-container">
-                <button class="btn-large btn-success generate-random">Regenerate Imgur Pics</button>
-                <button class="btn-large btn-primary generate-grid">Make Grid Background</button>
-                <button class="btn-large btn-primary generate-boxes">Make Box Background</button>
-            </div>
             <div class="row projects">
-                <h3>Work</h3>
+                <h3>Bobby Does: Work</h3>
                 <ul>
+										<li class="lead">
+                        <b><a href="http://www.rukkus.com" itemprop="affiliation">Rukkus</a></b>
+                        <br />
+                        At Rukkus, I've been able to take on a number of challenges including optimizing the API (of which I am most
+											  proud, having optimized one particularily slow endpoint by an order of magnitude), building out a v1.0
+											  Android application, creating a brand new, SEO-friendly website, and otherwise supporting the biz dev
+												team.
+                        <div class="technology">Python, Django, Redis, SOLR, Postgres, Javascript, jQuery, Backbone, HTML5</div>
+                    </li>
                     <li class="lead">
                         <b><a href="http://www.theshelf.com" itemprop="affiliation">TheShelf</a></b>
                         <br />
-                        TheShelf is a site that brings together bloggers and brands in an immersive ecosystem benefiting both parties.
+                        While working at TheShelf, I was able to both sharpen my Python/Django chops and
+												gain invaluable exposure to the business side of working in an early-stage startup. My first task
+												upon arrival was to refactor the website entirely. Challenging? Yes. Daunting? Yes. But in the end,
+												very positive because I was able to fully understand the code base once finished.
+												Subsequent projects included building out a dynamic image collage, re-wiring key parts of the site
+												to use Backbone, and optimizing a feed containing millions of items.
                         <div class="technology">Python, Django, PostgreSQL, Javascript, jQuery, HTML5</div>
                     </li>
                     <li class="lead">
                         <b><a href="http://www.openmile.com" itemprop="affiliation">OpenMile</a></b>
                         <br />
-                        A company acting to automate the process of trucking brokerages/
+                        OpenMile was my first job at a startup, and the reason why I've only worked as startups since!
+												Coming in as a co-op (an intern, for all practical purposes), I never felt as though I had any
+												less responsibility than the other team members. My daily tasks included responding to bug reports
+												filed by the sales team, building out portlets (modular page components), and playing ping-pong. I kid...
+												about the ping-pong of course.
                         <div class="technology">Python, Pylons, sqlAlchemy, MySQL, Javascript, jQuery</div>
                     </li>
                 </ul>
-                <h3>Personal Projects</h3>
+                <h3>Bobby Does: Personal Projects</h3>
                 <ul>
                     <li class="lead">
                         <b><a href="http://www.back-step.com" itemprop="url">BackStep</a><strong>(in development)</strong></b>
@@ -67,8 +81,19 @@
                         of the valuables.
                         <div class="technology">Python, Django, PostgreSQL, NodeJS, Express, Backbone, Javascript, Android, iOS, jQuery, CSS3</div>
                     </li>
+										<li class="lead">
+                        <b><a href="https://github.com/steinbachr/world-cup-challenge" itemprop="url">World Cup Challenge</a></b>
+                        <br />
+                        The World Cup Challenge was a competition put forth by <a href="http://footballradar.com/">FootballRadar</a>
+											  which asked its participants to write a program which would - for each team in the World Cup - print
+											  out the probability of that team being knocked out in group, 2nd round, etc. and ending with the probability
+											  of that team winning the cup. My solution happened to be the winning one and relied on a number of
+											  different factors to choose probabilities including: player skill scores, team chemistry scores,
+											  fifa rank, number of "stars" on the team, and past international results.
+                        <div class="technology">Python</div>
+                    </li>
                     <li class="lead">
-                        <b><a href="http://www.opentapp.me" itemprop="url">DrinkUp</a></b>
+                        <b><a href="http://www.opentapp.me" itemprop="url">DrinkUp</a><strong>(not maintained)</strong></b>
                         <br />
                         DrinkUp is a venture launched by me and two friends as an effort to make creation and distribution of 
                         drink deals by bars and clubs as simple as logging into a web app and pushing a button. On the user side,
@@ -77,8 +102,14 @@
                         <div class="technology">Python, Django, MySQL, Javascript, jQuery</div>
                     </li>
                 </ul>
-                <h3>Weekend Projects</h3>
+                <h3>Bobby Does: Weekend Projects</h3>
                 <ul>
+										<li class="lead">
+                        <b><a href="https://github.com/steinbachr/django-js-variable-injector" itemprop="url">django-js-variable-injector</a></b>
+                        <br />
+                        Provides a mechanism for injecting Django template variables into external Javascript files' namespace in a (more) elegant way.
+                        <div class="technology">Python, Django</div>
+                    </li>
                     <li class="lead">
                         <b><a href="https://github.com/steinbachr/django-csv" itemprop="url">django-csv</a><strong>(in development)</strong></b>
                         <br />
@@ -110,10 +141,9 @@
                     <li class="lead">
                         <b><a href="https://github.com/steinbachr/imgagine" itemprop="url">Imgagine</a></b>
                         <br />
-                        My first foray with Backbone, the buttons at the top of the page are an example of
-                        this jQuery plugin which fetches a random gallery from imgur and displays it in a couple of nice
+                        My first foray with Backbone, this jQuery plugin fetches a random gallery from imgur and displays it in a couple of nice
                         ways.
-                        <div class="technology">Javascript, Backbone</div>
+                        <div class="technology">Javascript, jQuery, Backbone</div>
                     </li>
                     <li class="lead">
                         <b><a href="http://event-profiler.incepted.us" itemprop="url">The Facebook Event Profiler</a></b>
@@ -124,10 +154,16 @@
                 </ul>
             </div>            
             <div class="row other-links">         
-                <h4>(Other Links)</h4>
+                <h4>(Bobby's Other Links)</h4>
                 <ul>
                     <li>
                         <a href="http://blog.iambob.me" itemprop="url">Blog</a>
+                    </li>
+										<li>
+                        <a href="https://plus.google.com/u/1/+BobbySteinbach/about" itemprop="url">Google Plus</a>
+                    </li>
+										<li>
+                        <a href="https://news.ycombinator.com/user?id=rigid_airship" itemprop="url">HackerNews</a>
                     </li>
                     <li>
                         <a href="http://www.linkedin.com/in/steinbachr" itemprop="url">LinkedIn</a>
@@ -145,15 +181,5 @@
             </div>           
         </div>
     </div>
-    <script type="text/javascript" src="public/scripts/script.js"></script>
-    <script type="text/javascript">
-      // @license magnet:?xt=urn:btih:0b31508aeb0634b347b8270c7bee4d411b5d4109&dn=agpl-3.0.txt GPL-v3-or-Later
-      (function(){
-        var e = document.createElement('script'); e.type='text/javascript'; e.async = true;
-        e.src = document.location.protocol + '//d1agz031tafz8n.cloudfront.net/thedaywefightback.js/widget.min.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(e, s);
-      })();
-      // @license-end
-    </script>
 </body>
 </html>

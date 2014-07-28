@@ -1,18 +1,17 @@
-body {
+body { background: url('../images/Backstep_small_bordered.png'); background-repeat: repeat;
   ul {
     list-style-type: none;
-  }
-  .imgur-container, .big-container {
-    height: 2700px;
-    overflow: hidden;
   }
   .big-container {
     width: 100%;    
     margin: auto;    
     .container {      
       background: white; 
-      opacity: .9;
+      opacity: .99;
+      border:solid 3px black;
+      border-top:none;
       width: 70%;
+      height: auto !important;
       padding-top: 10px;
       margin: auto;
       h3 {
@@ -50,11 +49,12 @@ body {
     .my-pic {
       color: black;
       position: absolute;
-      width: 250px;      
-      background: white;
+      width: 250px;
+      border:solid 2px black;
+      background: #f9f9f7;
       z-index: 10;
       img {
-        width: 250px;
+        width: 100%;
       }
       .info {
         text-align: center;
