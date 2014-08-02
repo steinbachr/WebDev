@@ -1,3 +1,5 @@
+@max-width: 950px;
+
 body { background: url('../images/Backstep_small_bordered.png'); background-repeat: repeat;
   ul {
     list-style-type: none;
@@ -24,25 +26,51 @@ body { background: url('../images/Backstep_small_bordered.png'); background-repe
       strong {
         color: #cc0033;
       }
+      .basic-info, .blog-posts {
+          padding: 0px 50px;
+          p { line-height:1.8; }
+          &.blog-posts ol { padding-left: 0; }
+        @media (max-width: @max-width) {
+            padding: 0px 25px;
+        }
+      }
+      .share { text-align:center; }
       .projects {
         ul {
           display: inline-block;
           padding-right: 40px;
           li {
             padding: 30px;
-            text-align: center;    
+            text-align: left;
             border-bottom: solid 2px #777;
+            p { line-height:1.8; }
+            h4 { text-align:center; }
           }
         }
-        .technology { font-size:14px; padding-top:6px; }
+        .technology { font-size:12px; padding-top:6px; font-style:italic; text-align:center; }
       }
       .other-links {
-        padding: 30px 0px 30px 100px;
+        text-align:center;
+        padding: 30px 0 90px 0;
         margin-bottom: 50px;
         border-bottom: solid 1px #777;
-        ul li {
-          float: left;
-          padding-right: 30px;
+        ul {
+          display:inline-block;
+          padding-top:20px;
+          li {
+              display: inline-block;
+              padding-top:10px;
+              padding-right: 30px;
+              span {
+                  color: #666;
+                  padding-left: 4px;
+                  font-size:13px;
+              }
+              i {
+                  color: #333;
+                  font-size:18px;
+              }
+          }
         }
       }
     }
@@ -58,6 +86,10 @@ body { background: url('../images/Backstep_small_bordered.png'); background-repe
       }
       .info {
         text-align: center;
+      }
+      @media (max-width: @max-width) {
+        width:100px;
+        h1 { font-size:20px; }
       }
     }
   }
