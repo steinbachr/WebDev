@@ -117,3 +117,16 @@ body .big-container .my-pic .info {
     font-size: 20px;
   }
 }
+
+/**-- Image Gallery --**/
+.screenshots-container { text-align: center; }
+
+.thumbnails-container { padding-top:20px; }
+.thumbnail-image { width: 70px; display:inline-block; margin-left:20px; border:solid 2px #ccc; cursor: pointer;}
+.thumbnail-image.selected { width:100px; }
+.thumbnail-image img { width: 100%; }
+
+.big-screenshot-container { padding-top:30px; }
+.big-image { width: 300px; display:inline-block; border:solid 2px #ccc; }
+.big-image .img-caption { border-top: solid 1px #ccc; padding:5px; font-style:italic; font-size:12px; }
+.big-image img { width: 100%; }
