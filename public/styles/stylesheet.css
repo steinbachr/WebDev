@@ -57,7 +57,11 @@ body .big-container .container .projects ul {
 body .big-container .container .projects ul li {
   padding: 30px;
   text-align: left;
-  border-bottom: solid 2px #777;
+}
+body .big-container .container .projects ol li {
+  padding: 5px;
+  text-align: left;
+  border-bottom: none;
 }
 body .big-container .container .projects ul li p {
   line-height: 1.8;
