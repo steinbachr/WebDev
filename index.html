@@ -3,277 +3,326 @@
 <head>
     <meta charset="utf-8">
     <meta lang="en">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Bobby Steinbach on the web. Bobby is primarily a Python web developer, however sees himself more abstractly as a generalist having built programs and services in Python, Java, Android, C#, PHP, and even Perl. This page comprises a listing of Bobby Steinbach's projects, hobbies, links, and all other things Bobby.">
     <meta name="author" content="Bobby Steinbach">
-		<meta property="og:url" content="http:/www.iambob.me" />
-		<meta property="og:site_name" content="Bobby Steinbach"/>
-		<meta property="og:title" content="Bobby Steinbach on the Web"/>
-		<meta property="og:image" content="public/images/Backstep_sm_fb.png" />
-    <link rel="image_src" href="public/images/Backstep_sm_fb.png" />
+    <meta property="og:url" content="http:/www.iambob.me"/>
+    <meta property="og:site_name" content="Bobby Steinbach"/>
+    <meta property="og:title" content="Bobby Steinbach on the Web"/>
+    <meta property="og:image" content="public/images/Backstep_sm_fb.png"/>
+    <link rel="image_src" href="public/images/Backstep_sm_fb.png"/>
     <link rel="shortcut icon" href="public/images/Backstep_small.png">
     <link rel="apple-touch-icon" href="public/images/Backstep_small.png">
-    <link href="public/styles/bootstrap-theme.css" type="text/css" rel="stylesheet" />
-    <link href="public/styles/bootstrap.css" type="text/css" rel="stylesheet" />
-    <link href="public/styles/font-awesome/css/font-awesome.min.css" type="text/css" rel="stylesheet" />
-    <link href="public/styles/stylesheet.css" type="text/css" rel="stylesheet" />
+    <link href="public/styles/bootstrap-theme.css" type="text/css" rel="stylesheet"/>
+    <link href="public/styles/bootstrap.css" type="text/css" rel="stylesheet"/>
+    <link href="public/styles/font-awesome/css/font-awesome.min.css" type="text/css" rel="stylesheet"/>
+    <link href="public/styles/stylesheet.css" type="text/css" rel="stylesheet"/>
     <script src="public/scripts/jquery-1.8.3.min.js" type="text/javascript"></script>
     <script src="public/scripts/bootstrap.min.js" type="text/javascript"></script>
     <script src="public/scripts/underscore.js" type="text/javascript"></script>
     <script src="public/scripts/backbone.js" type="text/javascript"></script>
+    <script src="public/scripts/core.js" type="text/javascript"></script>
     <script src="public/scripts/index.js" type="text/javascript"></script>
-		<script>
-		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
-		ga('create', 'UA-53454636-1', 'auto');
-		ga('send', 'pageview');
+        ga('create', 'UA-53454636-1', 'auto');
+        ga('send', 'pageview');
 
-	</script>
+    </script>
     <title>Bobby Steinbach</title>
 </head>
 <body>
-		<div id="fb-root"></div>
-		<script>(function(d, s, id) {
-			var js, fjs = d.getElementsByTagName(s)[0];
-			if (d.getElementById(id)) return;
-			js = d.createElement(s); js.id = id;
-			js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=284560668416433&version=v2.0";
-			fjs.parentNode.insertBefore(js, fjs);
-		}(document, 'script', 'facebook-jssdk'));</script>
-    <div class="big-container" itemscope itemtype="http://data-vocabulary.org/Person">
-        <a href="http://blog.iambob.me" class="my-pic">
-            <img src="public/images/bobby-steinbach.jpg" itemprop="photo" alt="Bobby Steinbach" />
-            <div class="info">
-                <h1 itemprop="name">Bobby Steinbach</h1>
-                <h4>Pythonista, Jiu Jitsu Ninja</h4>
-                <span>redditor, builder, rabid netflix watcher</span>
-            </div>
-        </a>
-        <div class="container">
-						<div class="row basic-info">
-							<h2>Basic Info</h2>
-							<div class="basic-info">
-								<p>Hey there! My name's Bobby Steinbach and I'm a software developer currently working out of NYC where I'm
-								hacking as a Python/Django backend developer and Android lead developer at <a href="http://www.rukkus.com" title="Rukkus">Rukkus</a>.</p>
-								<p>Although I absolutely love coding and couldn't imagine doing anything else as a career, sometimes I definitely
-									need a break from the glow of a computer monitor. At these times, I enjoy Brazilian Jiu Jitsu, woodworking,
-									and - hackneyed for a programmer, I know - playing videogames.</p>
-							</div>
-						</div>
-						<div class="row blog-posts">
-							<h2>Popular Blog Posts</h2>
-							<div class="blog-posts">
-								<ol>
-									<li><a href="http://blog.iambob.me/accessing-google-analytics-from-django/" title="Accessing Google Analytics From Django">Accessing Google Analytics From Django</a></li>
-									<li><a href="http://blog.iambob.me/the-super-stupid-idiots-guide-to-getting-started-with-django-pipeline-and-s3/" title="Super Stupid Idiots Guide To Getting Started With Django Pipeline And S3">The Super Stupid Idiots Guide To Getting Started With Django, Pipeline, And S3</a></li>
-									<li><a href="http://blog.iambob.me/death-to-the-technical-interview/" title="Death To The Technical Interview">Death To The Technical Interview</a></li>
-									<li><a href="http://blog.iambob.me/folk-to-edm-the-top-10-artists-to-code-to/" title="Fold To Edm The Top 10 Artists To Code To">Folk To EDM: The Top 10 Artists To Code To</a></li>
-									<li><a href="http://blog.iambob.me/backstep-and-time-management/" title="Backstep and Time Management">Backstep and Time Management</a></li>
-									<li><a href="http://blog.iambob.me/making-a-post-request-from-android-app/" title="Making a Post Request From An Android App">Making a Post Request From An Android App (And Why I Hate Java)</a></li>
-								</ol>
-							</div>
-						</div>
-            <div class="row projects">
-                <h2>Work</h2>
-                <ul>
-					<li>
-                        <h4><a href="http://www.rukkus.com" itemprop="affiliation">Rukkus</a></h4>
-                        <br />
-						<p>
-                            My work thus far at Rukkus has revolved heavily around a few things:
-                            <ol>
-                                <li>Leading development of the <a href="https://play.google.com/store/apps/details?id=com.rukkus.app&hl=en">Rukkus Android Application</a></li>
-                                <li>Building out the front and back end for our <a href="https://rukkus.com/toronto-blue-jays-at-new-york-yankees/9-12-2015-bronx-yankee-stadium-80705/">next gen ticket buying experience</a></li>
-                                <li>Solving complex issues relating to data de-duplication and String matching</li>
-                            </ol>
-						</p>
-                        <div class="technology">Python, Django, Redis, SOLR, Postgres, Javascript, jQuery, Backbone, HTML5</div>
-						<div class="screenshots-container">
-							<div class="big-screenshot-container"></div>
-							<div class="thumbnails-container"></div>
-						</div>
-                    </li>
+<div id="fb-root"></div>
+<script>(function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s);
+    js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=284560668416433&version=v2.0";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<div class="big-container" itemscope itemtype="http://data-vocabulary.org/Person">
+<a href="http://blog.iambob.me" class="my-pic">
+    <img src="public/images/bobby-steinbach.jpg" itemprop="photo" alt="Bobby Steinbach"/>
 
-
-                    <li>
-                        <h4><a href="http://www.theshelf.com" itemprop="affiliation">TheShelf</a></h4>
-                        <br />
-												<p>
-                        While working at TheShelf, I was able to both sharpen my Python/Django chops and
-												gain invaluable exposure to the business side of working in an early-stage startup. My first task
-												upon arrival was to refactor the website entirely. Challenging? Yes. Daunting? Yes. But in the end,
-												very positive because I was able to fully understand the code base once finished.
-												Subsequent projects included building out a dynamic image collage, re-wiring key parts of the site
-												to use Backbone, and optimizing a feed containing millions of items.
-												</p>
-                        <div class="technology">Python, Django, PostgreSQL, Javascript, jQuery, HTML5</div>
-                    </li>
-                    <li>
-                        <h4><a href="http://www.openmile.com" itemprop="affiliation">OpenMile</a></h4>
-                        <br />
-                        OpenMile was my first job at a startup, and the reason why I've only worked as startups since!
-												Coming in as a co-op (an intern, for all practical purposes), I never felt as though I had any
-												less responsibility than the other team members. My daily tasks included responding to bug reports
-												filed by the sales team, building out portlets (modular page components), and playing ping-pong. I kid...
-												about the ping-pong of course.
-                        <div class="technology">Python, Pylons, sqlAlchemy, MySQL, Javascript, jQuery</div>
-                    </li>
-                </ul>
-                <h2>Personal Projects</h2>
-                <ul>
-                    <li>
-                        <h4><a href="http://www.back-step.com" itemprop="url">BackStep</a><strong>(in development)</strong></h4>
-                        <br />
-                        BackStep is an idea I've been playing with in my head for a month or so and this month decided
-                        to start development on. The premise is simple: Have you ever left something in a cab?
-                        Hopefully the answer is no, but if it isn't BackStep is for you.
-                        Using a combination of methods including widespread aggregation of data and manual effort,
-                        BackStep takes on the challenge of finding your items and putting you in contact with the finders
-                        of the valuables.
-                        <div class="technology">Python, Django, PostgreSQL, NodeJS, Express, Backbone, Javascript, Android, iOS, jQuery, CSS3</div>
-                    </li>
-										<li>
-                        <h4><a href="https://github.com/steinbachr/world-cup-challenge" itemprop="url">World Cup Challenge</a></h4>
-                        <br />
-                        The World Cup Challenge was a competition put forth by <a href="http://footballradar.com/">FootballRadar</a>
-											  which asked its participants to write a program which would - for each team in the World Cup - print
-											  out the probability of that team being knocked out in group, 2nd round, etc. and ending with the probability
-											  of that team winning the cup. My solution happened to be the winning one and relied on a number of
-											  different factors to choose probabilities including: player skill scores, team chemistry scores,
-											  fifa rank, number of "stars" on the team, and past international results.
-                        <div class="technology">Python</div>
-                    </li>
-                    <li>
-                        <h4><a href="http://www.opentapp.me" itemprop="url">DrinkUp</a><strong>(not maintained)</strong></h4>
-                        <br />
-                        DrinkUp is a venture launched by me and two friends as an effort to make creation and distribution of 
-                        drink deals by bars and clubs as simple as logging into a web app and pushing a button. On the user side,
-                        an Android and iOS app currently in development gives bar-goers the ability to redeem coupons either as 
-                        individuals or as part of a group. It's pretty sweet! Of course I am biased..
-                        <div class="technology">Python, Django, MySQL, Javascript, jQuery</div>
-                    </li>
-                </ul>
-                <h2>Weekend Projects</h2>
-                <ul>
-										<li>
-                        <h4><a href="https://play.google.com/store/apps/details?id=me.iambob.spitly" itemprop="url">Spitly</a></h4>
-                        <br />
-                        Ever face the situation when you've received a text but don't want to respond instantly? Spitly was conceived
-												for just this scenario. While there are other text scheduling apps out there, Spitly is different in that
-												it strips out many extraneous features that these other tools provide (recurring schedules, a
-												date / time combination, etc.) and instead focuses solely on the mission of allowing the user
-												to quickly and easily send out a delayed text.
-                        <div class="technology">Java, Android</div>
-                    </li>
-										<li>
-                        <h4><a href="https://github.com/steinbachr/django-js-variable-injector" itemprop="url">django-js-variable-injector</a></h4>
-                        <br />
-                        Provides a mechanism for injecting Django template variables into external Javascript files' namespace in a (more) elegant way.
-                        <div class="technology">Python, Django</div>
-                    </li>
-                    <li>
-                        <h4><a href="https://github.com/steinbachr/django-csv" itemprop="url">django-csv</a><strong>(in development)</strong></h4>
-                        <br />
-                        Simple CSV utilities for Django projects, the most noteworthy of which is the extensible system
-												for bootstraping data from csv files into models.
-                        <div class="technology">Python</div>
-                    </li>
-                    <li>
-                        <h4><a href="https://github.com/steinbachr/instasound" itemprop="url">Instasound</a></h4>
-                        <br />
-                        An attempt at Tkinter programming. Instasound connects the user to a variety of music sources with one
-                        simple interface.
-                        <div class="technology">Python, Tkinter</div>
-                    </li>
-                    <li>
-                        <h4><a href="http://www.soundster.com" itemprop="url">Instasound (web branch)</a>
-                            <a href="https://github.com/steinbachr/instasound/tree/web_app">| github</a></h4>
-                        <br />
-                        A branch of the Instasound application mentioned above using something I'm a little more familiar with,
-                        web programming.
-                        <div class="technology">Python, Flask, Javascript, jQuery</div>
-                    </li>
-                    <li>
-                        <h4><a href="https://github.com/steinbachr/eight_py" itemprop="url">8Py</a></h4>
-                        <br />
-                        Simple Python wrapper for the 8Tracks Api. Built to be used by
-                        <a href="https://github.com/steinbachr/instasound/tree/web_app">Instasound</a>.
-                        <div class="technology">Python</div>
-                    </li>
-                    <li>
-                        <h4><a href="https://github.com/steinbachr/imgagine" itemprop="url">Imgagine</a></h4>
-                        <br />
-                        My first foray with Backbone, this jQuery plugin fetches a random gallery from imgur and displays it in a couple of nice
-                        ways.
-                        <div class="technology">Javascript, jQuery, Backbone</div>
-                    </li>
-                    <li>
-                        <h4><a href="http://event-profiler.incepted.us" itemprop="url">The Facebook Event Profiler</a></h4>
-                        <br />
-                        A strictly client side app that analyzes and profiles your FB events
-                        <div class="technology">Javascript, jQuery</div>
-                    </li>
-                </ul>
-            </div>            
-            <div class="row other-links">         
-                <h4>Elsewhere On the Web</h4>
-                <ul>
-										<li>
-                        <a href="https://plus.google.com/u/1/+BobbySteinbach/about" itemprop="url"><i class="fa fa-google-plus-square"></i><span>Google+</span></a>
-                    </li>
-										<li>
-                        <a href="https://news.ycombinator.com/user?id=rigid_airship" itemprop="url"><i class="fa fa-hacker-news"></i><span>Hacker News</span></a>
-                    </li>
-                    <li>
-                        <a href="http://www.linkedin.com/in/steinbachr" itemprop="url"><i class="fa fa-linkedin"></i><span>LinkedIn</span></a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/steinbachr" itemprop="url"><i class="fa fa-github"></i><span>GitHub</span></a>
-                    </li>
-										<li>
-                        <a href="https://www.facebook.com/bobby.steinbach" itemprop="url"><i class="fa fa-facebook"></i><span>Facebook</span></a>
-                    </li>
-										<li>
-												<a href="http://stackexchange.com/users/2051772/bobby-s" itemprop="url"><i class="fa fa-stack-overflow"></i><span>StackOverflow</span></a>
-										</li>
-									  <li>
-                        <a href="http://blog.iambob.me" itemprop="url"><i class="fa fa-book"></i><span>Blog</span></a>
-                    </li>
-										<li>
-                        <a href="http://www.codewars.com/users/steinbachr" itemprop="url"><i class="fa fa-code"></i><span>Codewars</span></a>
-                    </li>
-										<li>
-												<a href="https://angel.co/bobby-steinbach" itemprop="url"><i class="fa fa-cloud"></i><span>AngelList</span></a>
-										</li>
-                </ul>
-								<div class="clearfix"></div>
-            </div>
-						<div class="row share">
-							<a href="https://twitter.com/share" class="twitter-share-button" data-lang="en" data-url="http://iambob.me" data-text="Bobby Steinbach on the web">Tweet</a>
-							<div class="fb-like" data-href="http://iambob.me" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
-						</div>
-        </div>
+    <div class="info">
+        <h1 itemprop="name">Bobby Steinbach</h1>
+        <h4>Pythonista, Jiu Jitsu Ninja</h4>
+        <span>redditor, builder, rabid netflix watcher</span>
     </div>
-		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</a>
 
-	<!-- JS templates -->
-	<script type="text/template" id="big-image-template">
-		<div class="big-image">
-			<img src="<%= src %>" alt="<%= alt %>"/>
-			<div class="img-caption"><%= caption %></div>
-		</div>
-	</script>
+<div class="container">
+<div class="row basic-info">
+    <h2>Basic Info</h2>
 
-	<script type="text/template" id="thumbnail-image-template">
-		<% _.each(images, function(image) { %>
-		<div class="thumbnail-image<% if (selectedImage == image) { %> selected<% } %>">
-			<img src="<%= image.get('src') %>" alt="<%= image.get('alt') %>"/>
-		</div>
-		<% }); %>
-	</script>
+    <div class="basic-info">
+        <p>Hey there! My name's Bobby Steinbach and I'm a software developer currently working out of NYC where I'm
+            hacking as a Python/Django backend developer and Android lead developer at <a href="http://www.rukkus.com"
+                                                                                          title="Rukkus">Rukkus</a>.</p>
+
+        <p>Although I absolutely love coding and couldn't imagine doing anything else as a career, sometimes I
+            definitely
+            need a break from the glow of a computer monitor. At these times, I enjoy Brazilian Jiu Jitsu, woodworking,
+            and - hackneyed for a programmer, I know - playing videogames.</p>
+    </div>
+</div>
+<div class="row blog-posts">
+    <h2>Popular Blog Posts</h2>
+
+    <div class="blog-posts">
+        <ol>
+            <li><a href="http://blog.iambob.me/accessing-google-analytics-from-django/"
+                   title="Accessing Google Analytics From Django">Accessing Google Analytics From Django</a></li>
+            <li>
+                <a href="http://blog.iambob.me/the-super-stupid-idiots-guide-to-getting-started-with-django-pipeline-and-s3/"
+                   title="Super Stupid Idiots Guide To Getting Started With Django Pipeline And S3">The Super Stupid
+                    Idiots Guide To Getting Started With Django, Pipeline, And S3</a></li>
+            <li><a href="http://blog.iambob.me/death-to-the-technical-interview/"
+                   title="Death To The Technical Interview">Death To The Technical Interview</a></li>
+            <li><a href="http://blog.iambob.me/folk-to-edm-the-top-10-artists-to-code-to/"
+                   title="Fold To Edm The Top 10 Artists To Code To">Folk To EDM: The Top 10 Artists To Code To</a></li>
+            <li><a href="http://blog.iambob.me/backstep-and-time-management/" title="Backstep and Time Management">Backstep
+                and Time Management</a></li>
+            <li><a href="http://blog.iambob.me/making-a-post-request-from-android-app/"
+                   title="Making a Post Request From An Android App">Making a Post Request From An Android App (And Why
+                I Hate Java)</a></li>
+        </ol>
+    </div>
+</div>
+<div class="row projects">
+    <h2>Work</h2>
+    <ul>
+        <li>
+            <h4><a href="http://www.rukkus.com" itemprop="affiliation">Rukkus</a></h4>
+            <br/>
+
+            <p>
+                My work thus far at Rukkus has revolved heavily around a few things:
+            <ol>
+                <li>Leading development of the <a
+                        href="https://play.google.com/store/apps/details?id=com.rukkus.app&hl=en">Rukkus Android
+                    Application</a></li>
+                <li>Building out the front and back end for our <a
+                        href="https://rukkus.com/new-york-rangers-at-carolina-hurricanes/3-31-2016-raleigh-pnc-arena-494112/">next
+                    gen ticket buying experience</a></li>
+                <li>Solving complex issues relating to data de-duplication and String matching</li>
+            </ol>
+            </p>
+            <div class="technology">Python, Django, Redis, SOLR, Postgres, Javascript, jQuery, Backbone, HTML5</div>
+            <div class="screenshots-container">
+                <div class="big-screenshot-container"></div>
+                <div class="thumbnails-container"></div>
+            </div>
+        </li>
+
+
+        <li>
+            <h4><a href="http://www.theshelf.com" itemprop="affiliation">TheShelf</a></h4>
+            <br/>
+
+            <p>
+                While working at TheShelf, I was able to both sharpen my Python/Django chops and
+                gain invaluable exposure to the business side of working in an early-stage startup. My first task
+                upon arrival was to refactor the website entirely. Challenging? Yes. Daunting? Yes. But in the end,
+                very positive because I was able to fully understand the code base once finished.
+                Subsequent projects included building out a dynamic image collage, re-wiring key parts of the site
+                to use Backbone, and optimizing a feed containing millions of items.
+            </p>
+
+            <div class="technology">Python, Django, PostgreSQL, Javascript, jQuery, HTML5</div>
+        </li>
+        <li>
+            <h4><a href="http://www.openmile.com" itemprop="affiliation">OpenMile</a></h4>
+            <br/>
+            OpenMile was my first job at a startup, and the reason why I've only worked as startups since!
+            Coming in as a co-op (an intern, for all practical purposes), I never felt as though I had any
+            less responsibility than the other team members. My daily tasks included responding to bug reports
+            filed by the sales team, building out portlets (modular page components), and playing ping-pong. I kid...
+            about the ping-pong of course.
+            <div class="technology">Python, Pylons, sqlAlchemy, MySQL, Javascript, jQuery</div>
+        </li>
+    </ul>
+    <h2>Personal Projects</h2>
+    <ul>
+        <li>
+            <h4><a href="http://www.back-step.com" itemprop="url">BackStep</a><strong>(not maintained)</strong></h4>
+            <br/>
+            BackStep is an idea I'd been playing with in my head for a month or so before deciding
+            to start development on. The premise was simple: Have you ever left something in a cab?
+            Hopefully the answer is no, but if it isn't BackStep is for you.
+            Using a combination of methods including widespread aggregation of data and manual effort,
+            BackStep took on the challenge of finding lost items and putting you in contact with the finders
+            of the valuables.
+            <div class="technology">Python, Django, PostgreSQL, NodeJS, Express, Backbone, Javascript, Android, iOS,
+                jQuery, CSS3
+            </div>
+        </li>
+        <li>
+            <h4><a href="https://github.com/steinbachr/world-cup-challenge" itemprop="url">World Cup Challenge</a></h4>
+            <br/>
+            The World Cup Challenge was a competition put forth by <a href="http://footballradar.com/">FootballRadar</a>
+            which asked its participants to write a program which would - for each team in the World Cup - print
+            out the probability of that team being knocked out in group, 2nd round, etc. and ending with the probability
+            of that team winning the cup. My solution happened to be the winning one and relied on a number of
+            different factors to choose probabilities including: player skill scores, team chemistry scores,
+            fifa rank, number of "stars" on the team, and past international results.
+            <div class="technology">Python</div>
+        </li>
+        <li>
+            <h4><a href="http://www.opentapp.me" itemprop="url">DrinkUp</a><strong>(not maintained)</strong></h4>
+            <br/>
+            DrinkUp is a venture launched by me and two friends as an effort to make creation and distribution of
+            drink deals by bars and clubs as simple as logging into a web app and pushing a button. On the user side,
+            an Android and iOS app currently in development gives bar-goers the ability to redeem coupons either as
+            individuals or as part of a group. It's pretty sweet! Of course I am biased..
+            <div class="technology">Python, Django, MySQL, Javascript, jQuery</div>
+        </li>
+    </ul>
+    <h2>Weekend Projects</h2>
+    <ul>
+        <li>
+            <h4><a href="https://play.google.com/store/apps/details?id=me.iambob.spitly" itemprop="url">Spitly</a></h4>
+            <br/>
+            Ever face the situation when you've received a text but don't want to respond instantly? Spitly was
+            conceived
+            for just this scenario. While there are other text scheduling apps out there, Spitly is different in that
+            it strips out many extraneous features that these other tools provide (recurring schedules, a
+            date / time combination, etc.) and instead focuses solely on the mission of allowing the user
+            to quickly and easily send out a delayed text.
+            <div class="technology">Java, Android</div>
+        </li>
+        <li>
+            <h4><a href="https://github.com/steinbachr/django-js-variable-injector" itemprop="url">django-js-variable-injector</a>
+            </h4>
+            <br/>
+            Provides a mechanism for injecting Django template variables into external Javascript files' namespace in a
+            (more) elegant way.
+            <div class="technology">Python, Django</div>
+        </li>
+        <li>
+            <h4><a href="https://github.com/steinbachr/django-csv" itemprop="url">django-csv</a><strong>(in
+                development)</strong></h4>
+            <br/>
+            Simple CSV utilities for Django projects, the most noteworthy of which is the extensible system
+            for bootstraping data from csv files into models.
+            <div class="technology">Python</div>
+        </li>
+        <li>
+            <h4><a href="https://github.com/steinbachr/instasound" itemprop="url">Instasound</a></h4>
+            <br/>
+            An attempt at Tkinter programming. Instasound connects the user to a variety of music sources with one
+            simple interface.
+            <div class="technology">Python, Tkinter</div>
+        </li>
+        <li>
+            <h4><a href="http://www.soundster.com" itemprop="url">Instasound (web branch)</a>
+                <a href="https://github.com/steinbachr/instasound/tree/web_app">| github</a></h4>
+            <br/>
+            A branch of the Instasound application mentioned above using something I'm a little more familiar with,
+            web programming.
+            <div class="technology">Python, Flask, Javascript, jQuery</div>
+        </li>
+        <li>
+            <h4><a href="https://github.com/steinbachr/eight_py" itemprop="url">8Py</a></h4>
+            <br/>
+            Simple Python wrapper for the 8Tracks Api. Built to be used by
+            <a href="https://github.com/steinbachr/instasound/tree/web_app">Instasound</a>.
+            <div class="technology">Python</div>
+        </li>
+        <li>
+            <h4><a href="https://github.com/steinbachr/imgagine" itemprop="url">Imgagine</a></h4>
+            <br/>
+            My first foray with Backbone, this jQuery plugin fetches a random gallery from imgur and displays it in a
+            couple of nice
+            ways.
+            <div class="technology">Javascript, jQuery, Backbone</div>
+        </li>
+        <li>
+            <h4><a href="http://event-profiler.incepted.us" itemprop="url">The Facebook Event Profiler</a></h4>
+            <br/>
+            A strictly client side app that analyzes and profiles your FB events
+            <div class="technology">Javascript, jQuery</div>
+        </li>
+    </ul>
+</div>
+<div class="row other-links">
+    <h2>Anything Else?</h2>
+    <ul>
+        <li>
+            <a href="woodworking.html" itemprop="url"><i class="fa fa-tree"></i><span>Woodworking</span></a>
+        </li>
+        <!--<li>-->
+            <!--<a href="bjj.html" itemprop="url"><i class="fa fa-trophy"></i><span>Brazilian Jiu Jitsu</span></a>-->
+        <!--</li>-->
+    </ul>
+</div>
+<div class="row other-links">
+    <h4>Elsewhere On the Web</h4>
+    <ul>
+        <li>
+            <a href="https://plus.google.com/u/1/+BobbySteinbach/about" itemprop="url"><i
+                    class="fa fa-google-plus-square"></i><span>Google+</span></a>
+        </li>
+        <li>
+            <a href="https://news.ycombinator.com/user?id=rigid_airship" itemprop="url"><i
+                    class="fa fa-hacker-news"></i><span>Hacker News</span></a>
+        </li>
+        <li>
+            <a href="http://www.linkedin.com/in/steinbachr" itemprop="url"><i
+                    class="fa fa-linkedin"></i><span>LinkedIn</span></a>
+        </li>
+        <li>
+            <a href="https://github.com/steinbachr" itemprop="url"><i class="fa fa-github"></i><span>GitHub</span></a>
+        </li>
+        <li>
+            <a href="https://www.facebook.com/bobby.steinbach" itemprop="url"><i class="fa fa-facebook"></i><span>Facebook</span></a>
+        </li>
+        <li>
+            <a href="http://stackexchange.com/users/2051772/bobby-s" itemprop="url"><i class="fa fa-stack-overflow"></i><span>StackOverflow</span></a>
+        </li>
+        <li>
+            <a href="http://blog.iambob.me" itemprop="url"><i class="fa fa-book"></i><span>Blog</span></a>
+        </li>
+        <li>
+            <a href="http://www.codewars.com/users/steinbachr" itemprop="url"><i
+                    class="fa fa-code"></i><span>Codewars</span></a>
+        </li>
+        <li>
+            <a href="https://angel.co/bobby-steinbach" itemprop="url"><i class="fa fa-cloud"></i><span>AngelList</span></a>
+        </li>
+    </ul>
+    <div class="clearfix"></div>
+</div>
+<div class="row share">
+    <a href="https://twitter.com/share" class="twitter-share-button" data-lang="en" data-url="http://iambob.me"
+       data-text="Bobby Steinbach on the web">Tweet</a>
+
+    <div class="fb-like" data-href="http://iambob.me" data-layout="standard" data-action="like" data-show-faces="true"
+         data-share="true"></div>
+</div>
+</div>
+</div>
+<script>!function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (!d.getElementById(id)) {
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://platform.twitter.com/widgets.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }
+}(document, "script", "twitter-wjs");</script>
 </body>
 </html>
